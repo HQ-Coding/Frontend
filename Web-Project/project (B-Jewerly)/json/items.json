@@ -1,0 +1,44 @@
+{
+    "items": [
+      {
+        "id": 1,
+        "name": "gold Jewerly set",
+        "category": "set",
+        "price": 2560,
+        "img" : "../img/card-1.jpg",
+        "count" :  1
+      },
+      {
+        "id": 2,
+        "name": "CoinRing",
+        "category": "necklaces",
+        "price": 900,
+        "img" : "../img/card-2.jpg",
+        "count" :  1
+      },
+      {
+        "id": 3,
+        "name": "White gold Bracelet",
+        "category": "bracelet",
+        "price": 860,
+        "img" : "../img/card-3.jpg",
+        "count" :  0
+      },
+      {
+        "id": 4,
+        "name": "special Set",
+        "category": "Set",
+        "price": 5000,
+        "img" : "../img/card-4.jpg",
+        "count" :  1
+      },
+      {
+        "id": 5,
+        "name": "gold necklaces",
+        "category": "necklaces",
+        "price": 500,
+        "img" : "../img/card-5.jpg",
+        "count" :  1
+      }
+    ]
+  }
