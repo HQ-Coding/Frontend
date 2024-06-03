@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <div class="calculator">
+        <nav class="nav">
+            <span class="material-symbols-outlined">
+                calculate
+                </span>
+            <span class="material-symbols-outlined">
+            menu
+            </span>
+        </nav>
+
+        <div class="result">
+        <div class="calculation1"></div>
+        <div class="calculation2  grey"></div>
+        </div>
+        
+        <div class="buttons">
+            <input type="button" value="AC" id="sign2" onclick="clearall()">
+            <input type="button" value="(" id="sign2"
+            onclick="cal( '(' )">
+            <input type="button" value=")" id="sign2"
+            onclick="cal( ')' )">
+            <span  id="sign2" class="material-symbols-outlined" onclick="backspace()">
+            backspace
+            </span>
+           
+
+            <input type="button" value="7" id="number"
+            onclick="cal('7')" >
+            <input type="button" value="8" id="number"
+            onclick="cal('8')" >
+            <input type="button" value="9" id="number"
+            onclick="cal('9')" >
+            <input type="button" value="-" id="sign"
+            onclick="cal('-')">
+            <input type="button" value="/" id="sign"
+            onclick="cal('/')">
+
+            <input type="button" value="4" id="number"
+            onclick="cal('4')" >
+            <input type="button" value="5" id="number"
+            onclick="cal('5')" >
+            <input type="button" value="6" id="number"
+            onclick="cal('6')" >
+            <input type="button" value="+" id="sign"
+            onclick="cal('+')" >
+            <input type="button" value="*" id="sign"
+            onclick="cal('*')" >
+
+            <input type="button" value="1" id="number"
+            onclick="cal('1')" >
+            <input type="button" value="2" id="number"
+            onclick="cal('2')" >
+            <input type="button" value="3" id="number"
+            onclick="cal('3')" >
+            <input type="button" value="%" id="sign"
+            onclick="cal('%')" >
+
+            <input type="button" value="0" id="number"
+            onclick="cal('0')" >
+            <input type="button" value="." id="number"
+            onclick="cal('.')" >
+            <input type="button" value="=" id="sign"
+            onclick="mosavi()">
+         
+        </div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>
