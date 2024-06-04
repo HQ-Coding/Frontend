@@ -1,0 +1,86 @@
+.news-box1{
+    width: 100%;
+    height: 50px;
+    background-color: #080f31;
+    border-bottom: #280a44 1px solid;
+    box-shadow: inset 0 0 20px #000000;
+    overflow: hidden;
+    display: flex;
+    position: relative;
+    top: 100%;
+    margin-top: -100px;
+}
+
+.news1 ul li{
+    display:flex;
+    width: 1100px;
+    background-color: #1d0c3f;
+    font-size: 22px;
+    color:#fff; 
+}
+.box1{
+    height: 70%;
+    display: flex;
+    position: absolute;
+    justify-content:space-around;
+    animation: move-horizontal 60s infinite linear ;
+    margin-top: 8px;
+    z-index: 1;
+
+}
+.logo3-nm{
+    width:9% ;
+    background: url(../images/north-montain.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+/*---------------------------------------*/
+.news-box2{
+    width: 100%;
+    height: 50px;
+    background-color: #080f31;
+    border-bottom: #280a44 1px solid;
+    box-shadow: inset 0 0 20px #000000;
+    overflow: hidden;
+    display: flex;
+    position: relative;
+    margin-top: 50px;
+}
+
+.box2{
+    opacity: 0;
+    
+    height: 70%;
+    display: flex;
+    position: absolute;
+    justify-content:space-around;
+    animation: move-horizontal 60s infinite linear ;
+    animation-delay: 30s;
+    margin-top: 8px;
+}
+
+.news2 ul li{
+    display:flex;
+    width: 1100px;
+    background-color: #440a0a;
+    font-size: 22px;
+    color:#fff; 
+}
+
+.logo2-nw{
+    width:9% ;
+    background: url(../images/nav.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+/*---------------------------------------*/
+
+
+    @keyframes move-horizontal {
+        from {
+            transform: translateX(100%);opacity: 1;}
+        to {
+            transform: translateX(-100%);}}
+    

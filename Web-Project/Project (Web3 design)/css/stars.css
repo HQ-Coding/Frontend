@@ -1,0 +1,138 @@
+
+.gravity{
+    display: flex;
+    position: relative;
+    width:500px;
+    height: 500px;
+    border-radius: 50%;
+    margin-top: -130px;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;/*
+    animation: shadow-light 2s infinite  alternate linear;*/
+    
+    
+}
+.tether{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background:url(../images/Tether\ \(USDT\).png);
+    background-position: center;
+    background-size: cover;
+    background-color:transparent;
+    box-shadow: 0 0 20px rgb(50, 254, 128);
+    background-color: rgb(50, 254, 128);
+    animation: GFG 18s infinite linear;
+    position: absolute;
+}
+.btc{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background:url(../images/Bitcoin\ BTC\ Icon.png);
+    background-position: center;
+    background-size: cover;
+    background-color: transparent;
+    box-shadow: 0 0 20px rgb(254, 223, 50);
+    background-color: rgb(254, 169, 50);
+    animation: GFG 18s infinite linear;
+    animation-delay: 3s;
+    position: absolute;
+}
+.ether{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background:url(../images/Ethereum\ ETH.png);
+    background-position: center;
+    background-size: cover;
+    background-color: transparent;
+    box-shadow: 0 0 20px rgb(50, 186, 254);
+    animation: GFG 18s infinite linear;
+    animation-delay:6s;
+    position: absolute;
+}
+.meta{
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        background:url(../images/Metacoms.png);
+        background-position: center;
+        background-size: cover;
+        background-color: transparent;
+        box-shadow: 0 0 20px rgb(142, 50, 254);
+        background-color: rgb(139, 44, 255);
+        animation: GFG 18s infinite linear;
+        animation-delay:9s;
+        position: absolute;
+    }
+.ada{
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        background:url(../images/Ada\ Coin.png);
+        background-position: center;
+        background-size: cover;
+        background-color: transparent;
+        box-shadow: 0 0 20px rgb(255, 255, 255);
+        background-color: #fff;
+        animation: GFG 18s infinite linear ;
+        animation-delay:12s;
+        position: absolute;
+    }
+.dai{
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        background:url(../images/Dai\ Coin.png);
+        background-position: center;
+        background-size: cover;
+        background-color: transparent;
+        box-shadow: 0 0 20px rgb(254, 230, 50);
+        background-color: rgb(254, 169, 50);
+        animation: GFG 18s infinite linear;
+        animation-delay:15s;
+        position: absolute;
+    }
+
+.doge{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: url(../images/Dogecoin\ \(DOGE\).png);
+    background-position: center;
+        background-size: cover;
+    box-shadow: 0 0 50px white;
+    animation: moong 3s infinite linear ;
+    position: absolute;
+    margin: 40px;}
+
+
+    @keyframes GFG { 
+        from { 
+            transform: rotate(0deg)  
+            translateX(160px) rotate(0deg)
+            translateY(-300px) rotate(0deg); }
+                    
+        to { 
+            transform: rotate(180deg)  
+            translateX(160px) rotate(0deg)
+            translateY(300px) rotate(0deg);} }
+    
+    @keyframes moong { 
+        from { 
+            transform: rotate(0deg)  
+            translateX(100px) rotate(0deg);}    
+            to { 
+            transform: rotate(-360deg)  
+            translateX(100px) rotate(0deg);} }   
+
+    @keyframes shadow-light{
+        from {box-shadow: inset 0 0 30px white;}
+        to{box-shadow: inset 0 0 30px transparent;}
+    }
+    @keyframes shadow-light2{
+        from {box-shadow:0 0 20px #000000;}
+        to{box-shadow:0 0 0 transparent;}
+    }
