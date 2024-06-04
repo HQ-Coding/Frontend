@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Train2-js</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee+Shade&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Honk&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles.css">
+    
+</head>
+<body>
+    <div class="game">
+        <div class="windows m-1 grid border">
+
+            <div class="intract my-1 p-3 border">
+                <h1>Choose your weapen</h1>
+                <div class="weapens">
+                    <button id="btn"><img src="images/paper.png" class="img-items"></button>
+                    <button id="btn"><img src="images/rock.png" class="img-items"></button>
+                    <button id="btn"><img src="images/scissors.png" class="img-items"></button>
+                </div>
+                <h1>CPU chooosed:</h1>
+                <div class="cpu-choosed">
+                    <img src="images/paper.png" class="img-cpu-choosed hidden" >
+                    <img src="images/rock.png" class="img-cpu-choosed hidden" >
+                    <img src="images/scissors.png" class="img-cpu-choosed hidden" >
+                </div>
+                
+            </div>
+
+
+            <div class="result_box p-2 ">
+                <h1 class="my-2">points:</h1>
+
+                <div class="result_container">
+
+                  <div class="user-point-container py-2">
+                    <h2>USER:</h2>
+                    <div id="user-point">
+                      <p>0</p>
+                    </div>
+                  </div>
+
+                  <div class="cpu-point-container py-2">
+                    <h2>CPU:</h2>
+                    <div id="cpu-point">
+                      <p>0</p>
+                    </div>
+                  </div>
+
+                </div>
+                <!-- <button class="refresh border">PLAY AGAIN</button> -->
+                <button class="restart border">Restart</button>
+                </div>
+        </div>
+        
+    </div>
+    <script src="./scripts.js"></script>
+</body>
+</html>
