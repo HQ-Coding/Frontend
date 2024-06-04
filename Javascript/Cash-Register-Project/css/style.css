@@ -1,0 +1,157 @@
+@import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Jersey+15&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  font-family: "Jersey 15", sans-serif;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.navbar a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  color: black;
+  font-family: "Anton", sans-serif;
+}
+.navbar a img {
+  height: 70px;
+  width: 70px;
+}
+.navbar .navbar-brand {
+  font-size: 50px;
+}
+
+.transaction-display {
+  position: relative;
+  background-color: #333;
+  box-shadow: inset 0 0 2px #fff;
+  height: 380px;
+  padding: 5px;
+  border: 2px solid black;
+  border-radius: 5px;
+}
+.transaction-display .transaction-info {
+  background-color: rgb(150, 250, 250);
+  padding: 10px;
+  height: 80%;
+  overflow-y: scroll;
+}
+.transaction-display .transaction-info li {
+  margin: 2px 0;
+  padding: 0 5px;
+  font-size: 20px;
+}
+.transaction-display .user {
+  position: relative;
+  top: 8px;
+  height: 65px;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  gap: 10px;
+}
+.transaction-display .user input {
+  font-size: 30px;
+  width: 200px;
+  border-radius: 5px;
+  padding: 0 5px;
+}
+.transaction-display .user button {
+  width: 150px;
+  font-size: 20px;
+  border-radius: 50px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  background-color: orange;
+  transition: 0.1s;
+}
+.transaction-display .user button p {
+  background-color: yellow;
+  color: #633;
+  position: relative;
+  display: grid;
+  place-items: center;
+  height: 100%;
+  width: 95%;
+  border-radius: 50px;
+  transform: translateY(-5px);
+  transition: 0.5s;
+}
+.transaction-display .user button:hover {
+  box-shadow: inset 0 0 10px whitesmoke, inset 20px 0 80px rgb(242, 255, 0), inset -20px 0 80px red, 0 0 50px #fff, 0px -2px 10px rgb(255, 251, 0), 0px 2px 30px red;
+}
+.transaction-display .user button:hover p {
+  color: #a33;
+  transform: translateY(-4px);
+  width: 96%;
+}
+.transaction-display .object1 {
+  position: absolute;
+  width: 100px;
+  height: 50px;
+  background-color: rgb(0, 0, 0);
+  z-index: 1;
+  left: 40%;
+  right: 0;
+  top: 100%;
+}
+.transaction-display .object1::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  height: 20px;
+  width: 150px;
+  background: #000000;
+  bottom: -5px;
+  right: 0;
+  left: -25%;
+  box-shadow: 0 2px 5px black;
+}
+.transaction-display #Status {
+  position: relative;
+  top: -10px;
+  left: -10px;
+  width: 110%;
+  background-color: black;
+  padding: 0.2rem 1rem;
+  font-size: 30px;
+  color: yellow;
+}
+
+.device {
+  position: relative;
+  width: 350px;
+  height: 400px;
+  background-color: rgb(150, 250, 250);
+  border: 1px solid black;
+  border-radius: 5px;
+}
+.device .keyboard {
+  position: absolute;
+  width: 100%;
+  bottom: 0%;
+  left: 0%;
+}
+.device .price {
+  background-color: black;
+  padding: 0.2rem 1rem;
+  font-size: 30px;
+  color: yellow;
+}
+.device .cid {
+  padding: 0.5rem 1rem;
+  font-size: 22px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  height: 250px;
+  overflow-y: scroll;
+}/*# sourceMappingURL=style.css.map */
