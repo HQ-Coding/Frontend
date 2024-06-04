@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Train3-js</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <div class="game m-2 flex">
+        <div class="console grid p-3 border">
+
+            <div class="player flex">
+
+                <div class="turn1 flex hidden">Waiting for <br>-Your turn</div>
+                <div class="totalScore flex bold">
+                    <h1>Total Score</h1>
+                    <h4>Player 1</h4>
+                    <p class="player0-TS py-1">0</p>
+                </div>
+                <div class="currrentScore flex bold">
+                    <h3>CURRENT SCORE</h3>
+                    <p class="player0-CS py-1">0</p>
+                </div>
+
+            </div>
+
+            <div class="menu">
+
+                <button class="startGame">Start Game</button>
+                <div class="dices ">
+                    <img src="./images/dice-1.png" class="image hidden">
+                </div>
+                <button class="roll" id="disable">ROLL Dice</button>
+                <button class="hold" >HOLD</button>
+
+            </div>
+            
+            <div class="player flex">
+
+                <div class="turn2 flex ">Waiting for <br> Your turn  </div>
+                <div class="totalScore flex bold">
+                    <h1>Total Score</h1>
+                    <h4>Player 2</h4>
+                    <p class="player1-TS py-1">0</p>
+                </div>
+                <div class="currrentScore flex bold">
+                    <h3>CURRENT SCORE</h3>
+                    <p class="player1-CS  py-1">0</p>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+</html>
