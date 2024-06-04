@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.2.1/dist/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Pokemon Cards</title>
+</head>
+<body>
+  <nav class="navbar ">
+    <a class="navbar-brand flex" href="#">
+      <img class="logo" src="../images/HQ.png" width="30" height="30" class="d-inline-block align-top" alt="HQ">
+      HQ MiniProject
+    </a>
+    <span>Pokémon Search App</span>
+  </nav>
+  
+  <section style="width: 100%;height: 2px; background-color: #111;"></section>
+
+  <section class="backgrounds">
+    <div class="container-fluid base">
+        <!-- search Input -->    
+        
+        <div class="serach text-center">
+            <label  class="text-center">Search for Pokémon Name or ID:</label>
+            <div class="searchBox">
+                <input type="text" id="search-input" placeholder="Enter Pokemon name or ID" required>
+                <button id="search-button">Search</button>
+            </div>
+        </div>
+        
+        <!-- search outPut -->
+        <div class="pokemon">
+            <div class="cell">
+                <span id="pokemon-name"></span>
+                <span id="pokemon-id"></span>
+                <span id="weight"></span>
+                <span id="height"></span>
+            </div>
+            <div class="banner ">
+                <div  id="pokemonImage" class="pokemonImageCover">
+                    <img  src="../images/HQ.png" alt="">
+                </div>
+            </div>
+
+            <section>
+                <div class="tbody">
+                    <div class="chain">
+                        <div class="cell"><span>Base</span> <span>Stats</span></div>
+                    </div>
+                    <div class="chain">
+                        <div class="cell"><span>hp:</span> <span id="hp">0</span></div>
+                    </div>
+                    <div class="chain">
+                        <div class="cell"><span>Attack :</span> <span id="attack">0</span></div>
+                    </div>
+                    <div class="chain">
+                        <div class="cell"><span>Defense :</span> <span id="defense">0</span></div>
+                    </div>
+                    <div class="chain">
+                        <div class="cell"><span>Sp. Attack :</span> <span id="special-attack">0</span></div>
+                    </div>
+                    <div class="chain">
+                        <div class="cell"><span>Sp. Defense :</span> <span id="special-defense">0</span></div>
+                    </div>
+                    <div class="chain">
+                        <div class="cell"><span>Speed :</span> <span id="speed">0</span></div>
+                    </div>
+                    <div class="chain">
+                        <div id="types" class="cell" ></div>
+                    </div>
+                </div>
+            </section>
+            
+        </div>
+    </div>
+</section>
+    
+<script src="../js/script.js"></script>
+
+</body>
+</html>
