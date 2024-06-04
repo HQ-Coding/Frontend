@@ -1,0 +1,355 @@
+@import url('https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    font-family: 'Kdam Thmor Pro', sans-serif;}
+
+body{
+    width: auto;
+    height: 100vh;
+}
+.hide{
+    scale: 0;
+}
+/* ================= navbar ================= */
+
+.navbar{
+    z-index: 100;
+    width: 100wv;
+    height: 70px;
+    padding: 1rem;
+    background: #fff;
+    display: flex;
+    justify-content: center;align-items: center;
+}
+.navbar ul{
+    display: flex;
+    column-gap: 5rem;
+}
+.navbar ul li a{
+    font-size: 25px;
+    color: black;
+}
+.login-pupup-btn{
+    font-size: 25px;
+}
+.login-pupup-btn:hover{
+    color: gold;
+}
+
+/* =================banner=================== */
+.banner{
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    background: url(../images/background01.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+/* ===================LOGIN AND SIGNIN forms==================== */
+
+.forms{
+    position: relative;
+    top: -1rem;
+    background:  linear-gradient(90deg, rgba(34,193,195,1) 0%, rgb(0, 3, 99) 100%);
+    border-radius: 20px;
+    display: flex;
+    flex-wrap: nowrap;
+    box-shadow: 0 0 20px black;
+    transition: .4s;
+}
+
+.forms .login-box{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px;
+    width: 550px;
+    height: 700px;
+
+    background: url(../images/bg4.jpg);
+    background-position: center;
+    background-size: cover;  
+
+    border-bottom-left-radius: 20px;
+    border-top-left-radius: 20px;
+}
+
+.forms .register-box{
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px;
+    width: 550px;
+    height: 700px;
+
+    background: url(../images/bg4.jpg);
+    background-position: center;
+    background-size: cover;
+
+    border-bottom-right-radius: 20px;
+    border-top-right-radius: 20px;
+}
+/*---------------.xscrole---------------*/
+.xscrole{
+
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    width: 550px;
+    height: 700px;
+    z-index: 100;
+    transition: 2s;
+    box-shadow:inset 0 0 20px black;
+    background-color:#345389;
+    overflow: hidden;
+    }
+
+/*--------------------------*/
+.forms.active .xscrole{
+    transform: translatex(0px);
+    border-bottom-left-radius: 20px;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 0px;
+    border-top-right-radius: 0px;
+}
+
+.forms .xscrole{
+    transform: translatex(590px);
+    border-bottom-right-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.background{
+    width: 90%;
+    height: 90%; 
+    border-radius: 100%;
+    margin-top: 50px;
+
+    background: url(../images/fish2.png);
+    background-position: center;
+    background-size: cover; 
+    transition: 2s;
+}
+
+.forms.active .background{
+    transform: rotate(180deg);
+}
+
+
+/*--------------------------*/
+h2{
+    font-size: 2.5em;}
+
+.input-box{
+    position: relative;
+    display: flex;
+    align-items: center;
+    width:335px;
+    height:auto;
+    margin-top: 4em;
+    background-color: rgb(255, 255, 255);
+    border-radius: 50px;
+    overflow: hidden;
+}
+
+.input-box label{
+    position: absolute;
+    top: 50%;
+    left: 35px;
+    transform: translateY(-50%);
+    font-size: 1em;
+    color: rgba(0, 0, 0, 0.385);
+    font-weight: 700;
+    pointer-events: none;
+    transition: 0.5s;
+    }
+
+.input-box input:hover~label{
+    color: rgb(99, 0, 192);
+}
+.input-box input:focus~label,
+.input-box input:valid~label{
+        opacity: 0;}   
+        
+.input-box input{
+    width: 300px;
+    font-size: 25px;
+    padding: 6px;
+    border-radius: 25px;
+    
+}
+.input-box span{
+    position:absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    left:3px;
+    border-radius: 50%;
+    background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgb(0, 3, 99) 100%);
+    transition: 2s;
+}
+.input-box input:valid~span,
+.input-box input:focus~span{
+        left: 89%;}   
+.input-box input:valid~span{
+        background-color: green;
+    }
+.input-box i{
+    font-size: 1.2em;
+    color: white;}
+
+/*======================== remember-forget =========================*/
+
+.remember-forget{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+    font-size:.95em;}
+
+.remember-forget a{
+    text-decoration: none;
+    color: black;}
+
+/*====================================================================*/ 
+
+.login-button{
+    width: 100%;
+    height: 45px;
+    background:  linear-gradient(90deg, rgba(34,193,195,1) 0%, rgb(0, 3, 99) 100%);
+    color: #fff;
+    
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 500;
+    margin-top: 50px;
+    transition: .5s;
+
+}
+
+.login-button:hover{
+    transform: scale(1.01);
+    box-shadow: inset 350px 0px 20px 0px rgb(0, 32, 96);
+    
+}
+
+.login-register{
+    text-align: center;
+    font-size: 1em;
+    font-weight: 500;
+    margin-top: 20px;
+}
+
+.login-register a{
+    text-decoration: none;
+    color: #162938;
+    font-weight: 700;
+}
+.login-register a:hover{
+    text-decoration: underline;
+}
+
+/*======================== NEWS-Animation ===================*/
+
+.news-box{
+ 
+    width: 40px;
+    height: 700px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden;
+    box-shadow:inset 0 0 10px white; 
+}
+
+.news-box .new{
+    color: #fff;
+    font-size:25px;
+    width: 1300px;
+    height: 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    transform: rotate(90deg);
+}
+
+.new #p1{
+    position: absolute;
+    animation: anime1 20s infinite linear ;
+}
+
+.new #p2{
+    position: absolute;
+    animation: anime1 20s infinite linear ;
+    animation-delay: 10s;
+    opacity: 0;
+}
+
+@keyframes anime1{
+    from {
+        transform: translatex(100%);opacity: 1;}
+    to {
+        transform: translatex(-100%);opacity: 1;}}
+        
+/*===================== xscrole ====================*/
+
+.xscrole span{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+
+    width: 50px;
+    height: 250px;
+    background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgb(0, 3, 99) 100%);
+    color:#fff;
+    left: 85%;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    font-size: 40px;
+    font-weight: 900;
+}
+
+.xscrole p{
+    transform: rotate(90deg);
+    font-size: 30px;
+    margin-top: 20px; 
+}
+
+.xscrole i{
+    align-self: center;
+}
+
+/* ====================== Close Icon Animation ====================== */
+.forms.active .xscrole span{
+    left:5%;
+    animation: anime-left 2s 1 alternate ease-in;
+}
+.forms.right .xscrole span{
+    left:85%;
+    animation: anime-right 2s 1 alternate ease-in;
+}
+@keyframes anime-left{
+    0%{transform: translateY(-100%);}
+    100%{transform: translateY(0%);}
+}
+@keyframes anime-right{
+    0%{transform: translateY(-100%);}
+    100%{transform: translateY(0%);}
+}
+/* =================================================================== */

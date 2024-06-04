@@ -1,0 +1,106 @@
+<html>
+    <head>
+        <title>Train4</title>
+        <link rel="stylesheet" href="../css/style.css">
+    </head>
+    <body>
+        <header>
+            <h2 class="logo">black sun</h2>
+
+            <nav class="navigation">
+                <a href="#">HOME</a>
+                <a href="#">ABOUT</a>
+                <a href="#">SERVICES</a>
+                <a href="#">CONTACT</a>
+                <button class="btnlogin-popup">login</button>
+            </nav>
+        </header>
+
+<!------------------------------------------------------------>
+
+        <div class="wrapper">
+            <span class="icon-close">
+                <ion-icon name="close-circle-outline"></ion-icon>
+            </span>
+            
+        <div class="form-box login">
+                <h2>Login</h2>
+                <form action="#">
+                    <div class="input-box">
+                        <sapn class="icon">
+                            <ion-icon name="mail"></ion-icon>
+                        </sapn>
+                        <input type="email" required>
+                        <label for="email">EMAIL</label>
+                    </div>
+                    <div class="input-box">
+                        <sapn class="icon"><ion-icon name="lock-closed"></ion-icon></sapn>
+                        <input type="password" required>
+                        <label for="password">PASSWORD</label>
+                    </div>
+
+                    <div class="remember-forget">
+                        <label><input type="checkbox">Remember Me</label>
+                        <a href="#">Forget password!</a>
+                    </div>
+                    
+                    <button type="submit" class="btn">Login</button>
+
+                    <div class="login-register">
+                        <p>
+                        Don't have an account? 
+                        <a href="#" class="register-link">Register</a>
+                        </p>
+                    </div>
+                </form>
+        </div>
+        <!---------------------------------------------------------->
+        <div class="form-box register">
+            <h2>REGISTERATION</h2>
+            <form action="#">
+                
+                <div class="input-box">
+                    <sapn class="icon">
+                        <ion-icon name="person"></ion-icon>
+                    </sapn>
+                    <input type="text" required>
+                    <label>Username</label>
+                </div>
+
+                <div class="input-box">
+                    <sapn class="icon">
+                        <ion-icon name="mail"></ion-icon>
+                    </sapn>
+                    <input type="email" required>
+                    <label for="email">EMAIL</label>
+                </div>
+
+                <div class="input-box">
+                    <sapn class="icon"><ion-icon name="lock-closed"></ion-icon></sapn>
+                    <input type="password" required>
+                    <label for="password">PASSWORD</label>
+                </div>
+
+                <div class="remember-forget">
+                    <label>
+                    <input type="checkbox">I agree to the terms & conditions
+                    </label>
+                   
+                </div>
+                <button type="submit" class="btn">REGISTER</button>
+
+                <div class="login-register">
+                    <p>
+                    Alraedy have an account? 
+                    <a href="#" class="login-link">Login</a>
+                    </p>
+                </div>
+            </form>
+            </div>
+        </div>
+
+        <script src="../javascript/script.js"></script>
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    </body>
+</html>
