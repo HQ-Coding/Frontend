@@ -1,0 +1,478 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap');
+
+*{
+    text-decoration: none;
+    list-style: none;
+    border: none;
+    outline: none;
+}
+
+body {
+    overflow-x: hidden;
+    font-family: "Cinzel", serif;
+    font-optical-sizing: auto;
+    background-color: gray;
+    display: grid;
+    place-items: center;
+  }
+
+.base{
+    background-color: #ffffff;
+    padding: 0 1rem;
+    width: clamp(20vw,1920px,100vw);
+}
+
+:root{
+    --black-1 : #000;
+    --black-2 : #222;
+    --black-3 : #444;
+    --grey-1 : #666;
+    --grey-2 : #888;
+    --grey-3 : #aaa;
+    --grey-4 : #ccc;
+    --white-1: #fff;
+    --white-2: #eee;
+    --link-1 : rgb(0, 180, 255)
+}
+// ========  navbar ========
+.navbar-brand img 
+  {
+    height: 3.5rem;
+  }
+  
+.nav-item{
+    margin: 0 .5rem;
+    position: relative;
+
+}
+.text-effect{
+    margin: 0 .5rem;
+    position: relative;
+    }
+
+.text-effect::before,
+.text-effect::after{
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: var(--black-2);
+    border-radius:5px ;
+    left: 40%;
+    bottom: 5px;
+    transform-origin:left;
+    transform: scaleX(0);
+    transition: .7s;}
+    
+.text-effect::before{
+    top: 5px;
+    }
+
+
+.text-effect:hover::after,
+.text-effect:hover::before{
+    width: 10px;
+    transform-origin: left;
+    transform: scaleX(1);}
+.text-effect:hover{
+    color: var(--black-2);
+}
+// =====================================
+
+.banner{
+    width: 95%;
+    max-height: 700px;
+    height: fit-content;
+    background-color: transparent;
+}
+.banner-text{
+    position: absolute;
+    right: 15%;
+    top: 0;
+    left: 5%;
+    z-index: 10;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: var(--white-1);
+    text-align: left;
+}
+
+.carousel .container{
+    z-index: 1;
+}
+
+// ======================================= dropdown
+.dropdown-pro{
+    padding: 10px 20px 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--black-1);
+    border-right: 2px solid var(--grey-4);
+}
+.dropdown-menu{
+    a{
+        cursor: pointer;
+    }
+}
+// ============================== SearchBar
+.searchbar p{
+    color: var(--black-3);
+    cursor: pointer;
+}
+p.bold{
+    font-weight: bolder;
+    color: var(--white-1);
+    text-shadow: #222 0 0px 1px ,red 0 0 3px, blue 0 0 5px;
+}
+
+.searchbar-parent1,
+.searchbar-parent2{
+    right: 0;
+    bottom: 10px;
+    left: 0;
+    z-index: 20;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+}
+.searchbar-parent1{
+    position: absolute;
+    padding: 2rem 0rem;
+}
+.searchbar-parent2{
+    position: relative;
+    padding: .5rem 1rem;
+}
+
+.searchbar{
+    background-color: var(--white-1);
+}
+
+// ============================== CARDS
+.h-cards{
+    cursor: pointer;
+    .cols{
+        width: 33%;
+        h1{
+            
+            text-shadow: var(--grey-3) 0 0 5px;
+        }
+    }
+}
+//=============================== WHAT TO DO
+
+.hover-cards{
+    display: flex;
+    flex-wrap: nowrap;
+    padding: 20px;
+    gap: 1rem;
+    
+        h1{
+            color: var(--white-1);
+            text-shadow: var(--black-2) 0 0 7px;
+        }
+        p {
+            display: block; 
+            opacity: 0; 
+            visibility: hidden; 
+            transition: visibility 0s, opacity 1s linear; 
+            color: var(--white-2);
+            text-shadow: var(--black-2) 0 0 5px;
+          }
+        i{
+            position: absolute;
+            cursor: pointer;
+            top:5%;
+            right: 5%;
+            padding: 5px;
+            color: var(--grey-1);
+            background-color: var(--white-2);
+            font-size: 20px;
+            border-radius: 50px;
+            transition: .3s;
+        }
+        i:hover{
+            color: var(--link-1);
+        }
+        .cols{
+            position: relative;
+            width: 100%;
+            min-width: 23%;
+            height: 350px;
+            align-content: end;
+            transition: width 1s , box-shadow .7s;
+            overflow: hidden;
+    }
+}
+.hover-cards .cols:hover{
+    width: 150%;
+    box-shadow: #444 0 0 10px;
+    p{
+        opacity: 1; 
+        visibility: visible; 
+        transition-delay: 0s; 
+      }
+} 
+.wwd-slider{
+    gap: 2px;
+}
+.slider-btn{
+    i{
+        border: var(--black-1) 1px solid;
+        border-radius: 50px;
+        color: #000;
+        transition: .3s;
+    }
+    i:hover{
+        color: var(--white-2);
+        background-color: var(--black-1);
+    }
+}
+// ==============================Client Card
+
+.client-card{
+    display:grid;
+    grid-template-columns: repeat(4,1fr);
+    padding: 20px;
+    gap: 1rem;
+
+    .cols{
+        position: relative;
+        overflow: hidden;
+        align-content: end;
+        height: 400px;
+        width: 100%;
+        transition: .7s;
+        .scrolbarIcon{
+            position: absolute;
+            display: none;
+            top: 0;
+            right: 0;
+            width: 30px;
+            flex-direction: column;
+            align-items: center;
+            background-color: var(--white-2);
+            border-bottom-left-radius: 5px;
+        }
+        .client-id{
+            position: absolute;
+            bottom: 30px;
+            color: var(--white-1);
+            h1,p{
+                text-shadow: var(--black-1) 0 0 5px;
+            }
+        }
+        .clientInfo{
+            position: relative;
+            bottom: -60%;
+            height: 50%;
+            transition: 1.5s;
+
+                overflow-y: scroll;
+                -ms-overflow-style: none; 
+                scrollbar-width: none;
+            img{
+                width: 30px;
+                margin-bottom: 1rem;}
+            
+            p{
+                font-size: 14px;
+
+            }}}   
+    .cols:hover{
+        box-shadow: #444 0 0 10px;
+        .clientInfo{
+            bottom: 0%;
+    }
+}}
+// =============================== footer
+
+.social{
+    display: flex;
+    gap: 2rem;
+    font-size: 40px;
+    li a i{
+        color: var(--black-1);
+    }
+}
+
+.copyRight{
+    color: var(--black-1);
+    cursor: pointer;
+}
+.hdModal{
+    .modal-content{
+        
+    .modal-body{
+        height: 550px;
+        background: url(../images/Untitled\ design.gif);
+        background-position: center;
+        background-size: cover;
+    }
+    }
+    
+}
+
+//=============================== Media Query
+// Extra large ≥1200px
+@media (max-width: 1200px){
+    
+}
+
+// Large ≥992px
+@media (max-width: 992px){
+    .client-id{
+        h1{font-size: 25px;}
+        p{font-size: 15px;}
+    }
+
+    .client-card{
+        display:grid;
+        grid-template-columns: repeat(2,1fr);
+        padding: 20px;
+        gap: 1rem;}
+}
+
+// Medium ≥768px
+@media (max-width: 768px){
+
+    .text-effect:hover::after,
+    .text-effect:hover::before{
+        width: 10px;
+        transform-origin: left;
+        transform: scaleX(0);}
+    .container h1{font-size: 2rem;}
+
+    // WHAT TO DO 
+    .hover-cards{
+        display: grid;
+        grid-template-rows: repeat(2,1fr);
+        grid-template-columns: repeat(2,1fr);
+        .cols{width: 100%;
+            height: 150px;}
+    }
+    .hover-cards .cols:hover{
+        width: 100%;} 
+    .banner-text{
+        h1{font-size: 50px;}
+        p{font-size: 15px;}
+    }
+    .cols{
+        h1{font-size: 30px;}
+        p{font-size: 15px;}}   
+}
+
+// Small ≥576px
+@media (max-width: 576px){}
+
+// Extra small <576px
+@media (max-width: 576px){
+
+    .banner-text{
+        h1{font-size: 30px;}
+        p{font-size: 15px;}
+    }
+    .cols{
+        h1{font-size: 25px;}
+        p{font-size: 12px;}
+    }
+
+    // what our client say
+    .client-card{
+        .cols{
+            height: 200px;
+            .scrolbarIcon{display: flex;}}
+            .cols:hover{
+            .clientInfo{
+                top: 0;
+                height: 70%;
+                p{font-size: 12px;}}}
+                }   
+    
+}
+
+
+// ============================== Utility
+
+.center{
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+}
+
+.buttons-black,
+.buttons-white{
+    cursor: pointer;
+    background-color: var(--white-1);
+    color: var(--black-1);
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+.buttons-black{
+    background-color: var(--black-1);
+    color: var(--white-1);
+   
+}
+
+.border-1{
+    border-radius: 10px;
+}
+.border-2{
+    border-radius: 15px;
+}
+.border-3{
+    border-radius: 20px;
+}
+.border-4{
+    border-radius: 25px;
+}
+.border-5{
+    border-radius: 30px;
+}
+
+h6{
+    color: #888;
+    font-size: 15px;
+}
+
+a:hover{
+    text-decoration: none;
+}
+
+.bg-image{
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.margin-100{
+    margin-top: 100px;
+}
+
+.h-cards,
+.client-card,
+.hover-cards{
+    overflow: hidden;
+}
+
+.h-cards .cols,
+.client-card .cols,
+.hover-cards .cols{
+    transform: translateY(50%);
+    opacity: 0;
+    transition: 1.5s;
+}
+
+.h-cards .cols.show,
+.client-card .cols.show,
+.hover-cards .cols.show{
+    transform: translateY(0px);
+    opacity: 1;
+}
+
+
+   
