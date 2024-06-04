@@ -1,0 +1,120 @@
+:root {
+    --light-grey: #f5f6f7;
+    --dark-blue: #0a0a23;
+    --fcc-blue: #151533f8;
+    --fcc-light-blue: #222b34;
+    --light-yellow: #fecc4c;
+    --dark-yellow: #feac32;
+    --light-pink: #ffadad;
+    --dark-red: #850000;
+    --light-green: #acd157;
+    --light-blue:#32f7fe;
+  }
+  
+  body {
+    font-family: "Lato", Helvetica, Arial, sans-serif;
+    font-size: 18px;
+    background-color: var(--fcc-blue);
+    color: var(--light-grey);
+  }
+  
+  h1 {
+    text-align: center;
+  }
+  
+  .container {
+    width: 90%;
+    max-width: 680px;
+  }
+  
+  h1,
+  .container,
+  .output {
+    margin: 20px auto;
+  }
+  
+  label,
+  legend {
+    font-weight: bold;
+  }
+  
+  .input-container {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  button {
+    outline: none;
+    cursor: pointer;
+    text-decoration: none;
+    padding: .7em;
+    border-radius: 5px;
+    background-color: var(--light-yellow);
+    font-weight: 700;
+    font-size: 16px;
+    color: #f5f6f7;
+   
+  }
+  
+  .clear {
+    background-color: var(--light-pink);
+    color: var(--dark-red);
+    border-color: var(--dark-red);
+  }
+  
+  button,
+  input,
+  select {
+    min-height: 24px;
+    color:#333;
+  }
+  
+  fieldset,
+  label,
+  button,
+  input,
+  select {
+    margin-bottom: 10px;
+  }
+  
+  .output {
+    border: 2px solid var(--light-blue);
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .hide {
+    display: none;
+  }
+  
+  .output span {
+    font-weight: bold;
+    font-size: 1.2em;
+  }
+  
+  .surplus {
+    color: var(--light-green);
+  }
+  
+  .deficit {
+    color: var(--light-pink);
+  }
+/* =============================== */
+  fieldset{
+    background: var(--fcc-light-blue);
+    padding: 1.55em;
+    border-radius: 5px;
+    border: var(--light-blue) solid 1px;
+    margin-top: 20px;
+    box-shadow:inset 0 0 10px black;
+  }
+
+  #budget{
+    margin-left: 10PX;
+    border-radius: 5PX;
+  }
+  #entry-dropdown{
+    padding: .5rem;
+    border-radius: 5px;
+  }
