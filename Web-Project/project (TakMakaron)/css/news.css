@@ -1,0 +1,46 @@
+.news-box1{
+    width: 100%;
+    height: 50px;
+    background-color: #fff;
+    box-shadow: inset 0 0 20px #000000;
+    overflow: hidden;
+    display: flex;
+    position: relative;
+    margin: 1rem 0;
+}
+
+.news1 ul li{
+    display:flex;
+    width: 1100px;
+    background-color: rgb(0, 82, 0);
+    font-size: 22px;
+    color:#fff; 
+    padding: 0 5px;
+}
+.box1{
+    height: 70%;
+    display: flex;
+    position: absolute;
+    justify-content:space-around;
+    animation: move-horizontal 60s infinite linear ;
+    margin-top: 8px;
+    z-index: 1;
+}
+
+.box2{
+    height: 70%;
+    display: flex;
+    position: absolute;
+    justify-content:space-around;
+    scale: 0;
+    animation: move-horizontal 60s infinite linear ;
+    animation-delay: 30s;
+    margin-top: 8px;
+}
+
+/*---------------------------------------*/
+    @keyframes move-horizontal {
+        from {
+            transform: translateX(100%);scale: 1;}
+        to {
+            transform: translateX(-100%);scale: 1;}}
