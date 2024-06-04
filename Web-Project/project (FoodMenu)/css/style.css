@@ -1,0 +1,322 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    color: #222;
+  
+}
+
+body{
+    display:flex;
+    justify-content: center;
+    background-color: #fff;
+    
+}
+span:hover{
+    color: red;
+}
+.banner{
+    position: relative;
+    background-color: #fff;
+    width: 1450px;
+    height: auto;
+
+    padding: 0rem 2rem;
+    display: grid;
+ 
+    overflow: hidden; 
+}
+
+.navbar{
+    
+    display: flex;
+    margin-top: 1rem;
+    justify-content:space-between;
+    align-items: center;
+    z-index: 101;
+}
+.navbar ul{
+  display: flex;
+}
+
+.navbar ul li{
+    padding: 10px 30px;
+}
+.navbar ul li a{
+    position: relative;
+    font-size: 20px;
+    font-weight: 700;
+    transition: .4s;
+}
+.navbar ul li a:hover{
+    color: red;
+}
+
+.navbar ul li a::after{
+    content: '';
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    background-color: red;
+    border-radius: 10pX;
+    left: 50%;
+    top: 110%;
+    transform: scaleX(0);
+    transition: .7s;
+}
+.navbar ul li a:hover::after{
+    transform: scaleX(1);}
+
+.account-info{
+        display: flex;
+        align-items: center;
+    }
+/* -------------- =============== main ==============------------ */
+.food__container{
+    position: relative;
+    display: grid;
+}
+.foodbar{
+    position: absolute;
+    text-align: center;
+    background-color: #030303;
+    box-shadow: 0 10px 20px;
+
+    height: 600px;
+    width: 470px;
+    top: -100px;
+    left: 170px;
+}
+.foodbar h2{
+    font-size: 40px;
+    color: #fff;
+    margin-top: 3rem;
+}
+
+/*============================*/
+
+.home__images {
+    margin-top: -4rem;
+}
+.home__info{
+    position: relative;
+    display: flex;
+    align-items: center;
+
+
+}
+.home__info img{
+    width: 700px;
+    margin-left: 50px;
+}
+
+.home__info .data{
+    width: 400px;
+    display: grid;
+    row-gap: 20px;
+
+    padding: 1rem;
+    box-shadow: 0 0 5px gray;
+    background-color: #fff;
+    
+}
+
+.data h1{
+    text-transform: capitalize;
+}
+.data p{
+    font-style: italic;
+}
+.order-box{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.order-box .price{
+    color: red;
+    font-size: 30px;
+    font-weight: 800;
+}
+.order-box  button{
+    font-size: 20px;
+    font-weight: 500;
+    padding: 10px 15px;
+    transition: box-shadow .7s , color .7s;
+}
+.order-box  button:hover{
+    box-shadow: inset 150px 0 100px 0px red;
+    color: #fff;
+}
+
+/* ============= Swiper ============= */
+
+.swiper{
+    margin-inline : initial;
+}
+.swiper-pagination-bullets.swiper-pagination-horizontal{
+    bottom: 2rem;
+}
+.swiper-pagination-bullet{
+    width: 1rem;
+    height: .25rem;
+    border-radius: 1rem;
+    background-color: black;
+    opacity: 1;
+    transition: background-color .3s ,width .3s;
+}
+.swiper-pagination-bullet-active{
+    width: 1.25rem;
+    background-color:red;
+}
+.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet{
+    margin: 0 2px;
+}
+
+/* =============================================================== */
+
+.food-menu{
+    width: 100%;
+    padding: 2rem 0;
+    display: grid;
+    align-items: center;
+}
+
+.cards{
+    display: grid;
+    grid-template-columns: 10% 20% 20% 20% 20% 10%;
+    gap: 20px;
+    align-items: center;
+    
+}
+.card{
+
+    width: 170px;
+    height: 220px;
+    padding: 0 1rem;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px black;
+    background-color: #100;
+    display: flex;
+    flex-direction: column;
+    transition: .7s;
+}
+.cards span{
+    background-color: #222;
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color .5s;
+}
+.cards span:hover{
+    background-color: red;
+}
+
+.card:hover{
+    transform: scale(1.07);
+    box-shadow: 0 20px 30px black;
+}
+.card img{
+    width: 150px;
+    margin-top: -50px;
+    margin-left: -50px;   
+}
+
+.card span{
+    cursor: pointer;
+    background-color: transparent;
+}
+
+.card h5,
+.card p,
+.card div,
+.card .price{
+    color: #fff;
+    font-family: sans-serif;
+}
+
+/* ===========================================*/
+
+@media(max-width:1300px){
+    .navbar ul{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows: repeat(2,1fr);
+        justify-content: center;
+    }
+    .navbar ul> *:nth-child(5){
+        grid-column: 3 /span 1; 
+        grid-row: 1 /span 2; 
+    }
+}
+
+@media(max-width:770px){
+    
+    .cards{
+        grid-template-columns: 1fr;
+        justify-items: center;
+        gap: 50px;
+    }
+    .foodbar{
+        left: 50px;
+        top: 50px;
+        flex-direction: column;
+        margin-bottom: 200px;
+    }
+
+    .food__container{
+        margin-top: 3rem;
+        background-color: #030303;
+        padding: .2rem;
+    }
+    .foodbar{
+        top: 0;
+        left: 0;
+        box-shadow: none; 
+        width: 100%;
+    }
+    .home__info{
+     
+        margin-top: 7em;
+        top: 0;
+        left: 0;
+        flex-direction: column;
+    }
+    .home__info .data{
+        width: 320px;
+        
+    }
+}
+
+@media(max-width:500px){
+    .banner{
+        padding: 1.5rem  10px;
+    }
+    .home__info .data{
+        width: 320px;
+        height: 180px;
+    }
+}
+
+@media(max-width:300px){
+    .foodbar{
+        width: 350px;
+        height: 500px;
+    }
+}
+
+/* ============ anime ================== */
+@keyframes test1{
+    0%{transform: rotate(360deg);}
+    100%{transform: rotate(0deg);}
+}
+.card:hover img{
+    animation: test1 15s linear infinite;}
+
+
