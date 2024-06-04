@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Kdam+Thmor+Pro&family=Lato:wght@300&family=Nova+Square&family=Poppins&family=Vina+Sans&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+    text-decoration: none;
+    list-style: none;
+    border: none;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    background-color: #3c424a;
+}
+
+.banner{
+    background-color: #fff;
+    padding: .5rem;
+    color: #fff;
+    margin: 20px 0;
+    box-shadow: 0 0 10px #333;
+}
+
+.cover{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-image: 
+    linear-gradient(rgba(0,10,0,0.75),rgba(0,0,0,0.5)), 
+    url("../image/3.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+
+.navbar{
+    display: grid;
+    grid-template-columns: 15% 85%;
+    align-items: center;
+}
+
+.bar{
+    display: flex;
+    align-items: center;
+    height: 100%;
+    justify-content: space-between;
+    padding: 5px 5px;
+    flex-wrap: wrap;
+   
+}
+
+.bar ul{
+    display: grid;
+    grid-template-columns:  repeat(4,1fr);
+    gap: 5px;
+}
+.bar ul li {
+    background-color:#27343e; 
+}
+.bar ul li a{
+    text-decoration: none;
+    color: #fff;
+    font-family: Kdam Thmor Pro;
+}
+
+.logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    color: black;
+    height: 40px;
+    overflow: auto;
+    height: 100%;
+    border-radius: 0 0  10px 0;
+    font-family:Kdam Thmor Pro ;
+    overflow: hidden;
+}
+
+.access{
+    font-family: Kdam Thmor Pro;
+    background-color: #aeff00;
+    display: flex;
+}
+.access span{
+    font-size: 20px;
+}
+
+/* ===================================== */
+
+.info{
+    padding: 4rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.intro{
+    display: flex;
+    justify-content: space-between;
+}
+
+.text1{
+    font-size: 27px;
+    font-weight: 550;
+}
+.text2{
+    text-align: right;
+    font-size: 10px;
+}
+
+.cards{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+    gap: 1rem;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 400px;
+    width: 350px;
+    border-radius: 10px;
+    backdrop-filter: blur(5px);
+    border: 2px solid #ffffff3e;  
+    transition: 1.2s;
+}
+.card:hover{
+    backdrop-filter: blur(20px);
+    
+}
+.card-info{
+    padding: 2rem;
+    display: grid;
+    grid-template-rows: repeat(3,1fr);
+    gap: 20px;
+}
+
+.readmore{
+    padding: 1rem;
+    border-top: 1px solid #fff;
+}
+.readmore a{
+    display: flex;
+    align-items: center;
+    gap:10px;
+    color: #fff;
+    width: 100%;
+}
+.readmore:hover a{
+    color: #aeff00;
+}
+
+.card-info p::-webkit-scrollbar{
+    display: none;
+}
+
+.sign{
+    width: fit-content;
+    height: fit-content;
+    padding: .5rem;
+    border-radius: 10px;
+    border: 2px solid #fff;
+}
+
+
+/* utility */
+.btn{
+    text-align: center;
+    list-style: none;
+    padding: 5px 10px;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+}
+.b-radus{
+    border-radius: 10px;
+}
+/* ------------- */
+@media(max-width:1024px){
+    .cover{
+        overflow: scroll;
+    }
+}
+@media(max-width:780px){
+    ::-webkit-scrollbar{
+        display: none;
+    }
+    body{
+        padding: 1rem;
+    }
+    .navbar,
+    .intro,
+    .cards{
+        display: grid;
+        grid-template-columns:1fr;
+      
+    }
+    .card{
+        width: 60vw;
+        height: max-content;
+    }
+    .bar ul{
+        margin-top: 10px;
+    }
+    .logo{
+        border-radius: 0 0;
+    }
+    .text1,
+    .text2{
+        text-align: center;
+    }
+    .bar{
+        justify-content: center;
+    }
+    .banner{
+        height: max-content;
+    }
+    .cover{
+        height: auto;
+    }
+}
