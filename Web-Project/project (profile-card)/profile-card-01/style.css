@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;}
+
+.profile-card{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 370px;
+    width: 100%;
+    box-shadow: 0 0 10px black;
+    border-radius: 24px;
+    padding: 25px;
+    background: url(./images/card-background5.jpg);/*Custom1*/
+    background-position:top -180px right;
+    background-size: cover;
+    position: relative;}
+
+.profile-card::before{
+    content: "";
+    position: absolute;
+    height: 36%;
+    width: 100%;
+    background: url(./images/card-background.jpg);/*Custom1*/
+    background-position:top -26px right;
+    background-size: cover;
+    top: 0;
+    left: 0;
+    border-radius:  24px 24px 0 0;
+}
+
+.image{
+    position: relative;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: rgb(0, 59, 107);
+    padding: 3px;
+    box-shadow: 0 0 10px black;}
+
+.image .profile-image{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid white;
+    margin-bottom: 10px;}
+
+.profile-card .text-data{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    color: #fff;/*custom3*/
+    text-transform: uppercase;}
+
+.text-data .name{
+    font-size:22px ;
+    font-weight: 500;}
+
+.text-data .job{
+    font-size:15px ;
+    font-weight: 400;}
+
+.profile-card .media-buttons{
+    display: flex;
+    align-items: center;
+    margin-top: 20px;}
+
+.media-buttons .link{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+    margin: 0 8px;
+    text-decoration: none;
+    background-color:  rgb(0, 59, 107);
+    border-radius: 50%;
+    font-size: 20px;
+    color: #fff;}
+
+.profile-card .buttons{
+    display: flex;
+    align-items: center;
+    margin-top: 25px;}
+
+.buttons .button{
+    border: none;
+    margin: 0 10px;
+    padding: 8px 24px;
+    border-radius: 24px;
+    background-color: rgb(0, 59, 107);
+    font-size: 14px;
+    font-weight: 400;
+    color: #fff;
+    cursor: pointer;
+    transition:all 0.3s ease;}
+
+.buttons .button:hover{
+    background-color: rgb(0, 87, 158) ;}
+
+.analytics{
+    display: flex;
+    align-items: center;
+    margin-top: 25px;
+    color: white;
+    border-radius: 24px;}
+
+.analytics .data{
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    border-right: 2px solid ;}
+
+.data:last-child{
+    border: none;}
+
+.data i{
+    font-size: 18px;
+    margin-right: 6px;}
