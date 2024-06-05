@@ -15,9 +15,14 @@ const observer = new IntersectionObserver(entries =>{
   {
     threshold : .3,
   }
-  
 })
 
+// const toObserve = ( objList ) =>{
+//   objList.forEach(obj=>{
+//     observer.observe(obj)
+//   })
+// }   
+//  or 
 
 fromDown.forEach(obj=>{
   observer.observe(obj)
