@@ -337,8 +337,6 @@ body, html {
 .base .section:nth-child(2) .carousel {
   width: -moz-max-content;
   width: max-content;
-  -ms-box-shadow: -10px 2px 50px black;
-  box-shadow: -10px 2px 50px black;
 }
 .base .section:nth-child(2) .carousel-inner {
   width: -moz-min-content;
@@ -349,13 +347,15 @@ body, html {
   background-image: url(../img/logo.png);
   background-position: center;
   background-size: cover;
+  -ms-box-shadow: -10px 2px 30px black;
+  box-shadow: -10px 2px 30px black;
 }
 .base .section:nth-child(2) .carousel-inner .carousel-item {
   width: -moz-max-content;
   width: max-content;
 }
 .base .section:nth-child(2) .carousel-inner img {
-  width: clamp(150px, 35vw, 600px);
+  width: clamp(150px, 35vw, 500px);
   border-radius: 5px;
 }
 .base .section:nth-child(2) .info {

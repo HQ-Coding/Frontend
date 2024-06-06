@@ -80,8 +80,7 @@
     background-color: var(--text-color-1);
     @extend .center;
     .carousel{
-        width: max-content;
-        @include box-shadow(-10px, 02px, 50px, black);
+        width: max-content; 
     }
     .carousel-inner{
         width: min-content;
@@ -90,12 +89,14 @@
         background-image: url(../img/logo.png);
         background-position: center;
         background-size: cover;
+        @include box-shadow(-10px, 2px, 30px, black);
+       
 
         .carousel-item{
             width: max-content;
         }
         img{
-            width: clamp(150px , 35vw,600px);
+            width: clamp(150px , 35vw,500px);
             border-radius: 5px;
         }
     }
