@@ -8,17 +8,17 @@
 body{
     display: flex;
     justify-content: center;
-    background: linear-gradient( #9c6eff,#ffbd71);
+    align-items: center;
+    background: #9c6eff;
+    padding: 2rem;
 }
 
 .calculator{
-    margin-top: 20px;
     padding: 1rem;
     background-color:#213752;
     width: 480px;
     height: 700px;
     border-radius: 10px;
-
     display: flex;
     flex-direction: column;
     gap: 20px;

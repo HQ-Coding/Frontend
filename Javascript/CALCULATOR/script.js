@@ -10,7 +10,8 @@ let auditor= ["+." ,"-.","/.","%.",'*.',".."]
 
 
 function cal(val){
-
+    result1.classList.remove('grey')
+    result2.classList.add('grey')
     
     result1.innerHTML += val;
   
@@ -27,12 +28,14 @@ function cal(val){
     for (let i in auditor)
         result1.innerHTML = result1.innerHTML.replace(auditor[i],'.');
 
-    let stringResult = result1.innerHTML;
+    let stringResult = (eval(result1.innerHTML));
+    result2.innerHTML = stringResult
     return stringResult
 }
 function mosavi(){
     result1.classList.add('grey')
     result2.classList.remove('grey')
+    result1.innerHTML = result2.innerHTML
 }
 function clearall(){
     result1.innerHTML = ''
@@ -46,12 +49,4 @@ function backspace(){
 
 //---------------------------- 
 
-document.onclick = function(){
-    let strings =cal("")
-    if (eval(strings)== undefined){
-        result2.innerHTML = ""
-    }
-    else{
-    result2.innerHTML = (eval(strings))}
-}
 
