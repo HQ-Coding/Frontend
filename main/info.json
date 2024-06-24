@@ -105,6 +105,11 @@
     ],
     "jsProject": [
         {
+            "name": "Music Player",
+            "imgLink": "https://i.ibb.co/tXMw50r/musicplayer.png",
+            "webLink": "https://www.canva.com/design/DAGJDxKH8-Q/f4J7w8ClnYNQhu7vULW0lw/view?utm_content=DAGJDxKH8-Q&utm_campaign=designshare&utm_medium=link&utm_source=editor"
+        },
+        {
             "name": "PokemonCards",
             "imgLink": "https://i.ibb.co/KNvv9fh/18.png",
             "webLink": "https://hq-coding.github.io/Frontend/Javascript/PokemonCards/html/index.html"
