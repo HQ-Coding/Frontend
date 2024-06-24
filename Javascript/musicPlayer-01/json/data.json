@@ -1,0 +1,46 @@
+{
+    "musicInfo" :[
+        {
+        "title" : "n u a g e s - closer",
+        "id" : "1" ,
+        "artist" : "Eeuphonious",
+        "link" : "../musics/n u a g e s - closer - Eeuphonious.mp3",
+        "img" : "../images/1.png"
+        },
+        {
+        "title" : "To Dream Is My Only Way Of Being With You",
+        "id" : "2" ,
+        "artist" : "Owsey",
+        "link" : "../musics/Owsey - To Dream Is My Only Way Of Being With You - EnigmaVi.mp3",
+        "img" : "../images/2.png"
+        },
+        {
+        "title" : "I Could Almost Feel You",
+        "id" : "3" ,
+        "artist" : "Owsey",
+        "link" : "../musics/Owsey_I_Could_Almost_Feel_You_bOT1nXWktv0_140.mp3",
+        "img" : "../images/3.png"
+        },
+        {
+        "title" : "You Are Quietly Disappearing Before Me",
+        "id" : "4" ,
+        "artist" : "Owsey",
+        "link" : "../musics/Owsey_You_Are_Quietly_Disappearing_Before_Me_jFQNLHCrSkg_140.mp3",
+        "img" : "../images/4.png"
+        },
+        {
+        "title" : "Stumbleine Resotone - You re The Shade Of My Heart",
+        "id" : "5" ,
+        "artist" : "Owsey",
+        "link" : "../musics/Owsey, Stumbleine Resotone - You re The Shade Of My Heart.mp3",
+        "img" : "../images/5.png"
+        },
+        {
+        "title" : "Lost",
+        "id" : "6" ,
+        "artist" : "Phelian",
+        "link" : "../musics/Phelian - Lost - Fluidified.mp3",
+        "img" : "../images/6.png"
+        }
+    ]
+}

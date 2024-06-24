@@ -1,0 +1,164 @@
+:root {
+  --primary-clr: rgba(228, 228, 229, 1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Nunito", sans-serif;
+  text-decoration: none;
+  outline: none;
+  border: none;
+}
+
+body {
+  display: grid;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+.cover {
+  width: 100vw;
+  height: 100vh;
+  max-width: 1500px;
+  max-height: 1000px;
+  background: url(../images/banner.jpg);
+  background-repeat: no-repeat;
+  animation: slidein 60s forwards infinite alternate ease-in-out;
+  overflow: hidden;
+  transition: 0.7s;
+}
+
+.musicPlayerBase {
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.album-cover {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.album-cover .swiper {
+  overflow: visible;
+}
+.album-cover .swiper-wrapper {
+  width: -moz-max-content;
+  width: max-content;
+}
+.album-cover .swiper-slide {
+  width: -moz-max-content;
+  width: max-content;
+  margin: 0 1rem;
+}
+.album-cover .swiper-slide .song img {
+  width: 200px;
+  aspect-ratio: 1/1;
+  border-radius: 10px;
+}
+.album-cover .swiper-slide .img-Ref {
+  -webkit-box-reflect: below -35px -webkit-gradient(linear, right top, right bottom, from(transparent), to(rgba(255, 255, 255, 0.25)));
+}
+
+.actionBottons .info span:nth-child(1) {
+  font-size: clamp(20px, 3vw, 40px);
+  color: #fff;
+  font-weight: bolder;
+  text-transform: capitalize;
+  text-align: center;
+}
+.actionBottons .info span:nth-child(2) {
+  font-size: clamp(16px, 2vw, 20px);
+  color: #aaa;
+}
+.actionBottons .progressTiming {
+  width: 320px;
+  margin: 1rem 0;
+  display: grid;
+  place-items: center;
+  gap: 0.5rem;
+}
+.actionBottons .progressTiming .progress-container {
+  position: relative;
+  width: 100%;
+  height: 5px;
+  background-color: #777;
+  border-radius: 50px;
+  cursor: pointer;
+}
+.actionBottons .progressTiming .progress-container #progress-bar {
+  width: 0%;
+  height: 100%;
+  background-color: green;
+  cursor: pointer;
+}
+.actionBottons .progressTiming .progress-container span {
+  position: absolute;
+  background-color: rgb(57, 57, 57);
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  top: -130%;
+  left: 0%;
+  cursor: pointer;
+}
+.actionBottons .progressTiming #time-display {
+  color: #fff;
+}
+.actionBottons .player {
+  width: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.actionBottons .player button {
+  display: grid;
+  place-items: center;
+  width: 40px;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  border: 2px gainsboro solid;
+  background-color: transparent;
+}
+.actionBottons .player button i {
+  color: #fff;
+  font-size: 30px;
+}
+.actionBottons .player #playStop {
+  padding: 30px;
+}
+.actionBottons .player #playStop i {
+  position: absolute;
+}
+.actionBottons .player #download,
+.actionBottons .player #OCD {
+  width: 25px;
+  height: 25px;
+  display: grid;
+  place-items: center;
+}
+.actionBottons .player #download i,
+.actionBottons .player #OCD i {
+  color: #fff;
+  font-size: 18px;
+}
+
+@keyframes slidein {
+  0%, 100% {
+    background-position: 20% 0%;
+    background-size: 3400px;
+  }
+  50% {
+    background-position: 100% 0%;
+    background-size: 2400px;
+  }
+}/*# sourceMappingURL=styles.css.map */
