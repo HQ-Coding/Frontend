@@ -1,6 +1,12 @@
 {
     "WebProject": [
         {
+            "name": "Samurai Soda",
+            "imgLink": "https://i.ibb.co/SmyxNbc/Untitled-design.png",
+            "webLink": "https://hq-coding.github.io/Frontend/Web-Project/Project (Samurai-Soda)/index.html",
+            "category": "web"
+        },
+        {
             "name": "Bootstrap-Fullhomepage",
             "imgLink": "https://i.ibb.co/McdQNZ1/1.png",
             "webLink": "https://hq-coding.github.io/Frontend/Web-Project/Bootstrap-Fullhomepage/index.html",
