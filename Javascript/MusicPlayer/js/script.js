@@ -6,12 +6,19 @@ const cover = document.querySelector(".cover");
 const source = document.querySelector('source');
 const audio = document.getElementById('audio');
 const timeDisplay = document.getElementById('time-display');
+
 const prev = document.querySelector("#prev")
 const next = document.querySelector("#next")
 const playStop = document.querySelector("#playStop")
 const stopMusic = document.querySelector(".bx-stop")
 const playMusic = document.querySelector(".bx-play")
 const downloadButton = document.getElementById('download');
+
+const progressContainer = document.getElementById('progress-container');
+const progressBar = document.getElementById('progress-bar');
+const thumb = document.getElementById('thumb');
+
+// =======================================================================
 
 var swiper; // global instance
 let info ; // global instance
@@ -92,6 +99,7 @@ const slideClickToPlay = () =>{
         swiper.slideTo(index);
         
         toPlay(index)
+
       });
     });
 }
@@ -104,6 +112,7 @@ const goToMiddle = ()=>{
 
 const toPlay = (index) =>{
   cover.style.backgroundImage = `url(${info[index].img})`
+  progressBar.style.width = `0%`;  // ****
   loadDataOnDisply(index)
 }
 
@@ -190,3 +199,62 @@ const handleDownload = (link, title, artist) => {
 
 // ====================================================
 
+let isDragging = false ;
+
+audio.addEventListener('timeupdate' , updateProgressBar);
+progressContainer.addEventListener('click', setProgress);
+
+thumb.addEventListener("mousedown" ,()=>{
+  isDragging =true;
+  document.addEventListener('mousemove', onDrag);
+  document.addEventListener('mouseup', stopDrag);
+});
+
+function updateProgressBar(){
+  if (!isDragging) {
+    const { duration , currentTime} = audio;
+    const progressPercent = (currentTime / duration) * 100;
+    progressBar.style.width = `${progressPercent}%`
+  }
+}
+
+function setProgress(e) {
+  const width = progressContainer.clientWidth;
+  const clickX = e.offsetX;
+  const duration = audio.duration;
+  audio.currentTime = (clickX / width) * duration;
+}
+
+function onDrag(e) {
+  if (isDragging) {
+      const rect = progressContainer.getBoundingClientRect();
+      let offsetX = e.clientX - rect.left;
+      const width = progressContainer.clientWidth;
+
+      if (offsetX < 0) offsetX = 0;
+      if (offsetX > width) offsetX = width;
+
+      const progressPercent = (offsetX / width) * 100;
+      progressBar.style.width = `${progressPercent}%`;
+
+  }
+}
+
+
+function stopDrag(e) {
+  if (isDragging) {
+      isDragging = false;
+      document.removeEventListener('mousemove', onDrag);
+      document.removeEventListener('mouseup', stopDrag);
+
+      const rect = progressContainer.getBoundingClientRect();
+      let offsetX = e.clientX - rect.left;
+      const width = progressContainer.clientWidth;
+
+      if (offsetX < 0) offsetX = 0;
+      if (offsetX > width) offsetX = width;
+
+      const duration = audio.duration;
+      audio.currentTime = (offsetX / width) * duration;
+  }
+};

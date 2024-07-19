@@ -16,7 +16,7 @@
     justify-content: center;
     height: 100vh;
     width: 100%;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 .cover {
     width: 100vw;
@@ -69,6 +69,7 @@
       .img-Ref{
         -webkit-box-reflect: below -35px -webkit-gradient(linear,right top,right bottom,from(transparent),to(rgba(255,255,255,0.25)))
       }
+      // ***************** box-reflect
     }
   }
 
@@ -95,31 +96,50 @@
       display: grid;
       place-items: center;
       gap: .5rem;
-      .progress-container{
-        position: relative;
+      .progress-container {
         width: 100%;
-        height: 5px;
-        background-color: #777;
-        border-radius: 50px;
+        background: #e0e0e0;
         cursor: pointer;
+        position: relative;
+        height: 10px;
+        margin: 10px 0;
+        border-radius: 20px;
+    }
+    
+    #progress-bar {
+        width: 0%;
+        height: 100%;
+        position: absolute;
+        display: flex;
+        align-items: center;
+        border-radius: 20px;
+        background-color: #aaa;
 
-        #progress-bar{
-          width: 0%;
-          height: 100%;
-          background-color: green;
-          cursor: pointer;
-        }
-        span{
-          position: absolute;
-          background-color: rgb(57, 57, 57);
-          width: 20px;
-          height: 20px;
-          border-radius: 50%;
-          top: -130%;
-          left: 0%;
-          cursor: pointer;
-        }
-      }
+    }
+    
+    #thumb {
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        transform: translateX(-50%);
+        left: 100%;
+        cursor: pointer;
+        border-radius: 50%;
+    
+
+        box-shadow:
+        inset 0 0 10px whitesmoke,
+        inset 10px 0 15px #f0f,
+        inset -10px 0 15px #0ff,
+        inset 20px 0 300px #f0f,
+        inset -10px 0 300px #0ff,
+        0 0 50px #fff;
+    }
+    
+    #time-display {
+        font-size: 14px;
+        margin-top: 5px;
+    }
     
       #time-display{
         color: #fff;

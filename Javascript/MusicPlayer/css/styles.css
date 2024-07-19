@@ -17,7 +17,7 @@ body {
   justify-content: center;
   height: 100vh;
   width: 100%;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 .cover {
@@ -88,28 +88,36 @@ body {
   gap: 0.5rem;
 }
 .actionBottons .progressTiming .progress-container {
-  position: relative;
   width: 100%;
-  height: 5px;
-  background-color: #777;
-  border-radius: 50px;
+  background: #e0e0e0;
   cursor: pointer;
+  position: relative;
+  height: 10px;
+  margin: 10px 0;
+  border-radius: 20px;
 }
-.actionBottons .progressTiming .progress-container #progress-bar {
+.actionBottons .progressTiming #progress-bar {
   width: 0%;
   height: 100%;
-  background-color: green;
-  cursor: pointer;
-}
-.actionBottons .progressTiming .progress-container span {
   position: absolute;
-  background-color: rgb(57, 57, 57);
+  display: flex;
+  align-items: center;
+  border-radius: 20px;
+  background-color: #aaa;
+}
+.actionBottons .progressTiming #thumb {
   width: 20px;
   height: 20px;
-  border-radius: 50%;
-  top: -130%;
-  left: 0%;
+  position: absolute;
+  transform: translateX(-50%);
+  left: 100%;
   cursor: pointer;
+  border-radius: 50%;
+  box-shadow: inset 0 0 10px whitesmoke, inset 10px 0 15px #f0f, inset -10px 0 15px #0ff, inset 20px 0 300px #f0f, inset -10px 0 300px #0ff, 0 0 50px #fff;
+}
+.actionBottons .progressTiming #time-display {
+  font-size: 14px;
+  margin-top: 5px;
 }
 .actionBottons .progressTiming #time-display {
   color: #fff;
