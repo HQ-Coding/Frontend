@@ -1,3 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton+SC&family=Nosifer&family=Permanent+Marker&display=swap');
+
+:root{
+    --black : #000;
+    --white : #fff;
+    --card-dark-mode : rgb(33, 33, 33);
+    --background-dark-mode : #000;
+    --font-dark-mode:#eee;
+}
+
+.light-mode{
+    --black : #fff;
+    --white : #000;
+    --card-dark-mode : #fff;
+    --background-dark-mode : #e0e0e0;
+    --font-dark-mode:#222;
+}
+    
 *{
     padding: 0;
     margin: 0;
@@ -8,49 +26,77 @@
         text-decoration: none;
     }
 }
-body{
-    background-color: rgb(19, 19, 19);
+
+body {
+    margin: 0;
     height: 100vh;
-}
+    background-color: #000;
+    cursor: none; /* Hide the default cursor */
+    position: relative;
+  }
 
 h5,
 h4,
 h3,
 h2,
 h1{
-    color: #fff;
+    color: var(--font-dark-mode);
     font-weight: bolder;
     text-shadow : 2px -2px 10px gray;
+}
+h1,h2{
+    font-family: "Nosifer", sans-serif;
+    font-weight: 900;
+    font-style: normal;
 }
 .header{
     animation: shaining 4s infinite ease-in-out;
     
 }
+.base{
+    z-index: 10;
+}
 
 .jsProject,
 .webProject{
+    
     .row{
         justify-content: center;
         gap: 2rem;
     }
     .card{
-        background-color: rgb(33, 33, 33);
-        color: #fff;
+        background-color: var(--card-dark-mode);
         padding: 0;
         border-radius: 0px;
-        box-shadow: 0 0 20px black;
+        box-shadow: 0 0 20px var(--black);
         transition: 2s;
+        color: var(--font-dark-mode);
         .btn{
-            border: 2px solid #fff;
-            color: #fff;
+            border: 2px solid var(--font-dark-mode);
+            color:var(--font-dark-mode);
             transition:  .7s;
+            color: var(--white);
         }
         .btn:hover{
-            box-shadow:inset 300px 0 20px black;
+            box-shadow:inset 300px 0 20px var(--background-dark-mode);
             border: 2px solid #f0f;
             animation: border-colorful 5s infinite;
+            
           }
+        img{
+            height: 180px;
+        }
+        #category{
+            width: fit-content;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            padding-bottom: 2px;
+           
+        }
+        
     }
+    
     .card:hover{
         padding: 0;
         border-radius: 0px;
@@ -66,25 +112,47 @@ h1{
     #category{
         padding: 0 1rem;
         border-radius: 5px;
-        border: 1px solid #fff;
+        border: 1px solid var(--font-dark-mode);
     }
 }
 
 .Welcome{
+    p{
+        color: (var(--font-dark-mode));
+    }
     a{
-        color: #fff;
+        color: var(--font-dark-mode);
+        transition: .7s;
+        box-shadow: inset 0 0 0 0 var(--black);
     }
-    li:hover{
-        background-color: #fff;
-        a{
-            color: #000;
-        }
-    }
+
     li{
         font-weight: bolder;
-        border: 1px solid #fff;
+
+        background-color: var(--black);
         padding: .5rem 1rem;
-        transition: .5s;
+        transition: 1s;
+        position: relative;
+    }
+    li:hover{
+        box-shadow: inset 0 0 100px 10px var(--white);
+        a{
+            color: var(--black);
+        }
+    }
+    li::after , li::before{
+        box-sizing: content-box;
+        content: '';
+        position: absolute;
+        background-image: conic-gradient(from var(--angle), #fff, #f0f,#0ff,#0ff,#ff0,#fff);
+        width: 100%;
+        height: 100%;
+        top: 50%;
+        left: 50%;
+        translate: -50% -50%;
+        z-index:  -1;
+        padding: 5px;
+        animation: 3s spin infinite linear ;
     }
     ul{
         padding: 1rem;
@@ -96,6 +164,71 @@ h1{
         justify-items: center;
     }
 }
+// ===================
+
+  
+  #light {
+    position: fixed; /* Use fixed positioning to keep the light in viewport */
+    width: 100px;
+    height: 100px;
+    background: radial-gradient(circle, var(--white) 0%, var(--black) 100%);
+    box-shadow:inset 0 0 60px var(--black);
+    border-radius: 90%;
+    pointer-events: none; /* Make the light element non-interactive */
+    mix-blend-mode: screen; /* Optional: Create a glowing effect by blending colors */
+    z-index: 1000;
+  }
+  
+
+//++++++++++++++++++++++++  @property
+@property --angle{ 
+    syntax: '<angle>';
+    initial-value: 0deg ;
+    inherits: false;
+}
+
+#lightMods{
+    position: fixed;
+    background-color: var(--background-dark-mode);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+    clip-path: circle(5% at 0% 0%);
+    transition: 1s, clip-path .7s ease-in-out;
+    z-index: -1;
+}
+#lightModButton{
+    position: fixed;
+    background-color: transparent;
+    background-color: var(--white);
+    border-bottom-right-radius: 80%;
+    padding: clamp(2rem,5vw,2.5rem);
+    cursor: pointer;
+    z-index: 100;
+
+    
+    i{
+        position: absolute;
+        font-size: clamp(20px,3vw,35px);
+        color: var(--font-dark-mode);
+        background-color: var(--black);
+        border-radius: 50%;
+        padding: .5rem;
+        top: .7rem;
+        left: .7rem;
+        
+        }
+}
+
+// =========== Animation and query
+
+@keyframes spin{
+    from{ --angle : 0deg;}
+    to{ --angle : 360deg}
+}
+
 @media(max-width: 400px) {
     .Welcome{
     ul{
@@ -110,16 +243,16 @@ h1{
         -10px 0 50px transparent,
         10px 0 50px transparent;}
     30%{box-shadow:
-        0 0 20px #fff,
+        0 0 20px var(--white),
         -10px 0 50px #f0f,
         10px 0 50px #0ff;}
     50%{box-shadow:
         10px 0 50px #0ff,
         -10px 0 50px #f0f,
-        0 0 20px #fff;
+        0 0 20px var(--white);
         }
     80%{box-shadow:
-        0 0 20px #fff,
+        0 0 20px var(--white),
         -10px 0 50px #f0f,
          10px 0 50px #0ff;}
 }
@@ -127,30 +260,14 @@ h1{
 @keyframes border-colorful {
     0% { border-color: #f0f; }
     40% { border-color: #0ff; }
-    70% { border-color: #fff; }
+    70% { border-color: var(--white); }
     90% { border-color: #f0f; }
   }
 
 @keyframes shaining {
     0% {  text-shadow : 2px -2px 20px gray}
-    40% { text-shadow : 2px -2px 40px #fff }
+    40% { text-shadow : 2px -2px 40px var(--white) }
     70% {  text-shadow : 2px -2px 20px gray }
-    90% {  text-shadow : 2px -2px 40px #fff }
+    90% {  text-shadow : 2px -2px 40px var(--white) }
   }
 
-@keyframes lightning {
-    0%{
-        filter : 
-        drop-shadow(0 0 5px #0ff)
-        drop-shadow(0 0 15px #0ff)
-        drop-shadow(0 0 30px #0ff)
-        hue-rotate(0deg);
-    }
-    100%{
-        filter : 
-        drop-shadow(0 0 5px #0ff)
-        drop-shadow(0 0 15px #0ff)
-        drop-shadow(0 0 30px #0ff)
-        hue-rotate(360deg);
-    }
-}

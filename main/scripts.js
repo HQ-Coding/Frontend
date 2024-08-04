@@ -32,7 +32,7 @@ const getWebData = (WebProjects)=>{
         const{name,imgLink,webLink,category} = obj;
         const cardHtml = 
         `<div class="col-md-4 card" style="width: 18rem;">
-        <img src="${imgLink}" alt="${name} image">
+        <img src="${imgLink}" alt="${name} class="cardImg">
         <div class="card-body">
         <h5 class="card-title my-3">${name}</h5>
         <p class="card-text my-2">
@@ -49,7 +49,7 @@ const fetchMoreWeb =()=>{
     webEndingIndex += 8;
     getWebData(webDataArr.slice( webStartingIndex, webEndingIndex))
     
-    if(webDataArr.length <= webEndingIndex){
+    if(webDataArr.length <= endingIndex){
         moreWebBtn.disabled = true ;
         moreWebBtn.textContent = 'No more data to load';
     }
@@ -78,7 +78,7 @@ const fetchMoreJs =()=>{
     jsEndingIndex += 8;
     getJsData(jsDataArr.slice(jsStartingIndex , jsEndingIndex))
     
-    if(jsDataArr.length <= jsEndingIndex){
+    if(jsDataArr.length <= endingIndex){
         moreJsBtn.disabled = true ;
         moreJsBtn.textContent = 'No more data to load';
     }
@@ -89,3 +89,35 @@ moreJsBtn.addEventListener('click',fetchMoreJs)
 fetchData()
 
 
+// ==============================
+document.addEventListener('mousemove', (e) => {
+    const light = document.getElementById('light');
+    const lightWidth = light.offsetWidth;
+    const lightHeight = light.offsetHeight;
+    let left = e.clientX - lightWidth / 2;
+    let top = e.clientY - lightHeight / 2;
+  
+    left = Math.max(0, Math.min(left, window.innerWidth - lightWidth));
+    top = Math.max(0, Math.min(top, window.innerHeight - lightHeight));
+  
+    light.style.left = `${left}px`;
+    light.style.top = `${top}px`;
+  });
+
+// ============================================= lightmod
+
+const LM = document.getElementById('lightMods');
+const LMBTN = document.getElementById('lightModButton')
+const sunBTN = document.getElementById('sun')
+const moonBTN = document.getElementById('moon')
+
+
+moonBTN.style.display = 'none';
+LMBTN.addEventListener('click', () => {
+    sunBTN.style.display = sunBTN.style.display === 'none' ? 'block' : 'none';
+    moonBTN.style.display = moonBTN.style.display === 'none' ? 'block' : 'none';
+    LM.style.clipPath = LM.style.clipPath === 'circle(100%)' ? 'circle(0%)' : 'circle(100%)' ;
+
+    document.body.classList.toggle('light-mode');
+
+})

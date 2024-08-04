@@ -6,7 +6,6 @@ const fade= document.querySelectorAll(".fade");
 
 const cardBase = document.querySelectorAll(".base .section:nth-child(3) .col");
 
-
 const observer = new IntersectionObserver(entries =>{
   entries.forEach(entry => {
     entry.target.classList.toggle("show", entry.isIntersecting)
@@ -45,26 +44,26 @@ fade.forEach(obj=>{
 
 let isScrolling = false;
 
-        window.addEventListener('wheel', (event) => {
-            if (isScrolling) return;
+  window.addEventListener('wheel', (event) => {
+    if (isScrolling) return;
 
-            const sections = document.querySelectorAll('.section');
-            const currentSectionIndex = Math.round(window.scrollY / window.innerHeight);
-            const delta = Math.sign(event.deltaY);
-            let nextSectionIndex = currentSectionIndex + delta;
-            nextSectionIndex = Math.max(0, Math.min(nextSectionIndex, sections.length - 1));
-            const targetSection = sections[nextSectionIndex];
-            if (targetSection) {
-                isScrolling = true;
-                window.scrollTo({
-                    top: targetSection.offsetTop,
-                    behavior: 'smooth'
-                });
-                setTimeout(() => {
-                    isScrolling = false;
-                }, 1000); 
-            }
+      const sections = document.querySelectorAll('.section');
+      const currentSectionIndex = Math.round(window.scrollY / window.innerHeight);
+      const delta = Math.sign(event.deltaY);
+      let nextSectionIndex = currentSectionIndex + delta;
+      nextSectionIndex = Math.max(0, Math.min(nextSectionIndex, sections.length - 1));
+      const targetSection = sections[nextSectionIndex];
+      if (targetSection) {
+        isScrolling = true;
+        window.scrollTo({
+          top: targetSection.offsetTop,
+          behavior: 'smooth'
         });
+          setTimeout(() => {
+            isScrolling = false;
+          }, 1000); 
+      }
+      });
 
 // ==================================
 const swiperHTML = document.querySelector(".swiper-wrapper");
