@@ -49,7 +49,7 @@ const fetchMoreWeb =()=>{
     webEndingIndex += 8;
     getWebData(webDataArr.slice( webStartingIndex, webEndingIndex))
     
-    if(webDataArr.length <= endingIndex){
+    if(webDataArr.length <= webEndingIndex){
         moreWebBtn.disabled = true ;
         moreWebBtn.textContent = 'No more data to load';
     }
@@ -78,7 +78,7 @@ const fetchMoreJs =()=>{
     jsEndingIndex += 8;
     getJsData(jsDataArr.slice(jsStartingIndex , jsEndingIndex))
     
-    if(jsDataArr.length <= endingIndex){
+    if(jsDataArr.length <= jsEndingIndex){
         moreJsBtn.disabled = true ;
         moreJsBtn.textContent = 'No more data to load';
     }
