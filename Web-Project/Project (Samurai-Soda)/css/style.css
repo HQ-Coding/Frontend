@@ -50,8 +50,7 @@ body{
     left: 50%;
     transform: translateX(-50%);
     /* translateX(-50%) 50 darsad az obj  */
-    z-index: 1;
-    
+
     transition: .7s;
     display: flex;
     display: grid;
@@ -60,6 +59,7 @@ body{
 
     z-index: 1000;
     --left: 0px;
+    filter: drop-shadow( 0px 0 2px rgb(50, 50, 50));
 }
 
 .banner .product .soda{
@@ -85,6 +85,7 @@ body{
 .banner .product:hover{
     --left:-410px;
     transform: translateX(-50%) translateY(-50px) scale(1.1);
+    filter: drop-shadow( 0px 0 4px rgb(50, 50, 50));
 }
 
 /* ========= ROCK */
@@ -107,6 +108,7 @@ body{
     transform: translateX(-50%);
     bottom: -50px ;
     z-index: 100;
+    filter: drop-shadow( 0px 10px 20px rgb(50, 50, 50));
 }
 .banner:has(.product:hover) .rock img:nth-child(1){
     transform: translateX(-50%) translateY(50px) scale(.8);
@@ -166,7 +168,7 @@ body{
 }
 .span-1{
     position: absolute;
-    background: url(../image/spans/span-2.png);
+    background: url(../image/spans/span-5.png);
     background-position: center;
     background-size: cover;
     width:clamp(50px,15vw,100px) ;
@@ -177,7 +179,7 @@ body{
 
 .span-2{
     position: absolute;
-    background: url(../image/spans/span-2.png);
+    background: url(../image/spans/span-5.png);
     background-position: center;
     background-size: cover;
     width:clamp(50px,15vw,100px) ;
@@ -216,7 +218,7 @@ body{
         transparent
     );
     z-index: 10;
-    background-color: red;
+   
 }
 .companys{
     background-color: rgb(255, 255, 255);
@@ -265,7 +267,6 @@ body{
     animation: reversePlay 15s linear infinite ;
 }
 .slider[reverse="true"] .item img{
-    width: 150%;
     border-radius: 5px;
 }
 
@@ -279,7 +280,7 @@ body{
 
 /* =========== section-1 ================== */
 
-.section-1{
+/* .section-1{
     position: relative;
     height: 700px;
     display: grid;
@@ -301,6 +302,6 @@ body{
 .section-1:hover .dropingSoda{
     top: -200px;
     opacity: 1;
-}
+} */
 /* ======================== */
 
