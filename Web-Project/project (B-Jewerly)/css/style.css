@@ -255,6 +255,20 @@ body, html {
     align-items: start;
   }
 }
+a.upIcon {
+  position: fixed;
+  -webkit-backdrop-filter: blur(20px);
+          backdrop-filter: blur(20px);
+  border-radius: 50%;
+  border: 1px solid var(--bg-1);
+  color: var(--text-color-2);
+  z-index: 1000;
+  left: 5%;
+  bottom: 5%;
+  font-size: 40px;
+  text-decoration: none;
+}
+
 .base .section:first-child {
   background-image: url(../img/banner-1.png);
   background-position: center;
@@ -328,6 +342,14 @@ body, html {
 .base .section:first-child .offcanvas-title {
   color: var(--text-color-1);
   font-weight: bolder;
+}
+
+.dropdown-menu {
+  background-color: transparent;
+  border: 1px solid var(--bg-1);
+}
+.dropdown-menu .dropdown-item {
+  color: var(--text-color-1);
 }
 
 .base .section:nth-child(2) {
