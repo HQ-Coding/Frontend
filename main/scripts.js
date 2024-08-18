@@ -90,19 +90,26 @@ fetchData()
 
 
 // ==============================
-document.addEventListener('mousemove', (e) => {
-    const light = document.getElementById('light');
-    const lightWidth = light.offsetWidth;
-    const lightHeight = light.offsetHeight;
-    let left = e.clientX - lightWidth / 2;
-    let top = e.clientY - lightHeight / 2;
+function isMobileDevice() {
+    return /Mobi|Android|iPhone|iPad|iPod/.test(navigator.userAgent);
+  }
   
-    left = Math.max(0, Math.min(left, window.innerWidth - lightWidth));
-    top = Math.max(0, Math.min(top, window.innerHeight - lightHeight));
+  if (!isMobileDevice()) {
+    // Code for non-mobile devices
+    document.addEventListener('mousemove', (e) => {
+      const light = document.getElementById('light');
+      const lightWidth = light.offsetWidth;
+      const lightHeight = light.offsetHeight;
+      let left = e.clientX - lightWidth / 2;
+      let top = e.clientY - lightHeight / 2;
   
-    light.style.left = `${left}px`;
-    light.style.top = `${top}px`;
-  });
+      left = Math.max(0, Math.min(left, window.innerWidth - lightWidth));
+      top = Math.max(0, Math.min(top, window.innerHeight - lightHeight));
+  
+      light.style.left = `${left}px`;
+      light.style.top = `${top}px`;
+    });
+  }
 
 // ============================================= lightmod
 

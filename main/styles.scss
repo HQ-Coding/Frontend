@@ -222,6 +222,7 @@ h1,h2{
         }
 }
 // =============================== NAVBAR
+
 .nav{
     position: fixed;
     top: 1rem;
@@ -231,6 +232,7 @@ h1,h2{
     align-items: center;
     justify-content: center;
 }
+
 
 .iconBar{
     --LinkWidth : 45px;
@@ -244,22 +246,26 @@ h1,h2{
     left: 0;
     translate: -15% 0% ;
     transition: 1s linear;
+
     display: flex;
     flex-direction: column;
     justify-content: end;
     align-items: center;
 
+    
     span{
         position: relative;
         display: flex;
         justify-content: center;
         align-content: center;
+        
         border-radius: 50px;
         margin: 1rem 0;
         width: var(--LinkWidth);
         height: 45px;
         top: .5rem;
         right: 0;
+
         border: #000 1px solid;
         background-color: var(--white);
         transform-origin: left;
@@ -315,7 +321,10 @@ h1,h2{
                     display: block;
                     opacity: 1;
                     visibility: visible;
-                }}}
+                }
+            }    
+    }
+
 }
 #checkbox:checked + .toggle .iconBar {
     top: -20%;
@@ -324,10 +333,12 @@ h1,h2{
     background: var(--black);
     z-index: 10;
 }
+
 /* From Uiverse.io by vk-uiux */ 
 #checkbox {
     display: none;
   }
+  
   .toggle {
     position: relative;
     width: 40px;
@@ -336,6 +347,7 @@ h1,h2{
     display: block;
     height: calc(4px * 3 + 11px * 2);
   }
+  
   .bar {
     position: absolute;
     left: 0;
@@ -349,21 +361,25 @@ h1,h2{
   }
   
   /***** Tornado Animation *****/
+  
   .bar--top {
     bottom: calc(50% + 11px + 4px/ 2);
     transition-property: bottom,transform;
     transition-delay: calc(0s + 0.35s) * .6;
   }
+  
   .bar--middle {
     top: calc(50% - 4px/ 2);
     transition-property: opacity,transform;
     transition-delay: calc(0s + 0.35s * .3);
   }
+  
   .bar--bottom {
     top: calc(50% + 11px + 4px/ 2);
     transition-property: top,transform;
     transition-delay: 0s;
   }
+  
   #checkbox:checked + .toggle .bar--top {
     transform: rotate(-135deg);
     transition-delay: 0s;
