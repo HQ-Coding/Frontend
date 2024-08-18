@@ -1,201 +1,201 @@
 :root {
-    --primary-clr: rgba(228, 228, 229, 1);
-  }
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Nunito", sans-serif;
-    text-decoration: none;
-    outline: none;
-    border: none;
-  }
+  --primary-clr: rgba(228, 228, 229, 1);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Nunito", sans-serif;
+  text-decoration: none;
+  outline: none;
+  border: none;
+}
 
-  body {
-    display: grid;
-    justify-content: center;
-    height: 100vh;
-    width: 100%;
-    overflow-x: hidden;
+body {
+  display: grid;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
+  overflow-x: hidden;
 }
 .cover {
-    width: 100vw;
-    height: 100vh;
-    max-width: 1500px;
-    max-height: 1000px;
-    background: url(../images/banner.jpg);
-    background-repeat: no-repeat;
-    animation: slidein 60s forwards infinite alternate ease-in-out;
-    overflow: hidden;
-    transition: .7s;
+  width: 100vw;
+  height: 100vh;
+  max-width: 1500px;
+  max-height: 1000px;
+  background: url(../images/banner.jpg);
+  background-repeat: no-repeat;
+  animation: slidein 60s forwards infinite alternate ease-in-out;
+  overflow: hidden;
+  transition: .7s;
 }
 
 .musicPlayerBase{
-  width: 100%;
-  height: 100%;
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
+width: 100%;
+height: 100%;
+backdrop-filter: blur(8px);
+-webkit-backdrop-filter: blur(8px);
 
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: space-around;
+
+}
+
+
+.album-cover{
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: space-around;
-
-  }
- 
-
-  .album-cover{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    .swiper{
-      overflow: visible;
-    }
-
-    .swiper-wrapper{
-      width: max-content;
-    }
-
-    .swiper-slide{
-      width: max-content;
-      margin: 0 1rem;
-
-      .song img{
-        width: 200px;
-        aspect-ratio: 1/1;
-        border-radius: 10px;
-      }
-
-      .img-Ref{
-        -webkit-box-reflect: below -35px -webkit-gradient(linear,right top,right bottom,from(transparent),to(rgba(255,255,255,0.25)))
-      }
-      // ***************** box-reflect
-    }
+  justify-content: center;
+  .swiper{
+    overflow: visible;
   }
 
+  .swiper-wrapper{
+    width: max-content;
+  }
 
-  .actionBottons{
-    .info span:nth-child(1){
-      font-size: clamp(20px,3vw,40px);
-      color: #fff;
-      font-weight: bolder;
-      text-transform: capitalize;
-      text-align: center;
-    }
-    .info span:nth-child(2){
-      font-size: clamp(16px,2vw,20px);
-      color: #aaa
-    }
+  .swiper-slide{
+    width: max-content;
+    margin: 0 1rem;
 
-
-    $PT-Width: 320px;
-
-    .progressTiming{
-      width: $PT-Width;
-      margin: 1rem 0;
-      display: grid;
-      place-items: center;
-      gap: .5rem;
-      .progress-container {
-        width: 100%;
-        background: #e0e0e0;
-        cursor: pointer;
-        position: relative;
-        height: 10px;
-        margin: 10px 0;
-        border-radius: 20px;
-    }
-    
-    #progress-bar {
-        width: 0%;
-        height: 100%;
-        position: absolute;
-        display: flex;
-        align-items: center;
-        border-radius: 20px;
-        background-color: #aaa;
-
-    }
-    
-    #thumb {
-        width: 20px;
-        height: 20px;
-        position: absolute;
-        transform: translateX(-50%);
-        left: 100%;
-        cursor: pointer;
-        border-radius: 50%;
-    
-
-        box-shadow:
-        inset 0 0 10px whitesmoke,
-        inset 10px 0 15px #f0f,
-        inset -10px 0 15px #0ff,
-        inset 20px 0 300px #f0f,
-        inset -10px 0 300px #0ff,
-        0 0 50px #fff;
-    }
-    
-    #time-display {
-        font-size: 14px;
-        margin-top: 5px;
-    }
-    
-      #time-display{
-        color: #fff;
-      }
+    .song img{
+      width: 200px;
+      aspect-ratio: 1/1;
+      border-radius: 10px;
     }
 
-    .player{
-      width: 300px;
+    .img-Ref{
+      -webkit-box-reflect: below -35px -webkit-gradient(linear,right top,right bottom,from(transparent),to(rgba(255,255,255,0.25)))
+    }
+    // ***************** box-reflect
+  }
+}
+
+
+.actionBottons{
+  .info span:nth-child(1){
+    font-size: clamp(20px,3vw,40px);
+    color: #fff;
+    font-weight: bolder;
+    text-transform: capitalize;
+    text-align: center;
+  }
+  .info span:nth-child(2){
+    font-size: clamp(16px,2vw,20px);
+    color: #aaa
+  }
+
+
+  $PT-Width: 320px;
+
+  .progressTiming{
+    width: $PT-Width;
+    margin: 1rem 0;
+    display: grid;
+    place-items: center;
+    gap: .5rem;
+    .progress-container {
+      width: 100%;
+      background: #e0e0e0;
+      cursor: pointer;
+      position: relative;
+      height: 10px;
+      margin: 10px 0;
+      border-radius: 20px;
+  }
+  
+  #progress-bar {
+      width: 0%;
+      height: 100%;
+      position: absolute;
       display: flex;
       align-items: center;
-      justify-content: space-around;
-      button{
-        display: grid;
-        place-items: center;
-        width: 40px;
-        aspect-ratio: 1/1;
-        border-radius: 50%;
-        border: 2px gainsboro solid;
-        background-color: transparent;
-        i{
-          color: #fff;
-          font-size: 30px;
-        }
-        
+      border-radius: 20px;
+      background-color: #aaa;
+
+  }
+  
+  #thumb {
+      width: 20px;
+      height: 20px;
+      position: absolute;
+      transform: translateX(-50%);
+      left: 100%;
+      cursor: pointer;
+      border-radius: 50%;
+  
+
+      box-shadow:
+      inset 0 0 10px whitesmoke,
+      inset 10px 0 15px #f0f,
+      inset -10px 0 15px #0ff,
+      inset 20px 0 300px #f0f,
+      inset -10px 0 300px #0ff,
+      0 0 50px #fff;
+  }
+  
+  #time-display {
+      font-size: 14px;
+      margin-top: 5px;
+  }
+  
+    #time-display{
+      color: #fff;
+    }
+  }
+
+  .player{
+    width: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    button{
+      display: grid;
+      place-items: center;
+      width: 40px;
+      aspect-ratio: 1/1;
+      border-radius: 50%;
+      border: 2px gainsboro solid;
+      background-color: transparent;
+      i{
+        color: #fff;
+        font-size: 30px;
       }
-      #playStop{
-        padding: 30px;
-        i{
-          position: absolute;
-        }
-      }
-      #download,
-      #OCD{
-        width: 25px;
-        height: 25px;
-        display: grid;
-        place-items: center;
-        i{
-          color: #fff;
-          font-size: 18px;
-        }
+      
+    }
+    #playStop{
+      padding: 30px;
+      i{
+        position: absolute;
       }
     }
-    
+    #download,
+    #OCD{
+      width: 25px;
+      height: 25px;
+      display: grid;
+      place-items: center;
+      i{
+        color: #fff;
+        font-size: 18px;
+      }
+    }
   }
+  
+}
 
 // ======================== animations
 @keyframes slidein {
-  0%,
-  100% {
-    background-position: 20% 0%;
-    background-size: 3400px;
-  }
-  50% {
-    background-position: 100% 0%;
-    background-size: 2400px;
-  }
+0%,
+100% {
+  background-position: 20% 0%;
+  background-size: 3400px;
+}
+50% {
+  background-position: 100% 0%;
+  background-size: 2400px;
+}
 
 }

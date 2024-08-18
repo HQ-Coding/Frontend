@@ -105,12 +105,10 @@ const slideClickToPlay = () =>{
 }
 
 const goToMiddle = ()=>{
-  const middle = Math.round((swiper.slides.length) / 2 - 1); //swiper.slides
-  swiper.slideTo(middle);  //slideTo 
+  const middle = Math.round((swiper.slides.length) / 2 - 1);
+  swiper.slideTo(middle);
   loadDataOnDisply(middle)
 }
-
-// to have my def background at bg
 
 const toPlay = (index) =>{
   cover.style.backgroundImage = `url(${info[index].img})`
@@ -198,8 +196,8 @@ const handleDownload = (link, title, artist) => {
     document.body.removeChild(tempLink);
   });
 };
- 
-// ==================================================== Dragging
+
+// ====================================================
 
 let isDragging = false ;
 
