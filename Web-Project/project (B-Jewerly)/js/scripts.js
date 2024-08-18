@@ -3,18 +3,19 @@ const fromUp = document.querySelectorAll(".fromUp");
 const fromleft = document.querySelectorAll(".fromLeft");
 const fromRight = document.querySelectorAll(".fromRight");
 const fade= document.querySelectorAll(".fade");
-
 const cardBase = document.querySelectorAll(".base .section:nth-child(3) .col");
 
-const observer = new IntersectionObserver(entries =>{
+
+const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
-    entry.target.classList.toggle("show", entry.isIntersecting)
-    if (entry.isIntersecting) observer.unobserve(entry.target)
-  }),
-  {
-    threshold : .3,
-  }
-})
+    entry.target.classList.toggle("show", entry.isIntersecting);
+    if (entry.isIntersecting) {
+      observer.unobserve(entry.target);
+    }
+  });
+}, {
+  threshold: 0.5,
+});
 
 // const toObserve = ( objList ) =>{
 //   objList.forEach(obj=>{
@@ -39,13 +40,11 @@ fade.forEach(obj=>{
   observer.observe(obj)
 })
 
-
 // ==================================
-
 let isScrolling = false;
 
-  window.addEventListener('wheel', (event) => {
-    if (isScrolling) return;
+    window.addEventListener('wheel', (event) => {
+      if (isScrolling) return;
 
       const sections = document.querySelectorAll('.section');
       const currentSectionIndex = Math.round(window.scrollY / window.innerHeight);
@@ -56,25 +55,33 @@ let isScrolling = false;
       if (targetSection) {
         isScrolling = true;
         window.scrollTo({
-          top: targetSection.offsetTop,
-          behavior: 'smooth'
+        top: targetSection.offsetTop,
+        behavior: 'smooth'
         });
-          setTimeout(() => {
-            isScrolling = false;
-          }, 1000); 
+      setTimeout(() => {
+        isScrolling = false;
+        }, 1000);
       }
-      });
 
-// ==================================
+      let upIcon = document.getElementsByClassName("upIcon")[0];
+      console.log(nextSectionIndex)
+      if(nextSectionIndex <= 0){
+      upIcon.style.display = "none"
+        }else{
+      upIcon.style.display = "block"
+      }
+    });
+
+// ======================================================
 const swiperHTML = document.querySelector(".swiper-wrapper");
 
 const fetchData = async () => {
-  console.log("fetchData RUN successfully");
   try {
       const res = await fetch('../json/items.json');
       const data = await res.json();
       const { items } = data;
       getData(items);
+      console.log("fetchData RUN successfully %csuccessfully", 'color: green');
   } catch (err) {
       console.log(err);
   }
@@ -94,6 +101,7 @@ const getData = (items) => {
   });
 };
 
+// ======================================================
 const addToDisplay = (id, name, count, img, price) => {
   console.log('addToDisplay RUN %csuccessfully', 'color: green');
   const soldOutHTML = `<span class="sold center"><p class="font-4">SOLD OUT</p></span>`;
@@ -117,7 +125,6 @@ const addToDisplay = (id, name, count, img, price) => {
     cards[id - 1].innerHTML += soldOutHTML
   }
 };
-
 
 fetchData();
 
