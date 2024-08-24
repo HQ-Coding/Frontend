@@ -27,12 +27,17 @@ h2 {
   font-size: clamp(25px, 3vw, 50px);
 }
 
-*, *::before, *::after {
+* {
   margin: 0;
   padding: 0;
   outline: none;
   text-decoration: none;
+  list-style: none;
+  border: none;
   box-sizing: border-box;
+}
+* a {
+  text-decoration: none;
 }
 
 body {
@@ -267,9 +272,6 @@ body {
 }
 
 @media (max-width: 1200px) {
-  .span-4 {
-    display: none;
-  }
   .banner:has(.product:hover) .rock img:nth-child(2) {
     filter: blur(1px);
   }
@@ -417,11 +419,6 @@ body {
   height: -moz-max-content;
   height: max-content;
   width: 100%;
-  display: grid;
-  padding: 5rem;
-  grid-template-columns: repeat(2, 1fr);
-  align-items: center;
-  justify-content: space-between;
 }
 .ProdusedInfo .info {
   z-index: 100;
@@ -431,9 +428,8 @@ body {
 }
 .ProdusedInfo .info p {
   font-size: clamp(16px, 2vw, 25px);
-  text-wrap: balance;
   margin-top: 3rem;
-  padding-right: 7rem;
+  padding-right: 2rem;
 }
 .ProdusedInfo .character-bg {
   position: absolute;
@@ -452,17 +448,16 @@ body {
 }
 
 .warrior-Images {
-  --width: 120px;
+  --width: clamp(50px,15vw,100px);
   display: flex;
   width: calc(var(--quantity) * var(--width));
   position: relative;
   gap: 1rem;
-  margin-left: 5rem;
 }
 .warrior-Images div {
   background-color: gray;
   width: var(--width);
-  height: 550px;
+  height: clamp(400px, 30vw, 550px);
   position: relative;
   overflow: hidden;
   border-top-right-radius: 50px;
@@ -471,8 +466,6 @@ body {
   z-index: var(--position);
 }
 .warrior-Images div img {
-  width: -moz-max-content;
-  width: max-content;
   height: 100%;
   position: relative;
   right: 60px;
@@ -481,13 +474,20 @@ body {
 .warrior-Images div:hover {
   width: 500px;
 }
+.warrior-Images div:nth-child(5) {
+  width: 500px;
+}
+
+.warrior-Images:has(div:hover) div:nth-child(5) {
+  width: var(--width);
+}
 
 .warrior-Images:has(div:hover) img {
-  right: 150px;
+  right: 170px;
 }
 
 .warrior-Images:has(div:first-child:hover) img {
-  right: 230px;
+  right: 200px;
 }
 
 .unlish {
@@ -625,6 +625,7 @@ body {
   width: clamp(500px, 80vw, 800px);
   aspect-ratio: 1/1;
   left: 0%;
+  transition: 0.6s;
 }
 .characters .character .characterIMG-1 {
   position: absolute;
@@ -747,9 +748,6 @@ body {
   }
 }
 .OrderNow {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
   width: 100%;
   height: -moz-max-content;
   height: max-content;
@@ -763,19 +761,16 @@ body {
 .OrderNow h2 {
   color: var(--red);
 }
-.OrderNow .SodaCards {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-  gap: 2rem;
+.OrderNow .SodaCards .cardBot {
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 1rem auto;
 }
 .OrderNow .SodaCards .card {
-  width: 350px;
-  height: 400px;
+  width: clamp(120px, 35vw, 350px);
+  height: -moz-max-content;
+  height: max-content;
   position: relative;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  align-items: end;
   padding: 1rem;
   background-color: transparent;
   border: none;
@@ -783,15 +778,11 @@ body {
 .OrderNow .SodaCards .card .cardBody {
   position: absolute;
   width: 100%;
-  height: 40%;
+  height: 65%;
   bottom: 0%;
-  background-color: #6b6b6b;
+  left: 0;
+  background-color: #9f9f9f;
   border-radius: 10px;
-}
-.OrderNow .SodaCards .card .cardImg {
-  width: 150px;
-  z-index: 100;
-  filter: drop-shadow(0 10px 10px black);
 }
 .OrderNow .SodaCards .card .cardInfo {
   z-index: 100;
@@ -801,47 +792,195 @@ body {
 }
 .OrderNow .SodaCards .card .cardInfo h3 {
   font-size: 20px;
+  color: var(--red);
 }
 .OrderNow .SodaCards .card .cardInfo p {
   font-size: 10px;
 }
-.OrderNow .SodaCards .card .cardButtom {
-  background-color: var(--white);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-radius: 50px;
-}
-.OrderNow .SodaCards .card .cardButtom button {
+.OrderNow .product {
+  width: 100%;
+  aspect-ratio: 1/1;
+  transition: 0.7s;
+  z-index: 1000;
+  --left: -3.5px;
+  filter: drop-shadow(0px 4px 3px rgb(50, 50, 50));
   display: grid;
   place-items: center;
-  border: none;
-  background-color: transparent;
+  transform: translateY(-10px);
 }
-.OrderNow .SodaCards .card .cardButtom .addToCart {
+.OrderNow .product .soda {
+  background: var(--url) var(--left) 0, url(../image/soda-mockup.png);
+  background-size: auto 100%;
+  width: clamp(80px, 20vw, 120px);
+  aspect-ratio: 2/4;
+  background-blend-mode: multiply;
+  -webkit-mask-image: url(../image/soda-mockup.png);
+          mask-image: url(../image/soda-mockup.png);
+  -webkit-mask-size: auto 100%;
+          mask-size: auto 100%;
+  -webkit-mask-repeat: no-repeat;
+          mask-repeat: no-repeat;
+  transition: 0.7s;
+}
+.OrderNow .product:hover {
+  --left:-100px;
+  transform: translateY(-40px) scale(1.1);
+  filter: drop-shadow(0px 0px 5px rgb(50, 50, 50));
+}
+
+.cardButton {
+  background-color: var(--red);
+  display: flex;
+  border-radius: 17px;
+  gap: 5px;
+  width: 100%;
+  padding: 2px;
+  width: 100%;
+  min-width: -moz-fit-content;
+  min-width: fit-content;
+}
+.cardButton button {
+  display: grid;
+  place-items: center;
+  border-radius: 50px;
+}
+.cardButton .showNumber {
+  width: 2rem;
+  display: flex;
+}
+.cardButton .addToCart {
   background-color: var(--black);
   color: var(--white);
   padding: 0px 10px;
-  margin: 2px;
-  border-radius: 50px;
   font-size: 15px;
+  transition: 0.2s;
+  width: 100%;
+  border: 2px solid transparent;
 }
-.OrderNow .SodaCards .card .cardButtom i {
+.cardButton .addToCart:hover {
+  border: 2px solid var(--white);
+  background-color: var(--red);
+}
+.cardButton i {
   font-size: 30px;
   text-align: center;
-  margin: auto 0;
 }
-.OrderNow .SodaCards .card .cardButtom .cardIcons {
+.cardButton .cardIcons {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
+  border-radius: 50px;
+  background-color: var(--white);
 }
-.OrderNow .card:nth-child(4) {
-  grid-column: 2;
-  grid-row: 2;
+
+@media (max-width: 500px) {
+  .cardButton {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+  }
 }
-.OrderNow .card:nth-child(5) {
-  grid-column: 3;
-  grid-row: 2;
+.footer {
+  background-color: var(--red);
+}
+.footer z h4 {
+  -webkit-text-stroke: 1px rgb(196, 196, 196);
+}
+.footer .footerCol {
+  width: 250px;
+}
+.footer .footerContact ul {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 1rem;
+}
+.footer .footerContact ul a {
+  display: grid;
+  place-items: center;
+  background-color: var(--black);
+  padding: 0.5rem;
+  border-radius: 50px;
+  border: 2px solid var(--white);
+  color: var(--white);
+  text-decoration: none;
+  transition: 0.2s;
+}
+.footer .footerContact ul a i {
+  font-size: 25px;
+}
+.footer .footerContact ul a:hover {
+  color: var(--red);
+}
+
+.RedSamurai {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.RedSamurai span {
+  z-index: 1000;
+  transition: 0.7s;
+}
+.RedSamurai span img {
+  width: clamp(100px, 25vw, 250px);
+}
+
+.RedSamurai::after {
+  content: "";
+  background-color: var(--red);
+  width: 100%;
+  height: 100px;
+  position: absolute;
+  bottom: -20%;
+  left: 0%;
+  border-radius: 50%;
+  z-index: 10;
+}
+
+@keyframes fadeToRight {
+  from {
+    opacity: 0;
+    right: 10%;
+  }
+  to {
+    opacity: 0.5;
+    right: 30%;
+  }
+}
+.fromDown {
+  transform: translateY(50%);
+  opacity: 0;
+}
+
+.fromUp {
+  transform: translateY(-50%);
+  opacity: 0;
+}
+
+.fromRight {
+  transform: translateX(50%);
+  opacity: 0;
+}
+
+.fromLeft {
+  transform: translateX(-50%);
+  opacity: 0;
+}
+
+.ToVizible {
+  opacity: 0;
+}
+
+.ScaleUP {
+  transform: scale(0.5);
+  opacity: 0;
+}
+
+.show {
+  transform: translateX(0%) translateY(0%) scale(1);
+  opacity: 1;
 }/*# sourceMappingURL=style.css.map */

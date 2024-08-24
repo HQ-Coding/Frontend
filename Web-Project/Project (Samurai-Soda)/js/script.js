@@ -9,11 +9,12 @@ const observer = new IntersectionObserver (entries => {
     entries.forEach( entry =>{
         entry.target.classList.toggle("show" , entry.isIntersecting)
         if(entry.IntersectionObserver) observer.unobserve(entry.target)
-    }),
+    });}
+    ,
     {
         threshold : .5,
-    }    
-})
+    }
+  )
 
   fromDown.forEach(obj=>{
     observer.observe(obj)
@@ -31,7 +32,6 @@ const observer = new IntersectionObserver (entries => {
 const myText = document.getElementsByClassName('AboutUS-TEXT');
 const Wellcome = document.getElementsByClassName('wellcome');
 let i = 0;
-
 
   const WriteMyText = new IntersectionObserver (entries => {
     entries.forEach( entry =>{
@@ -56,7 +56,6 @@ let i = 0;
     }    
 })
 
-
 if (myText.length > 0) {
   WriteMyText.observe(myText[0]);
 }
@@ -64,7 +63,6 @@ if ( Wellcome[0].getAttribute('data-obj').length > 0) {
   console.log('Wellcome')
   WriteMyText.observe(Wellcome[0]);
 }
-
 
 const sodaBot = document.querySelectorAll(".circle img");
 const circles = document.querySelectorAll(".circle");
@@ -80,6 +78,10 @@ sodaBot.forEach((soda ,i )=>{
     BaseCircleIMG.style.animation = 'none'; 
     BaseCircleIMG.offsetHeight;  
     BaseCircleIMG.style.animation = 'scaletoShow .4s linear 1';
+    
+    characterIMG.style.animation = 'none'; 
+    characterIMG.offsetHeight;  
+    characterIMG.style.animation = 'fadeToRight .4s linear 1';
     
     sodaBot.forEach(soda => soda.style.filter = "drop-shadow(10px 10px 10px rgba(0, 0, 0, 0.5))");
     circles.forEach(circle => circle.style.backgroundColor = "transparent");

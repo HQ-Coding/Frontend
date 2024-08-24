@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="../css/style.css">
     <title>Document</title>
@@ -92,7 +92,7 @@
             <!-- ===================================================  NAVBAR   END -->
     
             <!-- ===================================================  SODA rotate   -->
-            <div class="product fromDown">
+            <div class="product">
                 <div class="soda"
                 style="--url :url(../image/sodas/soda-2.png)"></div>
     
@@ -102,10 +102,10 @@
              <!-- ===================================================  Rocks   -->
             <div class="rock">
                 <img src="../image/rock-1.png" alt="rock">
-                <img class="fromLeft" src="../image/rock-2.png" alt="rock">
-                <img class="fromRight" src="../image/rock-3.png" alt="rock">
-                <img class="fromRight" src="../image/rock-4.png" alt="rock">
-                <img class="fromLeft" src="../image/rock-5.png" alt="rock">
+                <img src="../image/rock-2.png" alt="rock">
+                <img src="../image/rock-3.png" alt="rock">
+                <img src="../image/rock-4.png" alt="rock">
+                <img src="../image/rock-5.png" alt="rock">
             </div>
 
         </div>
@@ -115,20 +115,15 @@
         <!-- ============================================= Section 2 character -->
         <section class="characters">
 
-
             <div class="character">
-
-                
                 <img class="characterIMG-1" src="" alt="">
                 <div class="part-1">
 
                     <div class="text">
                         <h3>PRODUCT OF THE YEAR</h3>
                         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magnam iste voluptatum dolores necessitatibus dicta aliquid in illo officiis odit eum.</p>
-
                     </div>
-                    
-                    
+                     
                     <div class="test" style="--quantity:5">
                         <div class="Base-Circle">
                         <img src="../image/soda-bot/1.png" alt="">
@@ -142,7 +137,7 @@
                     </div>
                 </div>
                 
-                <img class="characterIMG-2" src="../image/characters/3.png" alt="">
+                <img class="characterIMG-2 fromLeft" src="../image/characters/3.png" alt="">
                 <p class="wellcome" data-obj="Wellcome To Samurai Wrold"></p>
             </div>
             
@@ -155,24 +150,30 @@
         
         <!-- ============================================= Section 3 ProdusedInfo-->
 
-        <section class="ProdusedInfo">
+        <section class="ProdusedInfo container-fluid p-5">
             <span class="character-bg"></span>
             <!-- <sapn class="corner"></sapn> -->
+            <div class="row p-4">
 
-            <div class="info">
-                <h2>PRODUSED 2024</h2>
-                <h2>SAMURAI SODA POP</h2>
-                <p>Available in a range of fierce flavors, Samurai Soda delivers the perfect balance of refreshment and power. Every sip is crafted to help you stay sharp, focused, and ready to conquer your day."</p>
+                <div class="col-lg-6 col-md-12 col-sm-12 mb-4 ">
+                    <div class="info">
+                        <h2>PRODUSED 2024</h2>
+                        <h2>SAMURAI SODA POP</h2>
+                        <p>Available in a range of fierce flavors, Samurai Soda delivers the perfect balance of refreshment and power. Every sip is crafted to help you stay sharp, focused, and ready to conquer your day."</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 col-md-12 col-sm-12 mb-4 ">
+                    <div class="warrior-Images" style="--quantity:5">
+                        <div><img src="../image/characters/1.png" alt="" style="--position : 1"></div>
+                        <div><img src="../image/characters/2.png" alt="" style="--position : 2"></div>
+                        <div><img src="../image/characters/3.png" alt="" style="--position : 3"></div>
+                        <div><img src="../image/characters/4.png" alt="" style="--position : 4"></div>
+                        <div><img src="../image/characters/5.png" alt="" style="--position : 5"></div>
+                    </div>
+                </div>
+
             </div>
-
-            <div class="warrior-Images" style="--quantity:5">
-                <div><img src="../image/characters/1.png" alt="" style="--position : 1"></div>
-                <div><img src="../image/characters/2.png" alt="" style="--position : 2"></div>
-                <div><img src="../image/characters/3.png" alt="" style="--position : 3"></div>
-                <div><img src="../image/characters/4.png" alt="" style="--position : 4"></div>
-                <div><img src="../image/characters/5.png" alt="" style="--position : 5"></div>
-            </div>
-
         </section>
 
         <!-- =============================================  section 4 support-->
@@ -222,92 +223,215 @@
 
         <!-- ================================= -->
 
-        <section class="OrderNow">
-            <h2>ORDER NOW</h2>
-            <div class="SodaCards">
-
-                <div class="card">
-                    <img class="cardImg" src="../image/soda-bot/1.png" alt="">
-                    <span class="cardBody"></span>
-
-                    <div class="cardInfo">
-                        <h6>Samurai Soda</h6>
-                        <h3>Sun  Blade</h3>
-                        <p>Radiate strength and clarity with the energy of the sun.</p>
-                        <div class="cardButtom">
-
-                            <div class="cardIcons">
-                            <button class="decrease"><i class='bx bxs-chevron-left-circle'></i></button >
-                            <span class="showNumber"></span>
-                            <button  class="increase"><i class='bx bxs-chevron-right-circle'></i></button >
+        <section class="OrderNow container-fluid">
+            <div class="row">
+                <h2 class="w-100 text-center">ORDER NOW</h2>
+            </div>
+            
+            <div class="row">
+                <div class="SodaCards container-fluid">
+                    <div class="row">
+                        <!-- First Card -->
+            <div class="col-lg-4 col-md-6 col-sm-6 cardBot">
+                            <div class="card container-fluid">
+                              <span class="cardBody"></span>
+                              <div class="row align-items-end">
+                                <div class="col-lg-6 col-sm-12">
+                                  <div class="product">
+                                    <div class="soda" style="--url: url('../image/sodas/soda-1.png')"></div>
+                                  </div>
+                                </div>
+                                <div class="col-lg-6 col-sm-12">
+                                  <div class="cardInfo">
+                                    <h6>Samurai Soda</h6>
+                                    <h3>Star Blade</h3>
+                                    <p>Harness the brilliance of the stars for unparalleled energy.</p>
+                                    <div class="cardButton">
+                                      <div class="cardIcons">
+                                        <button class="decrease"><i class='bx bxs-chevron-left-circle'></i></button>
+                                        <span class="showNumber">1</span>
+                                        <button class="increase"><i class='bx bxs-chevron-right-circle'></i></button>
+                                      </div>
+                                      <button class="addToCart">ADD</button>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
                             </div>
-                            <button class="addToCart">ADD</button>
-                        </div>
-                    </div>
+                          </div>
+                    
+  
+      <!-- Second Card -->
+      <div class="col-lg-4 col-md-6 col-sm-6 cardBot">
+        <div class="card container-fluid">
+          <span class="cardBody"></span>
+          <div class="row align-items-end">
+            <div class="col-lg-6 col-sm-12">
+              <div class="product">
+                <div class="soda" style="--url: url('../image/sodas/soda-2.png')"></div>
+              </div>
+            </div>
+            <div class="col-lg-6 col-sm-12">
+              <div class="cardInfo">
+                <h6>Samurai Soda</h6>
+                <h3>Moon Blade</h3>
+                <p>Embrace calm and balance with the energy of the moon.</p>
+                <div class="cardButton">
+                  <div class="cardIcons">
+                    <button class="decrease"><i class='bx bxs-chevron-left-circle'></i></button>
+                    <span class="showNumber">100</span>
+                    <button class="increase"><i class='bx bxs-chevron-right-circle'></i></button>
+                  </div>
+                  <button class="addToCart">ADD</button>
                 </div>
-
-                <div class="card">
-                    <img class="cardImg" src="../image/soda-bot/1.png" alt="">
-                    <span class="cardBody"></span>
-
-                    <div class="cardInfo">
-                        <h6>Samurai Soda</h6>
-                        <h3>Sun  Blade</h3>
-                        <p>Radiate strength and clarity with the energy of the sun.</p>
-                        <div class="cardButtom">
-
-                            <div class="cardIcons">
-                            <button class="decrease"><i class='bx bxs-chevron-left-circle'></i></button >
-                            <span class="showNumber"></span>
-                            <button  class="increase"><i class='bx bxs-chevron-right-circle'></i></button >
-                            </div>
-                            <button class="addToCart">ADD</button>
-                        </div>
-                    </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Third Card -->
+      <div class="col-lg-4 col-md-6 col-sm-6 cardBot">
+        <div class="card container-fluid">
+          <span class="cardBody"></span>
+          <div class="row align-items-end">
+            <div class="col-lg-6 col-sm-12">
+              <div class="product">
+                <div class="soda" style="--url: url('../image/sodas/soda-3.png')"></div>
+              </div>
+            </div>
+            <div class="col-lg-6 col-sm-12">
+              <div class="cardInfo">
+                <h6>Samurai Soda</h6>
+                <h3>Star Blade</h3>
+                <p>Harness the brilliance of the stars for unparalleled energy.</p>
+                <div class="cardButton">
+                  <div class="cardIcons">
+                    <button class="decrease"><i class='bx bxs-chevron-left-circle'></i></button>
+                    <span class="showNumber">1</span>
+                    <button class="increase"><i class='bx bxs-chevron-right-circle'></i></button>
+                  </div>
+                  <button class="addToCart">ADD</button>
                 </div>
-
-                <div class="card">
-                    <img class="cardImg" src="../image/soda-bot/1.png" alt="">
-                    <span class="cardBody"></span>
-
-                    <div class="cardInfo">
-                        <h6>Samurai Soda</h6>
-                        <h3>Sun  Blade</h3>
-                        <p>Radiate strength and clarity with the energy of the sun.</p>
-                        <div class="cardButtom">
-
-                            <div class="cardIcons">
-                            <button class="decrease"><i class='bx bxs-chevron-left-circle'></i></button >
-                            <span class="showNumber"></span>
-                            <button  class="increase"><i class='bx bxs-chevron-right-circle'></i></button >
-                            </div>
-                            <button class="addToCart">ADD</button>
-                        </div>
-                    </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Third Card -->
+      <div class="col-lg-4 col-md-6 col-sm-6 cardBot">
+        <div class="card container-fluid">
+          <span class="cardBody"></span>
+          <div class="row align-items-end">
+            <div class="col-lg-6 col-sm-12">
+              <div class="product">
+                <div class="soda" style="--url: url('../image/sodas/soda-4.png')"></div>
+              </div>
+            </div>
+            <div class="col-lg-6 col-sm-12">
+              <div class="cardInfo">
+                <h6>Samurai Soda</h6>
+                <h3>Star Blade</h3>
+                <p>Harness the brilliance of the stars for unparalleled energy.</p>
+                <div class="cardButton">
+                  <div class="cardIcons">
+                    <button class="decrease"><i class='bx bxs-chevron-left-circle'></i></button>
+                    <span class="showNumber">1</span>
+                    <button class="increase"><i class='bx bxs-chevron-right-circle'></i></button>
+                  </div>
+                  <button class="addToCart">ADD</button>
                 </div>
-
-                <div class="card">
-                    <img class="cardImg" src="../image/soda-bot/1.png" alt="">
-                    <span class="cardBody"></span>
-
-                    <div class="cardInfo">
-                        <h6>Samurai Soda</h6>
-                        <h3>Sun  Blade</h3>
-                        <p>Radiate strength and clarity with the energy of the sun.</p>
-                        <div class="cardButtom">
-
-                            <div class="cardIcons">
-                            <button class="decrease"><i class='bx bxs-chevron-left-circle'></i></button >
-                            <span class="showNumber"></span>
-                            <button  class="increase"><i class='bx bxs-chevron-right-circle'></i></button >
-                            </div>
-                            <button class="addToCart">ADD</button>
-                        </div>
-                    </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Third Card -->
+      <div class="col-lg-4 col-md-6 col-sm-6 cardBot">
+        <div class="card container-fluid">
+          <span class="cardBody"></span>
+          <div class="row align-items-end">
+            <div class="col-lg-6 col-sm-12">
+              <div class="product">
+                <div class="soda" style="--url: url('../image/sodas/soda-5.png')"></div>
+              </div>
+            </div>
+            <div class="col-lg-6 col-sm-12">
+              <div class="cardInfo">
+                <h6>Samurai Soda</h6>
+                <h3>Star Blade</h3>
+                <p>Harness the brilliance of the stars for unparalleled energy.</p>
+                <div class="cardButton">
+                  <div class="cardIcons">
+                    <button class="decrease"><i class='bx bxs-chevron-left-circle'></i></button>
+                    <span class="showNumber">1</span>
+                    <button class="increase"><i class='bx bxs-chevron-right-circle'></i></button>
+                  </div>
+                  <button class="addToCart">ADD</button>
                 </div>
-                
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+                    </div>
+            </div>
+
+            </div>
+            
+
+            <div class="RedSamurai">
+                    <span class="Samurai fromLeft"><img class="" src="../image/spans/span-Lsamurai.png" alt=""></span>
+                    <span class="katana fromUp"><img src="../image/spans/span-katana.png" alt=""></span>
+                    <span class="Samurai fromRight"><img src="../image/spans/span-Rsamurai.png" alt=""></span>
             </div>
         </section>
+
+        <!-- ========== footer ================= -->
+      <footer class="footer">
+        <div class="container py-5">
+            
+            <div class="row d-flex align-items-center justify-content-between mx-auto">
+              <div class="footerCol footerContact col-md-3">
+                <h4>Contact</h4>
+                <br>
+                <ul>
+                    <li><a href=""><i class='bx bxl-xing'></i></a></li>
+                    <li><a href=""><i class='bx bxl-meta' ></i></a></li>
+                    <li><a href=""><i class='bx bxl-telegram' ></i></a></li>
+                    <li><a href=""><i class='bx bxl-linkedin' ></i></a></li>
+                </ul>
+              </div>
+              <div class="footerCol col-md-3">
+                <h4 >Location</h4>
+                <br>
+                <h6><i class='bx bx-location-plus' ></i>123 Anywhere St., Any City, State, Country</h6>
+              </div>
+              <div class="footerCol col-md-3">
+                <h4 >Email Address</h4>
+                <br>
+                <h6><i class='bx bx-envelope'></i>hello@reallygreatsite.com</h6>
+              </div>
+              <div class="footerCol col-md-3">
+                <h4 >Phone Number</h4>
+                <br>
+                <h6><i class='bx bx-phone' ></i>(123) 456 7890</h6>
+              </div>
+              
+            </div>
+        </div>
+      </footer>
+      <div class="bg-dark w-100">
+        <div class="d-flex justify-content-center">
+          <p>
+            ©
+            <a data-bs-toggle="modal" data-bs-target="#exampleModal" style="cursor: pointer;">Copyright by HQ</a>
+          </p>
+        </div>
+      </div>
         
 
     </div>
@@ -315,9 +439,9 @@
     
     
     
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     <script src="../js/script.js"></script>
 </body>
 </html>
