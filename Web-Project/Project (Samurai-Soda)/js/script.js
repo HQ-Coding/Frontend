@@ -12,7 +12,7 @@ const observer = new IntersectionObserver (entries => {
     });}
     ,
     {
-        threshold : .5,
+        threshold : .4,
     }
   )
 
@@ -60,7 +60,6 @@ if (myText.length > 0) {
   WriteMyText.observe(myText[0]);
 }
 if ( Wellcome[0].getAttribute('data-obj').length > 0) {
-  console.log('Wellcome')
   WriteMyText.observe(Wellcome[0]);
 }
 

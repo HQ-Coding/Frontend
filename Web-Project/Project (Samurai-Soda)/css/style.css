@@ -20,7 +20,6 @@ h4,
 h5,
 h6 {
   font-family: "MyCustomFont";
-  color: var(--black);
 }
 
 h2 {
@@ -886,20 +885,19 @@ body {
 .footer z h4 {
   -webkit-text-stroke: 1px rgb(196, 196, 196);
 }
-.footer .footerCol {
-  width: 250px;
-}
 .footer .footerContact ul {
-  display: flex;
-  align-items: center;
-  justify-content: start;
-  gap: 1rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 1rem;
 }
 .footer .footerContact ul a {
   display: grid;
   place-items: center;
   background-color: var(--black);
-  padding: 0.5rem;
+  padding: 10px;
+  width: 50px;
+  aspect-ratio: 1/1;
   border-radius: 50px;
   border: 2px solid var(--white);
   color: var(--white);
@@ -918,7 +916,7 @@ body {
   width: 100%;
   height: 300px;
   display: flex;
-  align-items: center;
+  align-items: end;
   justify-content: center;
 }
 .RedSamurai span {
@@ -935,10 +933,203 @@ body {
   width: 100%;
   height: 100px;
   position: absolute;
-  bottom: -20%;
   left: 0%;
+  bottom: 0;
   border-radius: 50%;
+  transform: translateY(70%);
   z-index: 10;
+}
+
+.ourProducts {
+  width: 100%;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 2rem 5rem;
+  display: flex;
+  justify-content: center;
+}
+.ourProducts h2 {
+  font-size: clamp(50px, 5vw, 80px);
+}
+.ourProducts .cover {
+  background-color: #eee;
+  padding: clamp(1rem, 2vw, 3rem);
+  border-radius: 20px;
+  box-shadow: 0 0 5px gray;
+  width: -moz-fit-content;
+  width: fit-content;
+  justify-content: center;
+}
+.ourProducts .Limg {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2rem;
+}
+.ourProducts .Limg .LsideImg {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 1rem;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.ourProducts .Limg .LsideImg .mug {
+  overflow: hidden;
+  border-radius: 20px;
+  grid-column: 1/2;
+  grid-row: 1/4;
+}
+.ourProducts .Limg .LsideImg .mug img {
+  width: 100%;
+  aspect-ratio: 1/1.7;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 20px;
+}
+.ourProducts .Limg .LsideImg .drug {
+  overflow: hidden;
+  grid-column: 2/3;
+  grid-row: 1/3;
+  width: 100%;
+  height: 100%;
+}
+.ourProducts .Limg .LsideImg .drug video {
+  border-radius: 20px;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover; /* Ensures the video covers the entire container while maintaining aspect ratio */
+  position: relative;
+}
+.ourProducts .Limg .LsideImg .button {
+  width: 100%;
+  height: -moz-fit-content;
+  height: fit-content;
+  align-self: end;
+  grid-column: 2/3;
+  grid-row: 3/4;
+}
+.ourProducts .Limg .LsideImg .button button {
+  padding: 10px;
+  width: 100%;
+  height: 100%;
+  border-radius: 50px;
+  border: 2px solid #888;
+  color: #888;
+  font-family: sans-serif;
+  transition: 0.4s;
+}
+.ourProducts .Limg .LsideImg .button button:hover {
+  box-shadow: inset 300px 0 0 var(--red);
+  color: var(--white);
+}
+.ourProducts .Limg .LsideImg .button button:focus {
+  border: none;
+}
+
+.Rimg {
+  width: -moz-max-content;
+  width: max-content;
+  display: flex;
+  align-items: end;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 2rem;
+}
+.Rimg .carousel-inner {
+  width: -moz-min-content;
+  width: min-content;
+}
+.Rimg .carousel-item {
+  overflow: hidden;
+  border-radius: 20px;
+}
+.Rimg .carousel-item img {
+  width: clamp(150px, 30dvw, 350px);
+  aspect-ratio: 2/3;
+}
+.Rimg span img {
+  width: clamp(30px, 5dvw, 80px);
+  aspect-ratio: 1/5;
+}
+.Rimg .text {
+  width: clamp(150px, 30dvw, 350px);
+  font-size: clamp(10px, 1vw, 15vw);
+  font-family: sans-serif;
+  padding: 10px;
+}
+
+.TshirtShop {
+  width: 100%;
+  height: -moz-max-content;
+  height: max-content;
+  padding: clamp(2rem, 10vw, 7rem);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.TshirtShop h2 {
+  transition: 0.7s;
+}
+.TshirtShop .TshirtBanner {
+  width: -moz-max-content;
+  width: max-content;
+  height: -moz-max-content;
+  height: max-content;
+}
+.TshirtShop .overFlowBg {
+  background-color: transparent;
+  position: relative;
+  border-radius: 12px;
+  transition: 0.7s;
+}
+.TshirtShop label {
+  background-color: #b51633;
+  width: clamp(350px, 80dvw, 1200px);
+  height: clamp(150px, 30dvw, 400px);
+  position: relative;
+  border-radius: 12px;
+  margin: 0;
+  transition: 0.7s;
+  z-index: 100;
+  box-shadow: 0 0 5px rgb(99, 99, 99);
+  cursor: pointer;
+}
+.TshirtShop label img {
+  position: absolute;
+  bottom: 0%;
+  left: 0;
+  width: 100%;
+  height: 150%;
+}
+.TshirtShop label input {
+  visibility: hidden;
+}
+.TshirtShop .readmore {
+  background-color: var(--black);
+  color: var(--white);
+  position: absolute;
+  bottom: 0.9rem;
+  width: clamp(100px, 10vw, 150px);
+  height: clamp(30px, 5vw, 40px);
+  border-radius: 12px;
+  border: 2px solid var(--white);
+  font-family: sans-serif;
+  text-transform: uppercase;
+}
+
+.TshirtShop:has(label input:checked) .overFlowBg {
+  background-color: #a6a6a6;
+  padding: 0 1rem 2rem 1rem;
+  box-shadow: 0 0 5px rgb(0, 0, 0);
+}
+
+.TshirtShop:has(label input:checked) label {
+  transform: translateY(-10%);
+}
+
+.TshirtShop:has(label input:checked) h2 {
+  transform: translateY(-70%);
 }
 
 @keyframes fadeToRight {
@@ -952,22 +1143,22 @@ body {
   }
 }
 .fromDown {
-  transform: translateY(50%);
+  transform: translateY(30%);
   opacity: 0;
 }
 
 .fromUp {
-  transform: translateY(-50%);
+  transform: translateY(-30%);
   opacity: 0;
 }
 
 .fromRight {
-  transform: translateX(50%);
+  transform: translateX(30%);
   opacity: 0;
 }
 
 .fromLeft {
-  transform: translateX(-50%);
+  transform: translateX(-30%);
   opacity: 0;
 }
 
