@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../css/style.css">
     <title>Document</title>
 </head>
@@ -43,68 +44,98 @@
             
             
             <!-- ===================================================  NAVBAR   -->
-            <nav class="navbar custom-navbar navbar-expand-lg navbar-light">
-                <div class="navbar-brand" href="#">
-                    <img id="logo" src="../image/logo.png" width="30" height="30" class="d-inline-block align-top" alt="">
-                    <h1>Samurai Soda</h1> 
-                </div>
-
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <nav class="navbar custom-navbar navbar-expand-lg px-2" aria-label="Offcanvas navbar large">
+              <div class="container-fluid">
+          
+                <a class="navbar-brand" href="#">
+                  <img id="logo" src="../image/logo.png" width="30" height="30" class="d-inline-block align-top" alt="">
+                  <h1>Samurai Soda</h1> 
+                </a>
+          
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar2" aria-controls="offcanvasNavbar2">
                   <span class="navbar-toggler-icon"></span>
                 </button>
-              
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                  <ul class="navbar-nav mr-auto">
-
-                    <li class="nav-item active">
-                      <a class="nav-link" href="#">About US<span class="sr-only">(current)</span></a>
-                    </li>
-
-                    <li class="nav-item">
-                      <a class="nav-link" href="#">Contact US</a>
-                    </li>
-                    
-                    <li class="nav-item">
-                      <a class="nav-link" href="#">OUR Suporter</a>
-                    </li>
-                    
-                    <li class="nav-item">
-                      <a class="nav-link" href="#"><i class='bx bxs-bell'></i></a>
-                    </li>
-
-                  </ul>
-                 
-                  <form class="form-inline my-3 my-lg-0 nav-icons">
-                        
-                    <div type="button" class="buy" data-bs-toggle="modal" data-bs-target="#ShopList">
-                      <div class="cart">
-                        <span>
-                            <a href=""><i class='bx bxs-cart-alt'></i></a>
-                        </span>
-                    </div>
-                    <a class="buyNow">BUY NOW</a>
+                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar2" aria-labelledby="offcanvasNavbar2Label">
+          
+                  <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasNavbar2Label">Samurai</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                   </div>
-                  </form>
+                  
+                  <div class="offcanvas-body">
+                      <ul class="navbar-nav justify-content-start flex-grow-1 pe-3">
+          
+                        <li class="nav-item active">
+                          <a class="nav-link" href="#">About US<span class="sr-only">(current)</span></a>
+                        </li>
+          
+                        <li class="nav-item">
+                          <a class="nav-link" href="#">Contact US</a>
+                        </li>
+                        
+                        <li class="nav-item dropdown">
+                          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            SHOP
+                          </a>
+                          <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#bestSeler">SOAD</a></li>
+                            <li><a class="dropdown-item" href="#">New collection</a></li>         
+                          </ul>
+                        </li>
 
+                        <li type="button" class="nav-item" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                          <a class="nav-link" href="#">login</a>
+                        </li>
+                        
+                        <li class="nav-item">
+                          <a class="nav-link" href="#"><i class='bx bxs-bell'></i></a>
+                        </li>
+          
+                      </ul>
+          
+                      <form class="form-inline my-3 my-lg-0 nav-icons">
+                                  
+                        <div class="buy" type="button" data-bs-toggle="offcanvas" data-bs-target="#shopList" aria-controls="shopList">
+                          <div class="cart">
+                            <span>
+                                <a href=""><i class='bx bxs-cart-alt'></i></a>
+                            </span>
+                        </div>
+                        <a class="buyNow">BUY NOW</a>
+                      </div>
+                      </form>
+                  </div>
                 </div>
-              </nav>
-        
+              </div>
+            </nav>
             <!-- ===================================================  NAVBAR   END -->
-            <!-- SHOP LIST -->
-            <div class="modal fade" id="ShopList" tabindex="-1" aria-labelledby="ShopListLabel" aria-hidden="true">
-              <div class="modal-dialog bg-dark">
-                <div class="modal-content bg-primary">
+            <!-- log in -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
                   <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="ShopListLabel">Modal title</h1>
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                   </div>
                   <div class="modal-body">
-                    ...
+                    ongoing...
                   </div>
                   <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                     <button type="button" class="btn btn-primary">Save changes</button>
                   </div>
+                </div>
+              </div>
+            </div>
+            <!-- shop list -->
+            <div class="offcanvas offcanvas-start" data-bs-backdrop="static" tabindex="-1" id="shopList" aria-labelledby="staticBackdropLabel">
+              <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="staticBackdropLabel">Offcanvas</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+              </div>
+              <div class="offcanvas-body">
+                <div>
+                  ongoing...
                 </div>
               </div>
             </div>
