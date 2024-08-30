@@ -1,89 +1,61 @@
 {
-    "SodaBottleIMG" :[
-        {
-          "id": 1,
-          "name": "Moon Blade",
-          "color": "black",
-          "description": "Dark and bold, with a sharp, mysterious flavor kick.",
-          "img_url": "https://i.ibb.co/4SqZ5Gp/1.png",
-          "count": 100
-        },
-        {
-          "id": 2,
-          "name": "Crimson Strike",
-          "color": "red",
-          "description": "Intense and fierce, packing a punch of rich flavor.",
-          "img_url": "https://i.ibb.co/svRMH5P/2.png",
-          "count": 100
-        },
-        {
-          "id": 3,
-          "name": "Sky Saber",
-          "color": "light blue",
-          "description": "Cool and refreshing, with a crisp, invigorating taste.",
-          "img_url": "https://i.ibb.co/7p0bx18/3.png",
-          "count": 100
-        },
-        {
-            "id": 4,
-            "name": "Petal Slash",
-            "color": "pink",
-            "description": "Delicate yet powerful, a sweet, floral explosion awaits.",
-            "img_url": "https://i.ibb.co/NnYMn0f/4.png",
-            "count": 100
-        },
-        {
-            "id": 5,
-            "name": "Sun Fury",
-            "color": "yellow",
-            "description": "Bright and fiery, bursting with radiant citrus energy.",
-            "img_url": "https://i.ibb.co/1sxFNLc/5.png",
-            "count": 100
-          }
-      ],
+  "SodaBottleIMG" :[
+    {
+      "id": 1,
+      "name": "Moon Blade",
+      "color": "black",
+      "description": "Dark and bold, with a sharp, mysterious flavor kick.",
+      "img_url": "https://i.ibb.co/4SqZ5Gp/1.png",
+      "soda_url": "https://i.ibb.co/mDM2TM9/1.png",
+      "character_url" : "https://i.ibb.co/YkThbsP/1.png",
+      "count": 100,
+      "price": 15
+    },
+    {
+      "id": 2,
+      "name": "Crimson Strike",
+      "color": "red",
+      "description": "Intense and fierce, packing a punch of rich flavor.",
+      "img_url": "https://i.ibb.co/svRMH5P/2.png",
+      "soda_url": "https://i.ibb.co/dDdLV5p/2.png",
+      "character_url" : "https://i.ibb.co/vDLDrXm/2.png",
+      "count": 100,
+      "price": 15
+    },
+    {
+      "id": 3,
+      "name": "Sky Saber",
+      "color": "light blue",
+      "description": "Cool and refreshing, with a crisp, invigorating taste.",
+      "img_url": "https://i.ibb.co/7p0bx18/3.png",
+      "soda_url": "https://i.ibb.co/nC8LGT5/3.png",
+      "character_url" : "https://i.ibb.co/51SKg4B/3.png",
+      "count": 100,
+      "price": 15
+    },
+    {
+        "id": 4,
+        "name": "Petal Slash",
+        "color": "pink",
+        "description": "Delicate yet powerful, a sweet, floral explosion awaits.",
+        "img_url": "https://i.ibb.co/NnYMn0f/4.png",
+        "soda_url": "https://i.ibb.co/ZKXrHB3/4.png",
+        "character_url" : "https://i.ibb.co/Hp5Dq8S/4.png",
+        "count": 100,
+        "price": 15
+    },
+    {
+        "id": 5,
+        "name": "Sun Fury",
+        "color": "yellow",
+        "description": "Bright and fiery, bursting with radiant citrus energy.",
+        "img_url": "https://i.ibb.co/1sxFNLc/5.png",
+        "soda_url": "https://i.ibb.co/0qH5m3s/5.png",
+        "character_url" : "https://i.ibb.co/9ygD2Zy/5.png",
+        "count": 100,
+        "price": 15
+    }
+  ]
 
-      
-        "SodaBottle": [
-          {
-            "id": 1,
-            "name": "Moon Blade",
-            "color": "black",
-            "description": "Dark and bold, with a sharp, mysterious flavor kick.",
-            "img_url": "https://i.ibb.co/mDM2TM9/1.png",
-            "charstar_url" : "https://i.ibb.co/YkThbsP/1.png"
-          },
-          {
-            "id": 2,
-            "name": "Crimson Strike",
-            "color": "red",
-            "description": "Intense and fierce, packing a punch of rich flavor.",
-            "img_url": "https://i.ibb.co/dDdLV5p/2.png",
-            "charstar_url" : "https://i.ibb.co/vDLDrXm/2.png"
-          },
-          {
-            "id": 3,
-            "name": "Sky Saber",
-            "color": "light blue",
-            "description": "Cool and refreshing, with a crisp, invigorating taste.",
-            "img_url": "https://i.ibb.co/nC8LGT5/3.png",
-            "charstar_url" : "https://i.ibb.co/51SKg4B/3.png"
-          },
-          {
-            "id": 4,
-            "name": "Petal Slash",
-            "color": "pink",
-            "description": "Delicate yet powerful, a sweet, floral explosion awaits.",
-            "img_url": "https://i.ibb.co/ZKXrHB3/4.png",
-            "charstar_url" : "https://i.ibb.co/Hp5Dq8S/4.png"
-          },
-          {
-            "id": 5,
-            "name": "Sun Fury",
-            "color": "yellow",
-            "description": "Bright and fiery, bursting with radiant citrus energy.",
-            "img_url": "https://i.ibb.co/0qH5m3s/5.png",
-            "charstar_url" : "https://i.ibb.co/9ygD2Zy/5.png"
-          }
-        ]
 }
       

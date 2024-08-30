@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+  .ourProducts {
+    width: 100%;
+    height: fit-content;
+    padding: 2rem 5rem;
+    display: flex;
+    justify-content: center;
+    h2{
+        font-size: clamp(50px,5vw,80px);
+    }
+
+    .cover {
+        background-color: #eee;
+        background-image: url(../image/spans/sky-transparent.png);
+        padding: clamp(1rem, 2vw, 3rem);
+        border-radius: 20px;
+        box-shadow: 0 0 5px gray;
+        width: fit-content;
+        justify-content: center;
+    }
+
+    .Limg {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 2rem;
+
+        .LsideImg {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+            gap: 1rem;
+            height: fit-content;
+
+            .mug {
+                overflow: hidden;
+                border-radius: 20px;
+                grid-column: 1 / 2;
+                grid-row: 1 / 4;
+               
+                img {
+                    width: 100%;
+                    aspect-ratio: 1/1.7;
+                    object-fit: cover; 
+                    border-radius: 20px;
+                }
+            }
+
+            .drug {
+                overflow: hidden;
+                grid-column: 2 / 3;
+                grid-row: 1 / 3;
+                width: 100%;
+                height: 100%;
+                
+                video {
+                    border-radius: 20px;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover; /* Ensures the video covers the entire container while maintaining aspect ratio */
+                    position: relative;
+                }
+            }
+
+            .button {
+                width: 100%;
+                height: 50%;
+                align-self: end;
+                grid-column: 2 / 3;
+                grid-row: 3 / 4;
+
+                button {
+                    padding: 10px;
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 50px;
+                    border: 2px solid gray;
+                    color: gray;
+                    font-family: sans-serif;
+                    transition: .7s;
+                    font-size: CLAMP(20px,5vw,35px);
+                }
+                button:hover{
+                    box-shadow:inset 350px  0 0 var(--red);
+                    color: var(--white);
+                }
+                button:focus {
+                    border: none;
+                }
+            }
+        }
+    }
+}
+.Rimg{
+    width: max-content;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 2rem;
+    .carousel{
+        width: 100%;
+        background-color: var(--red);
+        border-radius: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        padding: 1rem;
+    }
+    .carousel-inner{
+        width: min-content;
+    }
+    .carousel-item{
+        overflow: hidden;
+        border-radius: 20px;
+        img{
+            width: clamp(150px,25vw,350px);
+            aspect-ratio: 2/3;
+        }
+    }
+    span img{
+        width:clamp(20px,5vw,60px);
+        aspect-ratio: 1/5;
+    }
+    .text{
+        width: clamp(100px,25vw,300px);
+        font-size: clamp(10px,1vw,15vw);
+        font-family: sans-serif;
+        background-color: #eee;
+        border-radius: 20px;
+    }
+}
+</style>
+<body>
+    <section class="ourProducts">
+          
+        <div class="cover row">
+        <div class="Limg col-lg-6 col-md-12 col-sm-12" ><!-- ===LEFT Side=== -->
+          
+          <div class="text">
+            <h2>our <br> Products</h2>
+            <h6>by  HQ</h6>
+          </div>
+          <div class="LsideImg">
+
+            <div class="mug">
+              <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="../image/mug/mug-black.png" class="d-block" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="../image/mug/mug-blue.png" class="d-block" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="../image/mug/mug-pink.png" class="d-block" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="../image/mug/mug-red.png" class="d-block" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="../image/mug/mug-yellow.png" class="d-block" alt="...">
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            
+              <div class="drug">
+                <video autoplay loop muted>
+                  <source src="../image/otherProducts/samurai-drug.mp4" type="video/mp4">
+                  <source src="../image/otherProducts/samurai-drug.webm" type="video/webm">
+                  Your browser does not support the video tag.
+                </video> 
+              </div>
+
+              <div class="button">
+                <button>More >></button>
+              </div>
+
+          </div>  
+
+        </div>
+        <!-- === end left Side=== -->
+
+        <div class="Rimg col-lg-6 col-md-12 col-sm-12"> <!-- ===RIGHT Side=== -->
+            <span><img src="../image/spans/leftSpan.png" alt=""></span>
+
+            <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="../image/T/redTshirt.png" class="d-block" alt="...">
+                </div>
+                <div class="carousel-item">
+                  <img src="../image/T/pink-Tshirt.png" class="d-block" alt="...">
+                </div>
+                <div class="carousel-item">
+                  <img src="../image/T/SamuraiLogoTshirt.png" class="d-block" alt="...">
+                </div>
+              </div>
+              <p class="text">Discover our unique products: stylish t-shirts, vibrant vitamins, and custom mugs designed just for you. Elevate your everyday with creativity!</p>
+            </div>
+
+            <span><img src="../image/spans/rightSpan.png" alt=""></span>
+        </div>
+        </div>
+
+      </section>
+</body>
+</html>

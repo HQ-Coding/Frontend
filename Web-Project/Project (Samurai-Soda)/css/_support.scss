@@ -1,0 +1,103 @@
+.support {
+    position: relative; 
+    height: 420px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem 0;
+
+    h3{
+        text-transform: uppercase;
+        font-size: 25px;
+        position: relative;
+        top: -1.5rem;
+    }
+
+    span {
+        background-image: url('../image/spans/span-3.png');
+        background-size: cover; 
+        background-position: center; 
+        width: clamp(100px, 30vw, 500px);
+        height: clamp(40px, 6vh, 60px);
+        display: inline-block; 
+        position: absolute; 
+    }
+    span:nth-child(1) {
+        top: 0%;
+        left: 0%;
+        transform: scaleY(-1);
+    }
+    span:nth-child(2) {
+        top: 0%;
+        right: 0%;
+        transform: rotate(180deg);
+    }
+    span:nth-child(3) {
+        bottom: 0%;
+        left: 0%;
+    }
+    span:nth-child(4) {
+        bottom: 0%;
+        right: 0%;
+        transform: scaleX(-1);
+    }
+}
+
+
+
+.slider{
+    width: 100%;
+    height: var(--height);
+    overflow: hidden;
+    mask-image: linear-gradient(
+        to right,
+        transparent,
+        var( --black)
+ 30% 70%,
+        transparent
+    );
+    z-index: 10;
+    .list{
+        position: relative;
+        display: flex;
+        width: 100%;
+        min-width: calc(var(--width) * var(--quantity));
+        height: var(--height);
+
+        .item{
+            display: grid;
+            place-items: center;
+            width: var(--width);
+            height: var(--height);
+            position: absolute;
+            left: 100%;
+            animation: autoRun 15s linear infinite;
+            animation-delay: calc( (15s / var(--quantity)) * (var(--position) - 1) ) !important;
+            transition: filter .2s;
+            img{
+                width: 100%;
+            }
+        }}
+
+}
+.companys{
+    background-color:var(--white);
+    border: var( --black)
+ 1px solid;
+    
+}
+.slider:hover .item{
+    animation-play-state:  paused !important;
+    filter: grayscale(1);
+}
+.slider .item:hover{
+    filter: grayscale(0);
+}
+
+.slider[reverse="true"] .item{
+    animation: reversePlay 15s linear infinite ;
+}
+.slider[reverse="true"] .item img{
+    border-radius: 5px;
+}

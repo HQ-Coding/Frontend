@@ -1,0 +1,125 @@
+.modal-content{
+    width: max-content;
+}
+.login-container {
+    font-family: sans-serif;
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+    transition: .5s;
+    h2 {
+        margin-bottom: 20px;
+    }
+    input[type="email"],
+    input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    }
+    button {
+        width: 100%;
+        padding: 10px;
+        background-color: var(--black);
+        color:var(--white);
+        border-radius: 5px;
+        font-size: 16px;
+    }
+}
+
+
+.social-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    button {
+        width: 48%;
+        font-size: 14px;
+    }
+}
+
+.terms-checkbox {
+    display: flex;
+    align-items: center;
+    margin: 15px 0;
+    text-transform: capitalize;
+    input {
+        margin-right: 10px;
+        transform: translateY(-3px);
+    }
+}
+
+.signup-text {
+    margin-top: 20px;
+    label{
+        color: rgb(0, 106, 255);
+        font-weight: bold;
+        font-family: 'MyCustomFont';
+        cursor: pointer;   
+    }
+    label:hover{
+        text-decoration: underline;
+    }
+    input{
+        visibility: hidden;
+    }
+}
+
+.modal-body:has(.signup-text input){
+    .signupForm{
+        transform:  translateY(0%);
+        opacity: 0;
+        visibility: hidden;
+    }
+    .loginForm{
+        transform:  translateY(5%);
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+.modal-body:has(.signup-text input:checked){
+    .signupForm{
+        transform:  translateY(-77%);
+        opacity: 1;
+        visibility: visible;
+    }
+    .loginForm{
+        transform:  translateY(100%);
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+.modal-body{
+    display: flex;
+    flex-direction: column;
+    overflow-y: hidden;
+    height: 600px;
+}
+
+//==========
+.AccountForm{
+    .modal-header{
+        position: relative;
+        background-image: url(../image/red-sky.png);
+        background-position: end;
+        background-size: cover;
+        height: 100px;
+        
+    }
+    .logo{
+        position: absolute;
+        width: 120px;
+        aspect-ratio: 1/1;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-20%);
+        z-index: 100;
+    }
+}

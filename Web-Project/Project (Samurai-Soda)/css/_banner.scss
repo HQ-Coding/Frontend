@@ -1,0 +1,212 @@
+@import 'utility';
+
+.banner{
+    width: 100%;
+    height: 700px;
+    overflow: hidden;
+    position: relative;
+    background-image: 
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(255, 255, 255, 0)), 
+    url('../image/background.jpg');
+    background-position: center;
+    background-size: 180%;
+    background-repeat: no-repeat;
+    transition: .7s;
+    box-shadow: inset 00px -50px 100px 0px var(--white);
+
+  .product{
+    width: 500px;
+    height: 500px;
+    position: absolute;
+    bottom: clamp(100px,7.5rem,150px);
+    left: 50%;
+    transform: translateX(-50%);
+    transition: .7s;
+    display: flex;
+    display: grid;
+    align-items: end;
+    width: fit-content;
+
+    z-index: 10;
+    --left: 0px;
+    filter: drop-shadow( 0px 0 2px rgb(50, 50, 50));
+
+    .soda{
+        background: 
+            var(--url) var(--left) 0,
+            url(../image/soda-mockup.png);
+            background-size: auto 100%;
+            /* background-repeat: no-repeat; */
+            width: clamp(150px,25vw,200px);
+            aspect-ratio: 2 / 4;
+    
+            background-blend-mode: multiply;
+            mask-image: url(../image/soda-mockup.png);
+            mask-size: auto 100%;
+            mask-repeat: no-repeat;
+            transition: .7s;
+    
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+        }}
+
+    .rock{
+        position: absolute;
+        inset: 0 0 0 0;
+        pointer-events: none;
+
+        img{
+            position: absolute;
+            transition: .7s;
+            bottom: 0px;
+            height: clamp(400px,50vw,600px);
+            
+        }
+
+    }
+} 
+
+.banner:has(.product:hover){
+    background-size: 130%;
+}
+
+.banner .product:hover{
+    --left:-400px;
+    transform: translateX(-50%) translateY(-50px) scale(1.1);
+    filter: drop-shadow( 0px 0 4px rgb(50, 50, 50));
+}
+
+/* ============ ROCK */
+.banner .rock img:nth-child(1){
+    height: clamp(250px,40vw,300px) !important;
+    left: 50% ;
+    transform: translateX(-50%);
+    bottom: -50px ;
+    z-index: 7;
+    filter: drop-shadow( 0px 10px 20px rgb(50, 50, 50));
+}
+.banner:has(.product:hover) .rock img:nth-child(1){
+    transform: translateX(-50%) translateY(200px) scale(.8);
+
+}
+
+.banner .rock img:nth-child(2){
+    left: 0%;
+    transform: translateX(-50%) translateY(50px);
+    z-index: 9;
+}
+.banner .rock img:nth-child(3){
+    right: 0%;
+    transform: translateX(50%) translateY(50px);
+    z-index: 7;
+}
+.banner:has(.product:hover) .rock img:nth-child(3),
+.banner:has(.product:hover) .rock img:nth-child(2){
+    transform: translateX(0%) translateY(0px);
+}
+
+.banner .rock img:nth-child(4){
+    right: 0%;
+    transform: translateX(55%) translateY(50px);
+    z-index: 9;
+}
+.banner .rock img:nth-child(5){
+    left: 0%;
+    transform: translateX(-55%) translateY(50px) ;
+    z-index: 9;
+}
+.banner:has(.product:hover) .rock img:nth-child(4),
+.banner:has(.product:hover) .rock img:nth-child(5){
+    transform: translateX(0%) translateY(100px) scale(.7);
+}
+
+.banner .product .soda:nth-child(2){
+    opacity: 0;
+}
+.banner .product:hover .soda:nth-child(2){
+    opacity: 1;
+}
+
+// ============
+.unlish{
+    position: absolute;
+    width: 100%;
+    height: calc(var(--height) * 3);
+    overflow: hidden;
+    z-index: 8; 
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.unlish .list{
+    position: relative;
+    display: flex;
+    width: 100%;
+    min-width: calc(var(--width) * var(--quantity));
+    height: var(--height);
+    text-wrap: nowrap;
+}
+.unlish .list :nth-child(4),
+.unlish .list :nth-child(2){
+    -webkit-text-stroke: 1px var( --black)
+;
+    color: transparent;
+}
+.unlish .list .item{
+    box-sizing: content-box;
+    display: grid;
+    place-items: center;
+    width: max-content;
+    height: var(--height);
+    position: absolute;
+    left: 100%;
+    animation: autoRuns 20s linear infinite;
+    animation-delay: calc( (20s / var(--quantity)) * (var(--position) - 1)) !important;
+    font-size:45px;
+    font-family: 'MyCustomFont';
+    font-weight: bolder;
+    padding: 0 1rem;
+}
+.unlish .list[reverse="true"] .item{
+    animation: reversePlays 20s linear infinite ;
+}
+// ============================
+
+.redband {
+    width: 200%;
+    height: 150px;
+    background-color:var(--red);
+    position: absolute; 
+    top: 50%;
+    left: -50%;
+    transform: rotate(-30deg) ;
+    z-index: 0;
+    opacity: .85;
+    transition: .5s;
+    overflow: hidden;
+}
+
+.redband::after {
+    content: '';
+    background: url(../image/spans/span-mask.png);
+    background-position: center;
+    background-size: cover;
+    width: 250px;
+    height:100%;
+    position: absolute;
+    top: 0;
+    left: 52%;
+    transform: translateX(-50%);
+    z-index: 1000 ; 
+    opacity: 0;
+    transition: .7s;
+}
+.banner:has(.product:hover) .redband{
+    opacity: 1;
+    transform: rotate(-90deg) scale(2);
+    z-index: 10;
+}
+.banner:has(.product:hover) .redband::after{
+    opacity: 1;
+}

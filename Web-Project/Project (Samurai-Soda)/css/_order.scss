@@ -1,0 +1,151 @@
+.OrderNow{
+    width: 100%;
+    height: max-content;
+    background: url(../image/background-sky.png);
+    background-position: center;
+    background-size: cover;
+    mask-image: linear-gradient(
+            to bottom,
+            transparent,
+            var( --black)
+            5% 100%,
+            transparent
+        );
+    padding-top:4rem ;
+    
+    h2{
+        color: var(--red);
+    }
+    .SodaCards{
+        input[type="number"]::-webkit-outer-spin-button,
+        input[type="number"]::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+        .cardBot{
+            width: fit-content;
+            margin: 1rem auto;
+        }
+        .card{
+            width: clamp(120px,35vw,350px);
+            height: max-content;
+            position: relative;
+            padding: 1rem;
+            background-color: transparent;
+            border: none;
+            .cardBody{
+                position: absolute;
+                width: 100%;
+                height: 65%;
+                bottom: 0%;
+                left: 0;
+                background-color: #eee;
+                border-radius: 10px;
+            }
+            .cardInfo{
+                z-index: 100;
+                h6{
+                    font-size: 15px;
+                }
+                h3{
+                    font-size: 20px;
+                    color: var(--red);
+                }
+                p{
+                    font-size: 10px;
+                }
+            }
+        }
+    }
+
+    // bottle
+    .product{
+        width:100%;
+        aspect-ratio: 1/1;
+        transition: .7s;
+        z-index: 1000;
+        --left: -3.5px;
+        filter: drop-shadow( 0px 4px 3px rgb(50, 50, 50));
+        display: grid;
+        place-items: center;
+
+        .soda{
+            background: 
+                var(--url) var(--left) 0,
+                url(../image/soda-mockup.png);
+                background-size: auto 100%;
+                width: clamp(80px, 20vw,120px);
+                aspect-ratio: 2 / 4;
+                background-blend-mode: multiply;
+                mask-image: url(../image/soda-mockup.png);
+                mask-size: auto 100%;
+                mask-repeat: no-repeat;
+                transition: .7s;             
+            }
+        }
+        .product:hover{
+            --left:-100px;
+            transform: translateY(-40px) scale(1.1);
+            filter: drop-shadow( 0px 0px 5px rgb(50, 50, 50));
+        }
+        #price{
+            background-color: var(--white);
+            border: gray 3px solid;
+            color: gray;
+            border-radius: 50px;
+            width: fit-content;
+            padding: 5px;
+        }
+}
+
+.cardButton{
+    background-color: var(--red);
+    display: flex;
+    border-radius: 17px;
+    gap: 5px;
+    width: 100%;
+    padding: 2px;
+    width: 100%;
+    min-width: fit-content;
+    button{
+        display: grid;
+        place-items: center;
+        border-radius: 50px;
+    }
+    .showNumber{
+        width: 2rem;
+        display: flex;
+    }
+    .addToCart{
+        background-color: var(--black);
+        color: var(--white);
+        padding: 0px 10px;
+        font-size: 15px;
+        transition: .2s;
+        width: 100%;
+        border: 2px solid transparent;
+    }
+    .addToCart:hover{
+        border: 2px solid var(--white);
+        background-color: var(--red);
+    }
+    i{
+        font-size: 30px;
+        text-align: center;
+    }
+    .cardIcons{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        border-radius: 50px;
+        background-color: var(--white);
+    }
+}
+
+@media (max-width:500px){
+    .cardButton{
+        display: grid;
+        grid-template-rows: repeat(2,1fr);  
+    }
+}

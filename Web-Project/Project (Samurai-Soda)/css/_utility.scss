@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+@font-face {
+    font-family: 'MyCustomFont';  
+    src: url('../fonts/Cyberjunkies.otf') format('opentype'), 
+         url('../fonts/Cyberjunkies.ttf') format('truetype');  
+    font-weight: normal;   
+    font-style: normal;    
+}
+
+:root { 
+    --red : #b51633 ;
+    --black : #222 ;
+    --white : #fff ;
+}
+a,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+    font-family: 'MyCustomFont';
+}
+
+h2{
+    font-size: clamp(25px,3vw,50px);
+}
+*{
+    margin:0;
+    padding: 0;
+    outline: none;
+    text-decoration: none;
+    list-style: none;
+    border: none;
+    box-sizing: border-box;
+    // transition: .7s;
+    a{
+        text-decoration: none;
+    }
+}
+body{
+    position: relative;
+    color: var( --black)
+;
+    font-family: "Permanent Marker", cursive;
+    font-weight: 400;
+    font-style: normal;
+    background-color: var(--white);
+    display: flex;
+    justify-content: center;
+}
+.Base{
+    width: 1500px;
+    height: 100%;
+    overflow: hidden;
+    background-color:var(--white);
+    padding-bottom: 20px ;
+}
+
+
+@keyframes reversePlays {
+    from {
+        left: calc(var(--width) * -1.5);
+    }
+    to {
+        left: 100%;
+    }
+}
+
+@keyframes autoRuns {
+    from {
+        left: 100%;
+    }
+    to {
+        left: calc(var(--width) * -1.5);
+    }
+}
+
+@keyframes reversePlay {
+    from {
+        left: calc(var(--width) * -1);
+    }
+    to {
+        left: 100%;
+    }
+}
+
+@keyframes autoRun {
+    from {
+        left: 100%;
+    }
+    to {
+        left: calc(var(--width) * -1);
+    }
+}
+
+@keyframes gravity {
+    from { 
+        opacity: 1;
+        transform: rotate(-40deg)  
+        translateX(0px) rotate(0deg)
+        translateY(clamp(150px,28vw,250px)) rotate(0deg); }
+                
+    to { 
+        opacity: 1;
+        transform: rotate(220deg)  
+        translateX(0px) rotate(0deg)
+        translateY(clamp(150px,28vw,250px)) rotate(0deg);}
+}
+
+@keyframes stayInPosition{
+    from { 
+        transform: rotate(0deg) }
+                
+    to { 
+        transform: rotate(-180deg) }
+}
+@keyframes scaletoShow{
+    0%{ 
+        transform: scale(0.3) ;
+        opacity : 0;
+    }
+                
+    80%{ 
+        transform: scale(1.15);
+        opacity : 1;
+     }
+    100%{ 
+        transform: scale(1);
+
+     }
+}
+@keyframes fadeToRight{
+    from { 
+        opacity: 0;
+        right: 10%;
+     }
+                
+    to { 
+        opacity: 0.5;
+        right: 30%;}
+}
+.fromDown{
+    transform: translateY(30%);
+    opacity: 0;
+}
+.fromUp{
+    transform: translateY(-30%);
+    opacity: 0;
+}
+.fromRight{
+    transform: translateX(30%);
+    opacity: 0;
+}
+.fromLeft{
+    transform: translateX(-30%);
+    opacity: 0;
+}
+.ToVizible{
+    opacity: 0;
+}
+.ScaleUP{
+    transform: scale(.5);
+    opacity: 0;
+}
+.show{
+    transform: translateX(0%) translateY(0%) scale(1);
+    opacity: 1;
+}

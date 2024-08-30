@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale1.0,user-scalable=0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -52,25 +52,26 @@
                   <h1>Samurai Soda</h1> 
                 </a>
           
-                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar2" aria-controls="offcanvasNavbar2">
+                <button class="navbar-toggler fixed-md-down" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar2" aria-controls="offcanvasNavbar2">
                   <span class="navbar-toggler-icon"></span>
                 </button>
+
                 <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar2" aria-labelledby="offcanvasNavbar2Label">
           
                   <div class="offcanvas-header">
                     <h5 class="offcanvas-title" id="offcanvasNavbar2Label">Samurai</h5>
-                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    <button type="button" class="btn-close btn-close-dark " data-bs-dismiss="offcanvas" aria-label="Close"></button>
                   </div>
                   
                   <div class="offcanvas-body">
                       <ul class="navbar-nav justify-content-start flex-grow-1 pe-3">
           
                         <li class="nav-item active">
-                          <a class="nav-link" href="#">About US<span class="sr-only">(current)</span></a>
+                          <a class="nav-link" href="#AboutUS">About US</a>
                         </li>
           
                         <li class="nav-item">
-                          <a class="nav-link" href="#">Contact US</a>
+                          <a class="nav-link" href="#ContactUS">Contact US</a>
                         </li>
                         
                         <li class="nav-item dropdown">
@@ -78,8 +79,8 @@
                             SHOP
                           </a>
                           <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#bestSeler">SOAD</a></li>
-                            <li><a class="dropdown-item" href="#">New collection</a></li>         
+                            <li><a class="dropdown-item" href="#OrderNow">SOAD</a></li>
+                            <li><a class="dropdown-item" href="#TshirtShop">New collection</a></li>         
                           </ul>
                         </li>
 
@@ -109,37 +110,8 @@
               </div>
             </nav>
             <!-- ===================================================  NAVBAR   END -->
-            <!-- log in -->
-            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-              <div class="modal-dialog">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                  </div>
-                  <div class="modal-body">
-                    ongoing...
-                  </div>
-                  <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save changes</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- shop list -->
-            <div class="offcanvas offcanvas-start" data-bs-backdrop="static" tabindex="-1" id="shopList" aria-labelledby="staticBackdropLabel">
-              <div class="offcanvas-header">
-                <h5 class="offcanvas-title" id="staticBackdropLabel">Offcanvas</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-              </div>
-              <div class="offcanvas-body">
-                <div>
-                  ongoing...
-                </div>
-              </div>
-            </div>
-    
+
+            
             <!-- ===================================================  SODA rotate   -->
             <div class="product">
                 <div class="soda"
@@ -160,87 +132,118 @@
         </div>
         <!-- ======================= BANNER  END====================== -->
 
-        <section class="ourProducts">
-          
-          <div class="cover row">
-          <div class="Limg col-lg-6 col-md-12 col-sm-12" ><!-- ===LEFT Side=== -->
-            
-            <div class="text">
-              <h2>our <br> Products</h2>
-              <h6>by  HQ</h6>
-            </div>
-            <div class="LsideImg">
+       
+        <!--============================= log in =============================-->
+        <div class="AccountForm modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
 
-              <div class="mug">
-                <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
-                  <div class="carousel-inner">
-                    <div class="carousel-item active">
-                      <img src="../image/mug/mug-black.png" class="d-block" alt="...">
-                    </div>
-                    <div class="carousel-item">
-                      <img src="../image/mug/mug-blue.png" class="d-block" alt="...">
-                    </div>
-                    <div class="carousel-item">
-                      <img src="../image/mug/mug-pink.png" class="d-block" alt="...">
-                    </div>
-                    <div class="carousel-item">
-                      <img src="../image/mug/mug-red.png" class="d-block" alt="...">
-                    </div>
-                    <div class="carousel-item">
-                      <img src="../image/mug/mug-yellow.png" class="d-block" alt="...">
-                    </div>
-                  </div>
-                </div>
+              <div class="modal-header">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <img class="logo" src="../image/logo.png" alt="">
               </div>
 
+              <div class="modal-body mx-auto">
+                <!-- login -->
+                <div class="login-container loginForm">
+                  <h2>Login</h2>
+                    <form>
+                        <input type="email" placeholder="Email" required>
+                        <input type="password" placeholder="Password" minlength="12" required>
+
+                        <button type="submit">Login</button>
+                    </form>
+
+                    <div class="social-buttons">
+                        <button class="google-btn">
+                          <i class='bx bxl-google'></i>
+                          Login with Google
+                        </button>
+                        <button class="apple-btn">
+                          <i class='bx bxl-apple' ></i>
+                          Login with Apple
+                        </button>
+                    </div>
+
+                    <div class="signup-text">
+                      <p>Don't have an account?
+                        <input type="checkbox" id="changeLoginForm">
+                        <label for="changeLoginForm">Sign up here</label>
+                      </p>
+                  </div>
+
+                </div>
+                <!-- === -->
+                <!-- Sign Up -->
+                <div class="login-container signupForm">
+                  <h2>Sign Up</h2>
+                  <form id="signup-form">
+                      <input type="email" id="email" placeholder="Email" required>
+                      <input type="password" id="password" placeholder="Password (min 8 characters)" minlength="8" required>
+                      <input type="password" id="confirm-password" placeholder="Confirm Password" minlength="8" required>
               
-                <div class="drug">
-                  <video autoplay loop muted>
-                    <source src="../image/otherProducts/samurai-drug.mp4" type="video/mp4">
-                    <source src="../image/otherProducts/samurai-drug.webm" type="video/webm">
-                    Your browser does not support the video tag.
-                  </video> 
+                      <div class="terms-checkbox">
+                          <input type="checkbox" id="terms" required>
+                          <label for="terms">I accept the <a href="#">Terms and Conditions</a></label>
+                      </div>
+              
+                      <button type="submit">Sign Up</button>
+                  </form>
+              
+                  <div class="social-buttons">
+                    <button class="google-btn">
+                      <i class='bx bxl-google'></i>
+                      Login with Google
+                    </button>
+                    <button class="apple-btn">
+                      <i class='bx bxl-apple' ></i>
+                      Login with Apple
+                    </button>
                 </div>
-
-                <div class="button">
-                  <button>More >></button>
-                </div>
-
-            </div>  
-
-          </div>
-          <!-- === end left Side=== -->
-
-          <div class="Rimg col-lg-6 col-md-12 col-sm-12"> <!-- ===RIGHT Side=== -->
-              <span><img src="../image/spans/leftSpan.png" alt=""></span>
-
-              <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
-                <div class="carousel-inner">
-                  <div class="carousel-item active">
-                    <img src="../image/T/redTshirt.png" class="d-block" alt="...">
+              
+                  <div class="signup-text">
+                      <p>Already have an account? 
+                        <input type="checkbox" id="changeLoginForm">
+                        <label for="changeLoginForm">login</label>
+                      </p>
                   </div>
-                  <div class="carousel-item">
-                    <img src="../image/T/pink-Tshirt.png" class="d-block" alt="...">
-                  </div>
-                  <div class="carousel-item">
-                    <img src="../image/T/SamuraiLogoTshirt.png" class="d-block" alt="...">
-                  </div>
-                </div>
-                <p class="text">Discover our unique products: stylish t-shirts, vibrant vitamins, and custom mugs designed just for you. Elevate your everyday with creativity!</p>
+              </div>
+                <!-- === -->
+
               </div>
 
-              <span><img src="../image/spans/rightSpan.png" alt=""></span>
+            </div>
           </div>
+        </div>
+        <!--============================= end log in =============================-->
+        <!--============================= shop list  =============================-->
+        <div class="shopList offcanvas offcanvas-start" tabindex="-1" id="shopList" aria-labelledby="shopListLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="shopListLabel">Samurai Cart</h5>
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
           </div>
+          <div class="offcanvas-body">
+            <div class="cart-Items">
 
-        </section>
+              <!-- cart item load from js and json file -->
 
-        <!-- =================================== -->
+            </div>
+            <div class="offcanvas-footer">
+              <h5 id="total">Total of Cart : <span>0</span></h5>
+              <h5 id="taxs">Taxs :  <span>0</span></h5>
+              <h5 id="refral">Refral code :  <span>0</span></h5>
+              <h5 id="shouldPay">you pay :  <span>0</span></h5>
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="offcanvas">clear</button>
+              <button type="button" class="btn btn-primary">Payment</button>
+            </div>
+          </div>
+        </div>
+        <!--============================= end shop list  =============================-->
 
-        <section class="TshirtShop">
+        <!-- =================================== TshirtShop ==========================-->
+        <section id="TshirtShop" class="TshirtShop">
          
-          <h2 style="width:clamp(350px,80dvw,1200px);" >new  collection</h2>
-            
+          <h2 style="width:clamp(350px,80dvw,1200px);" >new  collection</h2> 
           <div class="TshirtBanner">
             <div class="overFlowBg">
               <form>
@@ -254,7 +257,9 @@
           </div>              
 
         </section>
-        <!-- ============================================= Section 2 character -->
+        <!-- ================================= End TshirtShop ========================-->
+
+        <!-- ================================= AboutUS ========================-->
         <section class="characters">
 
             <div class="character">
@@ -280,7 +285,7 @@
                     </div>
                 </div>
                 
-                <img class="characterIMG-2 fromLeft" src="../image/characters/3.png" alt="">
+                <img id="AboutUS"  class="characterIMG-2 fromLeft" src="../image/characters/3.png" alt="">
                 <p class="wellcome" data-obj="Wellcome To Samurai Wrold"></p>
             </div>
             
@@ -289,9 +294,9 @@
                 <p class="AboutUS-TEXT" data-obj="At Samurai Soda, we believe everyone has an inner warrior waiting to be unleashed. Inspired by the strength, precision, and honor of the samurai, our soda is crafted to fuel your body and refresh your spirit. Each can of Samurai Soda is packed with bold flavors and the energy you need to tackle life’s battles. Whether you're training for your next challenge or simply looking for a boost, Samurai Soda is the perfect companion on your journey to greatness."></p>
             </div>
         </section>
-
+        <!-- ================================= end AboutUS ========================-->
         
-        <!-- ============================================= Section 3 ProdusedInfo-->
+        <!-- ================================= ProdusedInfo ========================-->
 
         <section class="ProdusedInfo container-fluid p-5">
             <span class="character-bg"></span>
@@ -318,8 +323,9 @@
 
             </div>
         </section>
+        <!-- ================================= end ProdusedInfo ========================-->
 
-        <!-- =============================================  section 4 support-->
+        <!-- ================================= support ========================-->
         <section class="support">
            
             <span></span>
@@ -362,44 +368,41 @@
             </div>
         </div>
         </section>
+        <!-- ================================= end support ========================-->
 
-
-        <!-- ================================= -->
+  
 
         
 
-        <!-- ================================= -->
-
-        <section class="OrderNow container-fluid">
+        <!-- ================================= order now ========================-->
+        <section id="OrderNow" class="OrderNow container-fluid">
             <div class="row">
                 <h2 class="w-100 text-center">ORDER NOW</h2>
-            </div>
-            
+            </div>    
             <div class="row">
                 <div class="SodaCards container-fluid">
-                    <div id="CardsField" class="row">
+                    <div class="row p-lg-5" id="CardsField" >
 
-  
+                      <!-- cards load from js and json file -->
                     </div>
             </div>
-
             </div>
-            
-
             <div class="RedSamurai">
                     <span class="Samurai fromLeft"><img class="" src="../image/spans/span-Lsamurai.png" alt=""></span>
                     <span class="katana fromUp"><img src="../image/spans/span-katana.png" alt=""></span>
                     <span class="Samurai fromRight"><img src="../image/spans/span-Rsamurai.png" alt=""></span>
             </div>
         </section>
+        <!-- ================================= end order now ========================-->
 
-        <!-- ========== footer ================= -->
-      <footer class="footer">
-        <div class="container py-5">
-            
-            <div class="row d-flex align-items-start justify-content-between mx-auto mt-4">
-              <div class="footerCol footerContact">
-                <h4>Contact</h4>
+      <!-- ================================= footer ========================-->
+      <footer id="ContactUS" class="footer">
+        <div class="container-fluid">
+            <!--  -->
+          <div class="row  p-5">
+
+            <div  class="col-lg-3 col-md-4 font-4 mb-2 footerContact">
+              <h4>Contact</h4>
                 <br>
                 <ul>
                     <li><a href=""><i class='bx bxl-xing'></i></a></li>
@@ -407,43 +410,57 @@
                     <li><a href=""><i class='bx bxl-telegram' ></i></a></li>
                     <li><a href=""><i class='bx bxl-linkedin' ></i></a></li>
                 </ul>
-              </div>
-              <div class="footerCol">
-                <h4 >Location</h4>
+            </div>
+            
+            <div class="col-lg-3 col-md-4 mb-2">
+              <h4 >Location</h4>
                 <br>
                 <h6><i class='bx bx-location-plus' ></i>123 Anywhere St., Any City, State, Country</h6>
-              </div>
-              <div class="footerCol">
-                <h4 >Email Address</h4>
+            </div>
+
+            <div class="col-lg-3 col-md-4 mb-2">
+              <h4 >Email Address</h4>
                 <br>
                 <h6><i class='bx bx-envelope'></i>hello@reallygreatsite.com</h6>
-              </div>
-              <div class="footerCol">
-                <h4 >Phone Number</h4>
+            </div>
+
+            <div class="col-lg-3 col-md-4 mb-2">
+              <h4 >Phone Number</h4>
                 <br>
                 <h6><i class='bx bx-phone' ></i>(123) 456 7890</h6>
-              </div>
-              
             </div>
+
+          </div>
+            <!--  -->
         </div>
       </footer>
+
+      <!-- ================================= end footer ========================-->
+
+      <!-- ================================= Copyright ========================-->
       <div class="bg-dark w-100">
         <div class="d-flex justify-content-center">
-          <p>
-            ©
+          <p class="text-light my-auto py-3" >
+            @
             <a data-bs-toggle="modal" style="cursor: pointer;">Copyright by HQ</a>
           </p>
         </div>
       </div>
-        
+      <!-- ================================= end Copyright ========================-->  
 
     </div>
     
+
+    <!-- ================================= javascripts ========================-->
+    <!-- cdn -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <!-- js file -->
     <script src="../js/script.js"></script>
     <script src="../js/loadData.js"></script>
+    <script src="../js/notification.js"></script>
+    <!-- ================================= end javascripts ========================-->
 </body>
 </html>

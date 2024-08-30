@@ -1,0 +1,67 @@
+.TshirtShop{
+    width: 100%;
+    height: max-content;
+    margin-top: clamp(20px,10vw,150px);
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    h2{
+        transition: .7s;
+    }
+    .TshirtBanner{
+        width:max-content;
+        height:max-content;
+    }
+    .overFlowBg{
+        position: relative;
+        border-radius: 12px;
+        transition: .7s;
+    }
+    label{
+        background-color: var(--red);
+        width:clamp(350px,80dvw,1200px);
+        height: clamp(150px,30dvw,400px);
+        position: relative;
+        border-radius: 12px;
+        margin: 0;
+        transition: .7s;
+        z-index: 100;
+        box-shadow: 0 0 5px rgb(99, 99, 99);
+        cursor: pointer;
+        img{
+            position: absolute;
+            bottom:0%;
+            left: 0;
+            width: 100%;
+            height: 150%;
+        }
+        input{
+            visibility: hidden;
+        }
+    }   
+
+    .readmore{
+        background-color: var(--black);
+        color: var(--white);
+        position: absolute;
+        bottom: .9rem;
+
+        width: clamp(100px,10vw,150px);
+        height: clamp(30px,5vw,40px);
+        border-radius: 12px;
+        border: 2px solid var(--white);
+        font-family: sans-serif;
+        text-transform: uppercase;
+    }
+}
+.TshirtShop:has(label input:checked) .overFlowBg{
+    background-color: gray;
+    padding: 0 1rem 2rem 1rem;
+    box-shadow: 0 0 5px rgb(0, 0, 0);
+}
+.TshirtShop:has(label input:checked) label{
+    transform: translateY(-10%);
+}
+.TshirtShop:has(label input:checked) h2{
+    transform: translateY(-70%);
+}
