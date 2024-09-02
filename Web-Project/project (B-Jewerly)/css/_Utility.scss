@@ -22,6 +22,7 @@
     font-style: normal;
     list-style: none;
     a{text-decoration: none;}
+    transition: .5s;
 }
 body{
     overflow-x: hidden;
@@ -91,25 +92,25 @@ body, html {
 }
 
 .fromDown{
-    transform: translateY(100%);
+    transform: translateY(50%);
     opacity: 0;
     transition: 1.5s;
 }
 
 .fromUp{
-    transform: translateY(-100%);
+    transform: translateY(-50%);
     opacity: 0;
     transition: 1.5s;
 }
 
 .fromLeft{
-    transform: translateX(-100%);
+    transform: translateX(-50%);
     opacity: 0;
     transition: 3s;
 }
 
 .fromRight{
-    transform: translateX(100%);
+    transform: translateX(50%);
     opacity: 0;
     transition: 3s;
 }

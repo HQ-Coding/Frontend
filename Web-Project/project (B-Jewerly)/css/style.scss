@@ -36,11 +36,13 @@ a.upIcon{
     // ==================================
     .navbar-toggler{
         border: none;
+        margin-right: 1rem;
     }
     .navbar-brand img{
     width: 200px;
     }
     .navbar-nav{
+        flex-wrap: wrap;
         gap: 10px;
         .nav-link{
             font-size: 25px;
@@ -92,8 +94,17 @@ a.upIcon{
 .dropdown-menu{
     background-color: transparent;
     border: 1px solid var(--bg-1);
+    padding: 10px;
     .dropdown-item{
         color: var(--text-color-1);
+        padding: 10px;
+        height: 100%;
+        text-align: center;
+        border-radius: 10px;
+    }
+    .dropdown-item:hover{
+        
+        background-color: var(--bg-3);
     }
 }
     

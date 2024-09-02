@@ -19,6 +19,7 @@
   font-weight: 400;
   font-style: normal;
   list-style: none;
+  transition: 0.5s;
 }
 * a {
   text-decoration: none;
@@ -99,25 +100,25 @@ body, html {
 }
 
 .fromDown {
-  transform: translateY(100%);
+  transform: translateY(50%);
   opacity: 0;
   transition: 1.5s;
 }
 
 .fromUp {
-  transform: translateY(-100%);
+  transform: translateY(-50%);
   opacity: 0;
   transition: 1.5s;
 }
 
 .fromLeft {
-  transform: translateX(-100%);
+  transform: translateX(-50%);
   opacity: 0;
   transition: 3s;
 }
 
 .fromRight {
-  transform: translateX(100%);
+  transform: translateX(50%);
   opacity: 0;
   transition: 3s;
 }
@@ -286,11 +287,13 @@ a.upIcon {
 }
 .base .section:first-child .navbar-toggler {
   border: none;
+  margin-right: 1rem;
 }
 .base .section:first-child .navbar-brand img {
   width: 200px;
 }
 .base .section:first-child .navbar-nav {
+  flex-wrap: wrap;
   gap: 10px;
 }
 .base .section:first-child .navbar-nav .nav-link {
@@ -347,9 +350,17 @@ a.upIcon {
 .dropdown-menu {
   background-color: transparent;
   border: 1px solid var(--bg-1);
+  padding: 10px;
 }
 .dropdown-menu .dropdown-item {
   color: var(--text-color-1);
+  padding: 10px;
+  height: 100%;
+  text-align: center;
+  border-radius: 10px;
+}
+.dropdown-menu .dropdown-item:hover {
+  background-color: var(--bg-3);
 }
 
 .base .section:nth-child(2) {
