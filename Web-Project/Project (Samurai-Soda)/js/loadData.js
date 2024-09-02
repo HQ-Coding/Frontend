@@ -50,10 +50,28 @@ const LoadCardDisplay = (cards) => {
             </div>`
     });
 
+    const inputs = document.querySelectorAll('#number-input');
+    inputs.forEach((obj )=>{
+       
+      obj.addEventListener('input', ()=> {
+        const value = parseInt(obj.value, 10);
+        const min = parseInt(obj.min, 10);
+        const max = parseInt(obj.max, 10);
+         
+        if (value < min) {
+          obj.value = min;
+        } else if (value > max) {
+          obj.value = max;
+        }
+      });
+    })
+
 };
 
-
 fetchCards();
+const total = document.querySelector("#total span")
+const taxs = document.querySelector("#taxs span")
+const shouldPay = document.querySelector("#shouldPay span")
 
 const attachEventListeners = (cards) => {
     const increaseButtons = document.querySelectorAll('.increase');
@@ -62,6 +80,8 @@ const attachEventListeners = (cards) => {
     const addToCart = document.querySelectorAll('.addToCart');
     const shopList = document.querySelector('.cart-Items');
 
+
+    // increaseButtons =====================================
     increaseButtons.forEach((button, index) => {
         button.addEventListener('click', () => {
             const currentCount = cards[index].count
@@ -76,6 +96,7 @@ const attachEventListeners = (cards) => {
         });
     });
 
+    // decreaseButtons =====================================
     decreaseButtons.forEach((button, index) => {
         button.addEventListener('click', () => {
             const INTshowNumber = parseInt(showNumber[index].value)
@@ -89,13 +110,13 @@ const attachEventListeners = (cards) => {
         });
     });
 
+    // addToCart ==========================================
     addToCart.forEach((button, index) => {
       button.addEventListener('click', () => {
 
         const INTshowNumber = parseInt(showNumber[index].value)
         const {id ,name , price , soda_url} = cards[index]
        
-        // LoadCartItem( id ,  name , price, img_url , INTshowNumber )
         if( INTshowNumber >= 1){
           shopList.innerHTML += 
           `
@@ -120,15 +141,6 @@ const attachEventListeners = (cards) => {
 
 
 
-// const LoadCartItem = (id ,  name , price, img_url , count ) => {
-  
-// }
-
-
-const total = document.querySelector("#total span")
-const taxs = document.querySelector("#taxs span")
-const shouldPay = document.querySelector("#shouldPay span")
-
 const deleteFromCart = () => {
   const deleteCartItemButtons = document.querySelectorAll('#delete'); 
   const shopListItems = document.querySelectorAll('.cart-Item'); 
@@ -136,9 +148,10 @@ const deleteFromCart = () => {
   deleteCartItemButtons.forEach((button, index) => {
     button.addEventListener('click', () => {
       shopListItems[index].remove(); 
+      CalcShopList();
     });
   });
-  CalcShopList();
+
 };
 
 const CalcShopList = () => {
@@ -154,6 +167,7 @@ const CalcShopList = () => {
 
   taxs.textContent = ( (2/100) * shopListTotal)
   total.textContent = shopListTotal
-  shouldPay.textContent = shopListTotal + (( (5/100) * shopListTotal))
+  shouldPay.textContent = shopListTotal + (( (2/100) * shopListTotal))
 };
 
+// input alarm
