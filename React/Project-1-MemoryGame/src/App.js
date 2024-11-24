@@ -1,19 +1,23 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import SingleCards from './component/SingleCards';
 import './App.css';
 
 const cardsImages = [
-  {"src": "/img/helmet-1.png"},
-  {"src": "/img/potion-1.png"},
-  {"src": "/img/ring-1.png"},
-  {"src": "/img/scroll-1.png"},
-  {"src": "/img/shield-1.png"},
-  {"src": "/img/sword-1.png"}
+  {"src": "/img/helmet-1.png" , mached:false},
+  {"src": "/img/potion-1.png" , mached:false},
+  {"src": "/img/ring-1.png" , mached:false},
+  {"src": "/img/scroll-1.png" , mached:false},
+  {"src": "/img/shield-1.png" , mached:false},
+  {"src": "/img/sword-1.png" , mached:false}
 ]
 
 function App() {
 
   const [cards , setCards] = useState([])
   const [turns , setTurns] = useState(0)
+
+  const [choiceOne , setChoiceOne] = useState(null)
+  const [choiceTwo , setChoiceTwo] = useState(null)
 
   const shuffleCards = () => {
     const shuffledCards = [...cardsImages, ...cardsImages]
@@ -25,7 +29,46 @@ function App() {
 
   }
 
+  //handle a choice
+  const handleChoice = (card) =>{
+    choiceOne ? setChoiceTwo(card) : setChoiceOne(card)
+  }
 
+  // compare 2 selected cards :
+  useEffect(() => {
+    if(choiceOne && choiceTwo){
+      if(choiceOne.src === choiceTwo.src){
+        setCards(prevCards => {
+          return prevCards.map(card => {
+            if(card.src ===  choiceOne.src){
+              return{...card, mached :true}
+            }
+            else{
+              return card
+            }
+          })
+        })
+
+        resetTurn()
+      }
+      else {
+        resetTurn()
+      }
+    }
+
+  },[choiceOne,choiceTwo])
+
+  
+
+  //resect choices and increase turn :
+
+  const resetTurn = () =>{
+    setChoiceOne(null)
+    setChoiceTwo(null)
+
+    setTurns(pervTurn => pervTurn + 1)
+
+  }
 
   return (
     <div className="App">
@@ -34,10 +77,12 @@ function App() {
 
       <div className='card-grid'>
         {cards.map((card)=>(
-          <div className='card' key={card.id}>
-            <img className='front' src={card.src} alt='card front' />
-            <img className='back' src='img/cover.png' alt='card back' />
-          </div>
+          <SingleCards 
+          card={card} 
+          key={card.id} 
+          handleChoice={handleChoice} 
+          flipped={ card === choiceOne || card === choiceTwo || card.mached }
+          />
         ))}
       </div>
     </div>
