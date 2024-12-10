@@ -15,12 +15,13 @@
     text-decoration: none;
   }
   .navbar a:last-child {
-    color: #fff;
+    color: #b3b3b3;
     text-decoration: none;
     margin-left: 40px;
     padding: 8px;
     border: 1px solid #fff;
     border-radius: 4px;
+    font-size: clamp(10px,2vw,20px);
   }
   .navbar a:last-child:hover {
     background: #fff;
