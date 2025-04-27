@@ -10,7 +10,6 @@ export default function Home() {
     <div className='home'>
       {error && <p className='error'>{error}</p>}
       {isLoading && <p className='isLoading'>isLoading...</p>}
-
       {data &&  <RecipeList recipes={data}/> }
     </div>
   )
