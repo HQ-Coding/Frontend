@@ -1,0 +1,245 @@
+{
+  "projects": [
+    {
+      "id": 1,
+      "name": "Samurai Soda",
+      "imgLink": "https://i.ibb.co/m8bkkqs/Samurai-Soda.png",
+      "webLink": "https://hq-coding.github.io/Frontend/Web-Project/Project%20(Samurai-Soda)/html/index.html",
+      "githubLink" : "https://github.com/HQ-Coding/Frontend/tree/main/Web-Project/Project%20(Samurai-Soda)",
+      "category": "Ongoing..."
+    },
+    {
+      "id": 6,
+      "name": "Urban",
+      "imgLink": "https://i.ibb.co/VJNR3Rn/9.png",
+      "webLink": "https://hq-coding.github.io/Frontend/Web-Project/project%20(Urban)/html/index.html",
+      "githubLink" : "https://github.com/HQ-Coding/Frontend/tree/main/Web-Project/project%20(Urban)",
+      "category": "web"
+    },
+    {
+      "id": 3,
+      "name": "B-Jewerly",
+      "imgLink": "https://i.ibb.co/BKQ1hz0/2.png",
+      "webLink": "https://hq-coding.github.io/Frontend/Web-Project/project%20(B-Jewerly)/html/index.html",
+      "githubLink" : "https://github.com/HQ-Coding/Frontend/tree/main/Web-Project/project%20(B-Jewerly)",
+      "category": "web"
+    },
+    {
+      "id": 19,
+      "name": "Music Player",
+      "imgLink": "https://i.ibb.co/WzkRsP1/Music-Player-01.png",
+      "webLink": "https://hq-coding.github.io/Frontend/Javascript/MusicPlayer/html/index.html",
+      "githubLink" : "https://github.com/HQ-Coding/Frontend/tree/main/Javascript/MusicPlayer",
+      "category": "js"
+    },
+    {
+      "id": 4,
+      "name": "EXP Coding",
+      "imgLink": "https://i.ibb.co/TM52PrQ/3.png",
+      "webLink": "https://hq-coding.github.io/Frontend/Web-Project/project%20(coding)/html/home.html",
+      "githubLink" : "https://github.com/HQ-Coding/Frontend/tree/main/Web-Project/project%20(coding)",
+      "category": "web"
+    },
+    {
+      "id": 9,
+      "name": "TakMakaron",
+      "imgLink": "https://i.ibb.co/jVyRtkv/8.png",
+      "webLink": "https://hq-coding.github.io/Frontend/Web-Project/project%20(TakMakaron)/html/index.html",
+      "githubLink" : "https://github.com/HQ-Coding/Frontend/tree/main/Web-Project/project%20(TakMakaron)",
+      "category": "web (not responsive yet)"
+    },
+    {
+      "id": 23,
+      "name": "TODO LIST",
+      "imgLink": "https://i.ibb.co/FXV53Wg/20.png",
+      "webLink": "https://hq-coding.github.io/Frontend/Javascript/TODO-LIST/index.html",
+      "githubLink" : "https://github.com/HQ-Coding/Frontend/tree/main/Javascript/TODO-LIST",
+      "category": "js"
+    },
+    {
+      "id": 8,
+      "name": "project (Podcast Player)",
+      "imgLink": "https://i.ibb.co/2j10fNt/7.png",
+      "webLink": "https://hq-coding.github.io/Frontend/Web-Project/project%20(Podcast%20Player)/html/index.html",
+      "githubLink" : "https://github.com/HQ-Coding/Frontend/tree/main/Web-Project/project%20(Podcast%20Player)",
+      "category": "web"
+    },
+    {
+      "id": 7,
+      "name": "Nike",
+      "imgLink": "https://i.ibb.co/qW4H19b/6.png",
+      "webLink": "https://hq-coding.github.io/Frontend/Web-Project/project%20(Nike)/html/index.html",
+      "githubLink" : "https://github.com/HQ-Coding/Frontend/tree/main/Web-Project/project%20(Nike)",
+      "category": "web"
+    }
+    ,
+    {
+      "id": 14,
+      "name": "profile card 3",
+      "imgLink": "https://i.ibb.co/4RYSybP/13.png",
+      "webLink": "https://hq-coding.github.io/Frontend/Web-Project/project%20(profile-card)/profile-card-01/index.html",
+      "githubLink" : "https://github.com/HQ-Coding/Frontend/tree/main/Web-Project/project%20(profile-card)/profile-card-03",
+      "category": "card"
+    },
+    {
+      "id": 12,
+      "name": "profile card 1",
+      "imgLink": "https://i.ibb.co/R0vg4TR/11.png",
+      "webLink": "https://hq-coding.github.io/Frontend/Web-Project/project%20(profile-card)/profile-card-03/index.html",
+      "githubLink" : "https://github.com/HQ-Coding/Frontend/tree/main/Web-Project/project%20(profile-card)/profile-card-01",
+      "category": "card"
+    },
+    {
+      "id": 2,
+      "name": "Bootstrap-FullWebSite",
+      "imgLink": "https://i.ibb.co/McdQNZ1/1.png",
+      "webLink": "https://hq-coding.github.io/Frontend/Web-Project/Bootstrap-Fullhomepage/index.html",
+      "githubLink" : "https://github.com/HQ-Coding/Frontend/tree/main/Web-Project/Bootstrap-Fullhomepage",
+      "category": "web"
+    },
+    {
+      "id": 5,
+      "name": "project (DATABASE)",
+      "imgLink": "https://i.ibb.co/tbD3HsH/4.png",
+      "webLink": "https://hq-coding.github.io/Frontend/Web-Project/project%20(DATABASE)/html/index.html",
+      "githubLink" : "https://github.com/HQ-Coding/Frontend/tree/main/Web-Project/project%20(DATABASE)",
+      "category": "web"
+    },
+    {
+      "id": 13,
+      "name": "profile card 2",
+      "imgLink": "https://i.ibb.co/7Gb6JjW/12.png",
+      "webLink": "https://hq-coding.github.io/Frontend/Web-Project/project%20(profile-card)/profile-card-04/index.html",
+      "githubLink" : "https://github.com/HQ-Coding/Frontend/tree/main/Web-Project/project%20(profile-card)/profile-card-02",
+      "category": "card"
+    },
+    {
+      "id": 10,
+      "name": "project (FoodMenu)",
+      "imgLink": "https://i.ibb.co/k38MRkd/5.png",
+      "webLink": "https://hq-coding.github.io/Frontend/Web-Project/project%20(FoodMenu)/html/index.html",
+      "githubLink" : "https://github.com/HQ-Coding/Frontend/tree/main/Web-Project/project%20(FoodMenu)",
+      "category": "web"
+    },
+    {
+      "id": 11,
+      "name": "Web3 design",
+      "imgLink": "https://i.ibb.co/fr1qH9N/10.png",
+      "webLink": "https://hq-coding.github.io/Frontend/Web-Project/Project%20(Web3%20design)/html/index.html",
+      "githubLink" : "https://github.com/HQ-Coding/Frontend/tree/main/Web-Project/Project%20(Web3%20design)",
+      "category": "web ( not responsive yet )"
+    },
+    {
+      "id": 15,
+      "name": "profile card 4",
+      "imgLink": "https://i.ibb.co/nbNj6Xh/14.png",
+      "webLink": "https://hq-coding.github.io/Frontend/Web-Project/project%20(profile-card)/profile-card-02/index.html",
+      "githubLink" : "https://github.com/HQ-Coding/Frontend/tree/main/Web-Project/project%20(profile-card)/profile-card-04",
+      "category": "card"
+    },
+    {
+      "id": 16,
+      "name": "login form 1",
+      "imgLink": "https://i.ibb.co/BZnkzMz/15.png",
+      "webLink": "https://hq-coding.github.io/Frontend/Web-Project/login-form-1/html/index.html",
+      "githubLink" : "https://github.com/HQ-Coding/Frontend/tree/main/Web-Project/login-form-1",
+      "category": "form"
+    },
+    {
+      "id": 17,
+      "name": "login form 2",
+      "imgLink": "https://i.ibb.co/T1YjDhm/16.png",
+      "webLink": "https://hq-coding.github.io/Frontend/Web-Project/login-form-2/html/index.html",
+      "githubLink" : "https://github.com/HQ-Coding/Frontend/tree/main/Web-Project/login-form-2",
+      "category": "form"
+    },
+    {
+      "id": 18,
+      "name": "login form 3",
+      "imgLink": "https://i.ibb.co/3RDHPL9/17.png",
+      "webLink": "https://hq-coding.github.io/Frontend/Web-Project/login-form-3/html/index.html",
+      "githubLink" : "https://github.com/HQ-Coding/Frontend/tree/main/Web-Project/login-form-3",
+      "category": "form"
+    },
+    {
+      "id": 20,
+      "name": "PokemonCards",
+      "imgLink": "https://i.ibb.co/KNvv9fh/18.png",
+      "webLink": "https://hq-coding.github.io/Frontend/Javascript/PokemonCards/html/index.html",
+      "githubLink" : "https://github.com/HQ-Coding/Frontend/tree/main/Javascript/PokemonCards",
+      "category": "js"
+    },
+    {
+      "id": 21,
+      "name": "Cash Register Project",
+      "imgLink": "https://i.ibb.co/Brmp71P/19.png",
+      "webLink": "https://hq-coding.github.io/Frontend/Javascript/Cash-Register-Project/index.html",
+      "githubLink" : "https://github.com/HQ-Coding/Frontend/tree/main/Javascript/Cash-Register-Project",
+      "category": "js"
+    },
+    {
+      "id": 22,
+      "name": "Weather",
+      "imgLink": "https://i.ibb.co/DQhrvk5/29.png",
+      "webLink": "https://hq-coding.github.io/Frontend/Javascript/Weather/html/index.html",
+      "githubLink" : "https://github.com/HQ-Coding/Frontend/tree/main/Javascript/Weather",
+      "category": "js"
+    },
+    {
+      "id": 24,
+      "name": "CALCULATOR",
+      "imgLink": "https://i.ibb.co/Yh7QcxF/28.png",
+      "webLink": "https://hq-coding.github.io/Frontend/Javascript/CALCULATOR/index.html",
+      "githubLink" : "https://github.com/HQ-Coding/Frontend/tree/main/Javascript/CALCULATOR",
+      "category": "js"
+    },
+    {
+      "id": 25,
+      "name": "Mini Game",
+      "imgLink": "https://i.ibb.co/h8DM5bX/23.png",
+      "webLink": "https://hq-coding.github.io/Frontend/Javascript/Mini-Game/index.html",
+      "githubLink" : "https://github.com/HQ-Coding/Frontend/tree/main/Javascript/Mini-Game",
+      "category": "js"
+    },
+    {
+      "id": 26,
+      "name": "Calories Counter",
+      "imgLink": "https://i.ibb.co/Lv67jTB/24.png",
+      "webLink": "https://hq-coding.github.io/Frontend/Javascript/Calories-Counter/index.html",
+      "githubLink" : "https://github.com/HQ-Coding/Frontend/tree/main/Javascript/Calories-Counter",
+      "category": "js"
+    },
+    {
+      "id": 27,
+      "name": "Music Player FCC",
+      "imgLink": "https://i.ibb.co/41m0Rgv/21.png",
+      "webLink": "https://hq-coding.github.io/Frontend/Javascript/Music-Player/index.html",
+      "githubLink" : "https://github.com/HQ-Coding/Frontend/tree/main/Javascript/Music-Player",
+      "category": "js"
+    },
+    {
+      "id": 28,
+      "name": "Palindrome",
+      "imgLink": "https://i.ibb.co/5KqCYGV/22.png",
+      "webLink": "https://hq-coding.github.io/Frontend/Javascript/Palindrome/index.html",
+      "githubLink" : "https://github.com/HQ-Coding/Frontend/tree/main/Javascript/Palindrome",
+      "category": "js"
+    },
+    {
+      "id": 29,
+      "name": "Paper Rock Scissors",
+      "imgLink": "https://i.ibb.co/2MK6sZ7/25.png",
+      "webLink": "https://hq-coding.github.io/Frontend/Javascript/Paper-Rock-Scissors/index.html",
+      "githubLink" : "https://github.com/HQ-Coding/Frontend/tree/main/Javascript/Paper-Rock-Scissors",
+      "category": "js"
+    },
+    {
+      "id": 30,
+      "name": "Roman Numeral Converter",
+      "imgLink": "https://i.ibb.co/GptNSdx/26.png",
+      "webLink": "https://hq-coding.github.io/Frontend/Javascript/Roman-Numeral-Converter/index.html",
+      "githubLink" : "https://github.com/HQ-Coding/Frontend/tree/main/Javascript/Roman-Numeral-Converter",
+      "category": "js"
+    }
+  ]
+}

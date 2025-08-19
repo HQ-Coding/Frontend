@@ -1,0 +1,44 @@
+
+.lightAnimationFRAME {
+  position: fixed;       
+  top: 0;
+  left: 0;
+  width: 100vw;          
+  height: 100vh;         
+  background: #fff;      
+  display: flex;         
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;         
+  transition: opacity 0.8s ease; 
+
+}
+.lightAnimationFRAME.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+  .lightSVG {
+  transition: 0.3s;
+  animation: slideRight 2s infinite alternate; /* added duration, iteration, and direction */
+  }
+
+  @keyframes slideRight {
+  0%   { transform: scaleY(2) translateY(-100px); opacity: 1; }
+  100% { transform: scaleY(1) translateY(100px); opacity: 0.3; }
+}
+
+.cat{
+  width: 200px;
+}
+.box{
+  background-color: #ffffff;
+  width: 380px;
+  aspect-ratio: 1/1;
+  padding: 6rem;
+  border-radius: 100rem;
+  z-index: 100;
+}
+#loading-text{
+  font-size: 50px;
+}
