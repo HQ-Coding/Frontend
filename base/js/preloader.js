@@ -7,7 +7,7 @@ setInterval(() => {
 }, 500);
 
 const sectionOne = document.querySelector('.lightAnimation');
-const step = 25;
+const step = 40;
 let count_Of_Lights = Math.round(window.innerWidth / step); 
 
 function generateSVGPositions(count) {
