@@ -147,8 +147,6 @@ const initApp = async () => {
 
   const { aboutMeText, experianceINFO, educationINFO, skills ,experienceItem , certificateList } = data;
 
-  console.log(certificateList);
-
   if (DOM.aboutMeTextHTML) {
     const observer = new IntersectionObserver((entries, obs) => {
       entries.forEach(entry => {
