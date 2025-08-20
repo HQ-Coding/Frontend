@@ -188,7 +188,7 @@ nav ul li a[aria-current=page] {
   height: fit-content;
   transition: 0.5s;
   transform: translateY(20%);
-  opacity: 0.5;
+  opacity: 0;
 }
 
 #experianceINFO.show, #educationINFO.show {

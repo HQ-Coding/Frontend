@@ -44,7 +44,8 @@ function createObserver(viewHeight, toggle, sectionChild, className) {
         } else {
           sectionChild.classList.add(className);
         }
-      } else {
+      } 
+      if (!entry.isIntersecting) {
         if (toggle) {
           sectionChild.classList.remove(className); 
         }
@@ -115,8 +116,8 @@ const renderSkills = (skills) => {
 
 const renderExpList = (list) => {
   DOM.expObjs.innerHTML = list.map(obj =>`
-  <li class="flex gap-1 items-center my-2 ml-10">
-    <svg class="w-[40px] shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
+  <li class="flex gap-1 items-center my-2">
+    <svg class="w-[20px] sm:w-[40px] shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
       <path d="M320 576C461.4 576 576 461.4 576 320C576 178.6 461.4 64 320 64C178.6 64 64 178.6 64 320C64 461.4 178.6 576 320 576zM404.4 276.7L324.4 404.7C320.2 411.4 313 415.6 305.1 416C297.2 416.4 289.6 412.8 284.9 406.4L236.9 342.4C228.9 331.8 231.1 316.8 241.7 308.8C252.3 300.8 267.3 303 275.3 313.6L302.3 349.6L363.7 251.3C370.7 240.1 385.5 236.6 396.8 243.7C408.1 250.8 411.5 265.5 404.4 276.8z"/>
     </svg>
     <span class="pDarkGray text-sm sm:text-lg md:text-xl">${obj}</span>
@@ -323,7 +324,7 @@ if (DOM.contact) {
 if(DOM.experianceINFO_Section , DOM.educationINFO_Section) {
   const elementsToAnimate = [DOM.experianceINFO_Section , DOM.educationINFO_Section ];
   elementsToAnimate.forEach(el => {
-    const myObserver = createObserver(0.25, true, el, 'show');
+    const myObserver = createObserver(0.3, true, el, 'show');
     myObserver.observe(DOM.aboutMeSection);
   });
 }
