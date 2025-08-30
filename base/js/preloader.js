@@ -7,7 +7,7 @@ setInterval(() => {
 }, 500);
 
 const sectionOne = document.querySelector('.lightAnimation');
-const step = 60;
+const step = 30;
 let count_Of_Lights = Math.round(window.innerWidth / step); 
 
 function generateSVGPositions(count) {
@@ -51,5 +51,5 @@ window.addEventListener("resize", () => {
 window.addEventListener("load", () => {
     setTimeout(() => {
       document.querySelector(".lightAnimationFRAME").classList.add("hidden");
-    }, 2000); 
+    }, 5000); 
   });

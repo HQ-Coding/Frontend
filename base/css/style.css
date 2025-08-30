@@ -233,12 +233,12 @@ nav ul li a[aria-current=page] {
   z-index: 10;
 }
 .redBox #profileIMG-bg {
-  background-image: url(https://i.ibb.co/231v1dPJ/Profile-IMAGE-red-background-1.png);
+  background-image: url(../img/profile/Profile-IMAGE-red-background-1.png);
   opacity: 1;
   z-index: 1;
 }
 .redBox #profileIMG-no-bg {
-  background-image: url(https://i.ibb.co/Xkt1GcQG/Profile-IMAGE-no-background-1.png);
+  background-image: url(../img/profile/Profile-IMAGE-no-background-1.png);
   opacity: 0;
   z-index: 0;
 }
