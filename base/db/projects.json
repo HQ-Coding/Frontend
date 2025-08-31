@@ -9,6 +9,14 @@
       "category": "Ongoing..."
     },
     {
+      "id": 31,
+      "name": "GSAP | Liquid Soul",
+      "imgLink": "https://i.ibb.co/YTpdxBHs/Screenshot-2025-08-31-130124.png",
+      "webLink": "https://hq-coding.github.io/Frontend/Web-Project/project%20(Urban)/html/index.html",
+      "githubLink" : "https://github.com/HQ-Coding/Frontend/tree/main/Web-Project/project%20(Urban)",
+      "category": "GSAP | html | css | js"
+    },
+    {
       "id": 6,
       "name": "Urban",
       "imgLink": "https://i.ibb.co/VJNR3Rn/9.png",
