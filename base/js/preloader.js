@@ -51,5 +51,5 @@ window.addEventListener("resize", () => {
 window.addEventListener("load", () => {
     setTimeout(() => {
       document.querySelector(".lightAnimationFRAME").classList.add("hidden");
-    }, 5000); 
+    }, 3000); 
   });
