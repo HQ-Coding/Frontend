@@ -150,22 +150,23 @@ const formatTime = (time) => {
 };
 
 // ==================================================== Button action
-next.addEventListener("click", ()=>{
-  let currentIndex = swiper.activeIndex ;
-  if( currentIndex < swiper.slides.length && currentIndex >= 0 ){
-    let nextSlide = currentIndex +1;
+next.addEventListener("click", () => {
+  let currentIndex = swiper.activeIndex;
+  if (currentIndex < swiper.slides.length - 1) { // stay within range
+    let nextSlide = currentIndex + 1;
     swiper.slideTo(nextSlide);
-    toPlay(nextSlide)
+    toPlay(nextSlide);
   }
-})
-prev.addEventListener("click", ()=>{
-  let currentIndex = swiper.activeIndex ;
-  if( currentIndex < swiper.slides.length && currentIndex >= 0 ){
-    let prevtSlide = currentIndex - 1;
-    swiper.slideTo(prevtSlide);
-    toPlay(prevtSlide)
+});
+
+prev.addEventListener("click", () => {
+  let currentIndex = swiper.activeIndex;
+  if (currentIndex > 0) { // prevent -1
+    let prevSlide = currentIndex - 1;
+    swiper.slideTo(prevSlide);
+    toPlay(prevSlide);
   }
-})
+});
 
 playStop.addEventListener("click", ()=>{
   if (audio.paused) {
@@ -181,20 +182,15 @@ playStop.addEventListener("click", ()=>{
 
 
 const handleDownload = (link, title, artist) => {
-  // downloadButton.setAttribute('data-href', link);
-
-  downloadButton.addEventListener('click', () => {
-    // const hrefValue = downloadButton.getAttribute('data-href');
-    const hrefValue = link;
-  
+  downloadButton.onclick = () => {
     const tempLink = document.createElement('a');
-    tempLink.href = hrefValue;
-    tempLink.download = `${title} By ${artist}`; // Create a custom name for the file when downloading.
+    tempLink.href = link;
+    tempLink.download = `${title} By ${artist}`;
     tempLink.style.display = 'none';
     document.body.appendChild(tempLink);
     tempLink.click();
     document.body.removeChild(tempLink);
-  });
+  };
 };
 
 // ====================================================
