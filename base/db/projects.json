@@ -1,12 +1,20 @@
 {
   "projects": [
     {
+      "id": 32,
+      "name": "Todo List +",
+      "imgLink": "https://i.ibb.co/q3sfLyzb/todo-react-app.png",
+      "webLink": "https://hq-coding.github.io/todo-app/",
+      "githubLink" : "https://github.com/HQ-Coding/todo-app",
+      "category": "React 1st 🥇"
+    },
+    {
       "id": 1,
       "name": "Samurai Soda",
       "imgLink": "https://i.ibb.co/m8bkkqs/Samurai-Soda.png",
       "webLink": "https://hq-coding.github.io/Frontend/Web-Project/Project%20(Samurai-Soda)/html/index.html",
       "githubLink" : "https://github.com/HQ-Coding/Frontend/tree/main/Web-Project/Project%20(Samurai-Soda)",
-      "category": "Ongoing..."
+      "category": "web 1st 🥇| tailwind"
     },
     {
       "id": 31,
