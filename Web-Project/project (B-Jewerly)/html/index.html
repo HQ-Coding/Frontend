@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="../img/logo.png"/>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet"href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
@@ -16,12 +17,12 @@
   <a href="#Top" class='upIcon bx bx-up-arrow-alt'></a>
     <section class="base" style="position: relative;">
         <!-- section 1 -->
-        <section class="section" id="Top">
+        <section class="section sectionOne" id="Top">
           <span class="span1"></span>
           
             <nav class="navbar navbar-expand-lg navbar-dark" aria-label="Offcanvas navbar large">
               <div class="container-fluid">
-                <a class="navbar-brand" href="#"><img src="../img/logo.png" alt="LOGO"></a>
+                <a class="navbar-brand" href="#"><img src="../img/gif-1.gif" alt="LOGO"></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar2" aria-controls="offcanvasNavbar2">
                   <span class="navbar-toggler-icon"></span>
                 </button>
@@ -66,20 +67,15 @@
             </nav>
 
             <!-- -->
-
-              <div class="container-fluid pl-5 ml-3">
-                <div class="row">
-                    <div class="col-xl-6 col-lg-7 col-md-9 col-sm-10 p-5">
-                      <div class="header fromLeft" >
-                        You say vintage. 
-                        <br>
-                        We say classic.
-                        </div>
-                    <p class="fromDown  mt-5">What's special about your product, service, or company? Use this space to highlight the things that set you apart from your competition, whether it's a special feature, a unique philosophy, or awards and recognition that you have received. Think of this as your elevator pitch to get the reader's attention.</p>
-                </div>
-                    
-                </div>
+            <div class="bannerInfo">
+              <div class="bannerHeader fromLeft">
+                You say vintage <br>
+                We say classic
               </div>
+              <p class="fromDown mt-2 bannerText">
+                What's special about your product, service, or company? Use this space to highlight the things that set you apart from your competition, whether it's a special feature, a unique philosophy, or awards and recognition that you have received. Think of this as your elevator pitch to get the reader's attention.
+              </p>
+            </div>
         </section>
 
       <!-- section 2 -->
@@ -157,23 +153,22 @@
 
   <!-- section 4 -->
   <section class="section">
-    <div class="container my-5">
-      <div class="imgcard">
 
-      <div class="fromDown col-md-4 flex-column justify-content-between align-items-start">
+    <div class="imgcard">
+      <div class="fromDown d-flex flex-column justify-content-between align-items-start">
           <p id="forHer" class="font-10 fromLeft d-none d-sm-block">for her</p>
         <div class="d-flex flex-sm-column">
           <img  src="../img/item-1.png" alt="jwerely">
           <div class="info p-3">
-          <p class="font-2 w-100 mb-0">Necklaces</p>
-          <hr class="w-100">
-          <p class="font-2 w-100 pb-1"> 1960s Layered Necklaces</p>
-          <span id="price" class="font-2 w-100">$430</span>
-        </div>
+            <p class="font-2 w-100 mb-0">Necklaces</p>
+              <hr class="w-100">
+            <p class="font-2 w-100 pb-1"> 1960s Layered Necklaces</p>
+              <span id="price" class="font-2 w-100">$430</span>
+          </div>
         </div>
       </div>
 
-      <div class="fromDown col-md-4 my-1 d-flex flex-sm-column" style="transition: 3s;">
+      <div class="fromDown my-1 d-flex flex-sm-column" style="transition: 3s;">
           <img src="../img/item-3.png" alt="jwerely">
           <div class="info p-3">
           <p class="font-2 text-left w-100">Bracelets</p>
@@ -183,7 +178,7 @@
         </div>
       </div>
 
-      <div class="fromDown col-md-4 my-1 d-flex flex-sm-column" style="transition: 4s;">
+      <div class="fromDown my-1 d-flex flex-sm-column" style="transition: 4s;">
           <img src="../img/item-2.png" alt="jwerely">
           <div class="info p-3">
           <p class="font-2 text-left w-100">Bracelets</p>
@@ -193,11 +188,12 @@
         </div>
       </div>
 
+    </div>
+
+      <div class="text-center">
+        <button class="btn btn-outline-light px-4 py-2 font-2">Read More &gt;</button>
       </div>
-      <div class="row">
-        <button class="moreBtn col-lg-5 mx-auto my-3">MORE ></button >
-      </div>
-      </div>
+
       </section>
 
       <!-- section 5 -->
@@ -205,14 +201,14 @@
         <div class="container">
           <div class="gridBox">
 
-            <div class=" imgBox fromLeft">
+            <div class="imgBox fromLeft">
               <div >
                 <span class="text-center ">SUSTAINABLY SOURCED</span>
                 <p class="text-center ">
                   Why is this product or service the user's best choice? State your reason on the header, then expound with a short explanation why.
                 </p>
-                </div>
               </div>
+            </div>
         
             <div class="imgBox fromDown" >
               <div>
@@ -220,8 +216,8 @@
                 <p class="text-center">
                   Why is this product or service the user's best choice? State your reason on the header, then expound with a short explanation why.
                 </p>
-                </div>
               </div>
+            </div>
        
             <div class="imgBox fromRight" >
               <div >
@@ -229,17 +225,19 @@
                 <p class="text-center">
                   Why is this product or service the user's best choice? State your reason on the header, then expound with a short explanation why.
                 </p>
-                </div>
               </div>
-
             </div>
+
+          </div>
         
           <div class="row text-center fade">
             <div class="info">
               <p>Adorn yourself with our stunning gold jewelry, each piece a testament to luxurious artistry and impeccable design.</p>
-              <button class="moreBtn col-12 px-1 font-2">Read More ></button >
+              <div class="text-center">
+                <button class="btn btn-outline-light px-4 py-2 font-2">Read More &gt;</button>
+              </div>
             </div>
-            </div>
+          </div>
 
         </div>
       </section>

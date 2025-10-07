@@ -1,15 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Tangerine:wght@400;700&display=swap");
 :root {
-  --light-gold: #C6A34F;
-  --dark-gold: #AD8330 ;
-  --bg-1:#fff9f3;
-  --bg-2:#636a73;
-  --bg-3:#1C2027;
+  --light-gold: #c6a34f;
+  --dark-gold: #ad8330;
+  --bg-1: #fff9f3;
+  --bg-2: #636a73;
+  --bg-3: #1c2027;
   --text-color-1: #fff9f3;
-  --text-color-2:#C4BCB6;
-  --text-color-3:#403535;
-  --text-color-4:#3D3D3D;
+  --text-color-2: #c4bcb6;
+  --text-color-3: #403535;
+  --text-color-4: #3d3d3d;
 }
 
 * {
@@ -29,7 +29,8 @@ body {
   overflow-x: hidden;
 }
 
-body, html {
+body,
+html {
   margin: 0;
   padding: 0;
   height: 100%;
@@ -271,6 +272,12 @@ a.upIcon {
 }
 
 .base .section:first-child {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding-bottom: 60px;
+  justify-content: space-between;
   background-image: url(../img/banner-1.png);
   background-position: center;
   background-size: cover;
@@ -282,15 +289,37 @@ a.upIcon {
   background-image: url(../img/span-1.png);
   background-position: center;
   background-size: cover;
-  left: 0;
-  top: 0px;
+  right: 0;
+  top: 0;
+}
+.base .section:first-child nav {
+  padding: 0 50px;
+}
+.base .section:first-child .bannerInfo {
+  width: clamp(300px, 80vw, 700px);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  padding: 20px;
+  border-radius: 5px;
+  padding: 40px;
+}
+.base .section:first-child .bannerInfo .bannerHeader {
+  color: var(--text-color-2);
+  font-size: clamp(25px, 4vw, 50px);
+  font-weight: bold;
+}
+.base .section:first-child .bannerInfo .bannerText {
+  color: var(--text-color-1);
+  font-size: clamp(20px, 4vw, 27px);
 }
 .base .section:first-child .navbar-toggler {
   border: none;
   margin-right: 1rem;
 }
 .base .section:first-child .navbar-brand img {
-  width: 200px;
+  width: clamp(150px, 10vw, 200px);
 }
 .base .section:first-child .navbar-nav {
   flex-wrap: wrap;
@@ -492,6 +521,9 @@ a.upIcon {
   color: var(--text-color-1);
   align-items: center;
   justify-content: center;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 .base .section:nth-child(4) .imgcard {
   display: flex;
@@ -503,16 +535,11 @@ a.upIcon {
 }
 .base .section:nth-child(4) img {
   width: clamp(120px, 30vw, 350px);
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgb(11, 11, 11);
 }
 .base .section:nth-child(4) .moreBtn {
   color: var(--text-color-1);
-}
-.base .section:nth-child(4) .col-md-4 {
-  display: flex;
-  justify-content: center;
-  overflow: hidden;
-  width: -moz-max-content;
-  width: max-content;
 }
 
 .base .section:nth-child(5) {
@@ -562,11 +589,11 @@ a.upIcon {
 }
 .base .section:nth-child(5) .info {
   border-top: 1px solid var(--bg-1);
-  padding: 2rem;
-  margin-top: 2rem;
+  padding: 1rem;
+  margin-top: 1rem;
 }
 .base .section:nth-child(5) .info p {
-  font-size: 25px;
+  font-size: 20px;
 }
 
 .base .section:nth-child(6) {
@@ -616,6 +643,11 @@ a.upIcon {
   }
 }
 @media (max-width: 767.98px) {
+  .base .section:nth-child(5) {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
   .base .section:nth-child(5) .gridBox {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
@@ -641,7 +673,7 @@ a.upIcon {
     justify-self: center;
   }
   .base .section:nth-child(5) .imgBox div {
-    width: 400px;
+    width: 350px;
     height: 150px;
   }
   .base .section:nth-child(5) .info p {

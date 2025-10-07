@@ -1,194 +1,203 @@
-@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Tangerine:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Tangerine:wght@400;700&display=swap");
 
 // =============================== MAIN
-:root{
-    --light-gold : #C6A34F;
-    --dark-gold: #AD8330 ;
-    --bg-1:#fff9f3;
-    --bg-2:#636a73;
-    --bg-3:#1C2027;
-    --text-color-1: #fff9f3;
-    --text-color-2 :#C4BCB6;
-    --text-color-3 :#403535;
-    --text-color-4 :#3D3D3D;
+:root {
+  --light-gold: #c6a34f;
+  --dark-gold: #ad8330;
+  --bg-1: #fff9f3;
+  --bg-2: #636a73;
+  --bg-3: #1c2027;
+  --text-color-1: #fff9f3;
+  --text-color-2: #c4bcb6;
+  --text-color-3: #403535;
+  --text-color-4: #3d3d3d;
 }
 
-*{
-    margin: 0;
-    padding: 0;
-    font-family: "Cinzel Decorative", serif;
-    font-weight: 400;
-    font-style: normal;
-    list-style: none;
-    a{text-decoration: none;}
-    transition: .5s;
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Cinzel Decorative", serif;
+  font-weight: 400;
+  font-style: normal;
+  list-style: none;
+  a {
+    text-decoration: none;
+  }
+  transition: 0.5s;
 }
-body{
-    overflow-x: hidden;
+body {
+  overflow-x: hidden;
 }
 
-body, html {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    display: grid;
-    place-items: center;
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  display: grid;
+  place-items: center;
 }
-.base{
-    display: block;
-    width: clamp(350px,100vw,1500px);  
+.base {
+  display: block;
+  width: clamp(350px, 100vw, 1500px);
 }
 .section {
-    height: clamp(700px,100vh,750px);
-    overflow: hidden;
-    position: relative;
-    padding: 1rem;
-}
-// =============================== display
-.center{
-    display: grid;
-    place-items: center;
+  height: clamp(700px, 100vh, 750px);
+  overflow: hidden;
+  position: relative;
+  padding: 1rem;
 }
 
-.flex-col{
-    display: flex;
-    align-items: center;
-    justify-content: center;
+// =============================== display
+.center {
+  display: grid;
+  place-items: center;
 }
-.flex-row{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+
+.flex-col {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.flex-col-between{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+.flex-row {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
-.flex-row-between{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+.flex-col-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.flex-row-between {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 // =============================== Buttons
-.moreBtn{
-    width: max-content;
-    border: 1px solid var(--text-color-2);
-    border-radius: 50px;
-    background-color: transparent;
-    transition: .5s;
-    font-size:clamp(15px,3vw,20px);
+.moreBtn {
+  width: max-content;
+  border: 1px solid var(--text-color-2);
+  border-radius: 50px;
+  background-color: transparent;
+  transition: 0.5s;
+  font-size: clamp(15px, 3vw, 20px);
 }
-.moreBtn:hover{
-    background-color: var(--bg-3);
-    color: #fff;
+.moreBtn:hover {
+  background-color: var(--bg-3);
+  color: #fff;
 }
 // =============================== animation
-.fade{
-    opacity: 0;
-    transition: 3s;
+.fade {
+  opacity: 0;
+  transition: 3s;
 }
 
-.fromDown{
-    transform: translateY(50%);
-    opacity: 0;
-    transition: 1.5s;
+.fromDown {
+  transform: translateY(50%);
+  opacity: 0;
+  transition: 1.5s;
 }
 
-.fromUp{
-    transform: translateY(-50%);
-    opacity: 0;
-    transition: 1.5s;
+.fromUp {
+  transform: translateY(-50%);
+  opacity: 0;
+  transition: 1.5s;
 }
 
-.fromLeft{
-    transform: translateX(-50%);
-    opacity: 0;
-    transition: 3s;
+.fromLeft {
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: 3s;
 }
 
-.fromRight{
-    transform: translateX(50%);
-    opacity: 0;
-    transition: 3s;
+.fromRight {
+  transform: translateX(50%);
+  opacity: 0;
+  transition: 3s;
 }
 
-.show{
-    transform: translateX(0);
-    transform: translateY(0);
-    transform: translatez(0);
-    transform: scale(1);
-    opacity: 1;
+.show {
+  transform: translateX(0);
+  transform: translateY(0);
+  transform: translatez(0);
+  transform: scale(1);
+  opacity: 1;
 }
 
 // ==================================== FUNCTIONs
 
-@mixin box-shadow($x, $y, $blur, $c){ 
-    -webkit-box-shadow: $x $y $blur $c;
-    -moz-box-shadow: $x $y $blur $c;
-    -ms-box-shadow: $x $y $blur $c;
-    box-shadow: $x $y $blur $c;
-  }
-
-
-@mixin border($x, $y , $c){ 
-    -webkit-border: $x $y $c;
-    -moz-border: $x $y $c;
-    -ms-border: $x $y $c;
-    border: $x $y $c;
-  }
-
-  @for $i from 0 through 9 {
-    .font-#{$i + 1} { font-size: (12px + $i * 4px) }
-  }
-
-//   ========================= news
-.news-box{
-    position: absolute;
-    top: 0;
-    left: 0;
-
-    width: 50px;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    overflow: hidden;
-    box-shadow:inset 0 0 30px rgb(0, 0, 0); 
+@mixin box-shadow($x, $y, $blur, $c) {
+  -webkit-box-shadow: $x $y $blur $c;
+  -moz-box-shadow: $x $y $blur $c;
+  -ms-box-shadow: $x $y $blur $c;
+  box-shadow: $x $y $blur $c;
 }
 
-.news-box .new{
-    margin-right: 15px;
-    color: #fff;
-    font-size:25px;
-    width: 1000px;
-    height: 40px;
-    font-size: 16px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-direction: row;
-    transform: rotate(90deg);
+@mixin border($x, $y, $c) {
+  -webkit-border: $x $y $c;
+  -moz-border: $x $y $c;
+  -ms-border: $x $y $c;
+  border: $x $y $c;
+}
+
+@for $i from 0 through 9 {
+  .font-#{$i + 1} {
+    font-size: (12px + $i * 4px);
+  }
+}
+
+//   ========================= news
+.news-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 50px;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  overflow: hidden;
+  box-shadow: inset 0 0 30px rgb(0, 0, 0);
+}
+
+.news-box .new {
+  margin-right: 15px;
+  color: #fff;
+  font-size: 25px;
+  width: 1000px;
+  height: 40px;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  transform: rotate(90deg);
 }
 
 .new #p2,
-.new #p1{
-    padding: 0 3rem;
-    position: absolute;
-    animation: anime1 20s infinite linear ;
+.new #p1 {
+  padding: 0 3rem;
+  position: absolute;
+  animation: anime1 20s infinite linear;
 }
 
-.new #p2{
-    animation-delay: 10s;
-    opacity: 0;
+.new #p2 {
+  animation-delay: 10s;
+  opacity: 0;
 }
 
-@keyframes anime1{
-    from {
-        transform: translatex(100%);opacity: 1;}
-    to {
-        transform: translatex(-100%);opacity: 1;}}
-    
+@keyframes anime1 {
+  from {
+    transform: translatex(100%);
+    opacity: 1;
+  }
+  to {
+    transform: translatex(-100%);
+    opacity: 1;
+  }
+}
