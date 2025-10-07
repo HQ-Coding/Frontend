@@ -568,7 +568,7 @@ nav ul li a[aria-current=page] {
 #shape02,
 #shape03 {
   z-index: 1;
-  width: clamp(500px, 50vw, 700px);
+  width: clamp(400px, 50vw, 700px);
 }
 
 .slider-track {
